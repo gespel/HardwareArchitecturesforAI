@@ -1,0 +1,249 @@
+<stg><name>neuron</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="0" op_0_bw="0" op_1_bw="16">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:0  call void (...)* @_ssdm_op_SpecBitsMap(i16 0), !map !25
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="0" op_0_bw="0" op_1_bw="16">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:1  call void (...)* @_ssdm_op_SpecBitsMap(i16 %w_fxp_V), !map !31
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="0" op_0_bw="0" op_1_bw="16">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:2  call void (...)* @_ssdm_op_SpecBitsMap(i16 %x_fxp_V), !map !35
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="0" op_0_bw="0" op_1_bw="16">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:3  call void (...)* @_ssdm_op_SpecBitsMap(i16 %b_fxp_V), !map !39
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="0">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:4  call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @neuron_str) nounwind
+
+]]></Node>
+<StgValue><ssdm name="spectopmodule_ln0"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:5  %b_fxp_V_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %b_fxp_V)
+
+]]></Node>
+<StgValue><ssdm name="b_fxp_V_read"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:6  %x_fxp_V_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %x_fxp_V)
+
+]]></Node>
+<StgValue><ssdm name="x_fxp_V_read"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:7  %w_fxp_V_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %w_fxp_V)
+
+]]></Node>
+<StgValue><ssdm name="w_fxp_V_read"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="22" op_0_bw="16">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:8  %sext_ln700 = sext i16 %w_fxp_V_read to i22
+
+]]></Node>
+<StgValue><ssdm name="sext_ln700"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="22" op_0_bw="16">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:9  %sext_ln700_1 = sext i16 %x_fxp_V_read to i22
+
+]]></Node>
+<StgValue><ssdm name="sext_ln700_1"/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="1" lat="1">
+<core>DSP48</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="22" op_0_bw="22" op_1_bw="22">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:10  %mul_ln700 = mul i22 %sext_ln700, %sext_ln700_1
+
+]]></Node>
+<StgValue><ssdm name="mul_ln700"/></StgValue>
+</operation>
+
+<operation id="13" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="22" op_0_bw="22" op_1_bw="16" op_2_bw="6">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:11  %rhs_V = call i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16 %b_fxp_V_read, i6 0)
+
+]]></Node>
+<StgValue><ssdm name="rhs_V"/></StgValue>
+</operation>
+
+<operation id="14" st_id="1" stage="1" lat="1">
+<core>DSP48</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="22" op_0_bw="22" op_1_bw="22">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:12  %ret_V = add i22 %mul_ln700, %rhs_V
+
+]]></Node>
+<StgValue><ssdm name="ret_V"/></StgValue>
+</operation>
+
+<operation id="15" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="16" op_0_bw="16" op_1_bw="22" op_2_bw="32" op_3_bw="32">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:13  %out_V = call i16 @_ssdm_op_PartSelect.i16.i22.i32.i32(i22 %ret_V, i32 6, i32 21)
+
+]]></Node>
+<StgValue><ssdm name="out_V"/></StgValue>
+</operation>
+
+<operation id="16" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="0" op_0_bw="16">
+<![CDATA[
+_ZN13ap_fixed_baseILi33ELi21ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi32ELi20ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i:14  ret i16 %out_V
+
+]]></Node>
+<StgValue><ssdm name="ret_ln55"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

@@ -1,0 +1,121 @@
+
+
+================================================================
+== Vivado HLS Report for 'neuron'
+================================================================
+* Date:           Fri Jun 26 11:54:36 2026
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        neuron_FxP
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     2.846|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.84>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16 0), !map !25"   --->   Operation 2 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16 %w_fxp_V), !map !31"   --->   Operation 3 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16 %x_fxp_V), !map !35"   --->   Operation 4 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16 %b_fxp_V), !map !39"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @neuron_str) nounwind"   --->   Operation 6 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%b_fxp_V_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %b_fxp_V)" [neuron_FxP/neuron.cpp:53]   --->   Operation 7 'read' 'b_fxp_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%x_fxp_V_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %x_fxp_V)" [neuron_FxP/neuron.cpp:53]   --->   Operation 8 'read' 'x_fxp_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%w_fxp_V_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %w_fxp_V)" [neuron_FxP/neuron.cpp:53]   --->   Operation 9 'read' 'w_fxp_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%sext_ln700 = sext i16 %w_fxp_V_read to i22" [neuron_FxP/neuron.cpp:53]   --->   Operation 10 'sext' 'sext_ln700' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%sext_ln700_1 = sext i16 %x_fxp_V_read to i22" [neuron_FxP/neuron.cpp:53]   --->   Operation 11 'sext' 'sext_ln700_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.63ns) (grouped into DSP with root node ret_V)   --->   "%mul_ln700 = mul i22 %sext_ln700, %sext_ln700_1" [neuron_FxP/neuron.cpp:53]   --->   Operation 12 'mul' 'mul_ln700' <Predicate = true> <Delay = 0.63> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%rhs_V = call i22 @_ssdm_op_BitConcatenate.i22.i16.i6(i16 %b_fxp_V_read, i6 0)" [neuron_FxP/neuron.cpp:53]   --->   Operation 13 'bitconcatenate' 'rhs_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (2.20ns) (root node of the DSP)   --->   "%ret_V = add i22 %mul_ln700, %rhs_V" [neuron_FxP/neuron.cpp:53]   --->   Operation 14 'add' 'ret_V' <Predicate = true> <Delay = 2.20> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%out_V = call i16 @_ssdm_op_PartSelect.i16.i22.i32.i32(i22 %ret_V, i32 6, i32 21)" [neuron_FxP/neuron.cpp:53]   --->   Operation 15 'partselect' 'out_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "ret i16 %out_V" [neuron_FxP/neuron.cpp:55]   --->   Operation 16 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.85ns
+The critical path consists of the following:
+	wire read on port 'x_fxp_V' (neuron_FxP/neuron.cpp:53) [10]  (0 ns)
+	'mul' operation of DSP[16] ('mul_ln700', neuron_FxP/neuron.cpp:53) [14]  (0.638 ns)
+	'add' operation of DSP[16] ('ret.V', neuron_FxP/neuron.cpp:53) [16]  (2.21 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

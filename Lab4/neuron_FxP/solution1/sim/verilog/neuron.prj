@@ -1,0 +1,5 @@
+sv work "glbl.v"
+sv xil_defaultlib "neuron_mac_muladd_16s_16s_22ns_22_1_1.v"
+sv xil_defaultlib "neuron.v"
+sv xil_defaultlib "neuron.autotb.v"
+

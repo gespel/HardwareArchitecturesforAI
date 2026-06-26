@@ -1,0 +1,6 @@
+<annotationInfo>
+<item  id="14" filename="neuron_FxP/neuron.cpp" linenumber="53" name="mul_ln700" contextFuncName="neuron" moduleName="neuron" rtlName="neuron_mac_muladd_16s_16s_22ns_22_1_1_U1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/sten/vivado/Vivado/2019.1"><\/item>
+<item  id="15" filename="neuron_FxP/neuron.cpp" linenumber="53" name="rhs_V" contextFuncName="neuron" moduleName="neuron" rtlName="grp_fu_69_p2" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/sten/vivado/Vivado/2019.1"><\/item>
+<item  id="16" filename="neuron_FxP/neuron.cpp" linenumber="53" name="ret_V" contextFuncName="neuron" moduleName="neuron" rtlName="neuron_mac_muladd_16s_16s_22ns_22_1_1_U1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/sten/vivado/Vivado/2019.1"><\/item>
+<item  id="17" filename="neuron_FxP/neuron.cpp" linenumber="53" name="out_V" contextFuncName="neuron" moduleName="neuron" rtlName="ap_return" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/sten/vivado/Vivado/2019.1"><\/item>
+</annotationInfo>

@@ -1,0 +1,5 @@
+   Build using "/home/sten/vivado/Vivado/2019.1/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_neuron.cpp
+   Compiling neuron.cpp_pre.cpp.tb.cpp
+   Compiling neuron_tb.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe

@@ -1,0 +1,20 @@
+obj/neuron_tb.o: ../../../neuron_tb.cpp ../../../neuron.h \
+ /home/sten/vivado/Vivado/2019.1/include/ap_int.h \
+ /home/sten/vivado/Vivado/2019.1/include/ap_common.h \
+ /home/sten/vivado/Vivado/2019.1/include/ap_decl.h \
+ /home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h \
+ /home/sten/vivado/Vivado/2019.1/include/hls_half.h \
+ /home/sten/vivado/Vivado/2019.1/include/hls_fpo.h \
+ /home/sten/vivado/Vivado/2019.1/include/floating_point_v7_0_bitacc_cmodel.h \
+ /home/sten/vivado/Vivado/2019.1/include/gmp.h \
+ /home/sten/vivado/Vivado/2019.1/include/mpfr.h \
+ /home/sten/vivado/Vivado/2019.1/include/gmp.h \
+ /home/sten/vivado/Vivado/2019.1/include/mpfr.h \
+ /home/sten/vivado/Vivado/2019.1/include/ap_decl.h \
+ /home/sten/vivado/Vivado/2019.1/include/ap_int_base.h \
+ /home/sten/vivado/Vivado/2019.1/include/ap_int_ref.h \
+ /home/sten/vivado/Vivado/2019.1/include/ap_int_special.h \
+ /home/sten/vivado/Vivado/2019.1/include/ap_fixed.h \
+ /home/sten/vivado/Vivado/2019.1/include/ap_fixed_base.h \
+ /home/sten/vivado/Vivado/2019.1/include/ap_fixed_ref.h \
+ /home/sten/vivado/Vivado/2019.1/include/ap_fixed_special.h

@@ -1,0 +1,16 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make: „csim.exe“ ist bereits aktuell.
+0 Neuron Output Floating Point with float precision: 107.587814 
+1 Neuron Output Floating Point with float precision: 120.962540 
+2 Neuron Output Floating Point with float precision: 134.337265 
+3 Neuron Output Floating Point with float precision: 147.711990 
+4 Neuron Output Floating Point with float precision: 161.086716 
+5 Neuron Output Floating Point with float precision: 174.461441 
+6 Neuron Output Floating Point with float precision: 187.836151 
+7 Neuron Output Floating Point with float precision: 201.210876 
+8 Neuron Output Floating Point with float precision: 214.585602 
+9 Neuron Output Floating Point with float precision: 227.960327 
+10 Neuron Output Floating Point with float precision: 241.335052 
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

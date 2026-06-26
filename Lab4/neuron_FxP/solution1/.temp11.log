@@ -1,0 +1,24 @@
+Neuron Weight Fixed Point = 445.109
+ Neuron Bias Fixed Point = 152.109
+i = 0 Neuron Output Fixed Point = 103.422
+i = 0 Data Input Fixed Point = -0.109375
+i = 1 Neuron Output Fixed Point = 117.328
+i = 1 Data Input Fixed Point = -0.078125
+i = 2 Neuron Output Fixed Point = 131.234
+i = 2 Data Input Fixed Point = -0.046875
+i = 3 Neuron Output Fixed Point = 145.141
+i = 3 Data Input Fixed Point = -0.015625
+i = 4 Neuron Output Fixed Point = 159.063
+i = 4 Data Input Fixed Point = 0.015625
+i = 5 Neuron Output Fixed Point = 172.969
+i = 5 Data Input Fixed Point = 0.046875
+i = 6 Neuron Output Fixed Point = 186.875
+i = 6 Data Input Fixed Point = 0.078125
+i = 7 Neuron Output Fixed Point = 200.781
+i = 7 Data Input Fixed Point = 0.109375
+i = 8 Neuron Output Fixed Point = 207.734
+i = 8 Data Input Fixed Point = 0.125
+i = 9 Neuron Output Fixed Point = 221.656
+i = 9 Data Input Fixed Point = 0.15625
+i = 10 Neuron Output Fixed Point = 235.563
+i = 10 Data Input Fixed Point = 0.1875

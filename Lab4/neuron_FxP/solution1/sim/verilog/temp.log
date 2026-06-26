@@ -1,0 +1,40 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/home/sten/vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/sten/vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_neuron_top glbl -prj neuron.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /home/sten/vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s neuron -debug wave 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/vivado/Vivado/2019.1/neuron_FxP/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/vivado/Vivado/2019.1/neuron_FxP/solution1/sim/verilog/neuron_mac_muladd_16s_16s_22ns_22_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuron_mac_muladd_16s_16s_22ns_22_1_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module neuron_mac_muladd_16s_16s_22ns_22_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/vivado/Vivado/2019.1/neuron_FxP/solution1/sim/verilog/neuron.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neuron
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/vivado/Vivado/2019.1/neuron_FxP/solution1/sim/verilog/neuron.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_neuron_top
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.neuron_mac_muladd_16s_16s_22ns_2...
+Compiling module xil_defaultlib.neuron_mac_muladd_16s_16s_22ns_2...
+Compiling module xil_defaultlib.neuron
+Compiling module xil_defaultlib.apatb_neuron_top
+Compiling module work.glbl
+Built simulation snapshot neuron
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/sten/vivado/Vivado/2019.1/neuron_FxP/solution1/sim/verilog/xsim.dir/neuron/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Jun 26 11:55:34 2026...
+
+****** xsim v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+start_gui

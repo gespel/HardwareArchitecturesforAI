@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="neuron.cpp" path="/home/sten/vivado/Vivado/2019.1/neuron_FxP/neuron.cpp"/>
+    <originFiles name="neuron.h" path="/home/sten/vivado/Vivado/2019.1/neuron_FxP/neuron.h"/>
+  </source>
+  <testbench>
+    <originFiles name="neuron_tb.cpp" path="/home/sten/vivado/Vivado/2019.1/neuron_FxP/neuron_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
