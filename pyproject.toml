@@ -1,0 +1,16 @@
+[project]
+name = "hardwarearchitecturesforai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ipython>=9.15.0",
+    "matplotlib>=3.11.0",
+    "matplotlib-inline>=0.2.2",
+    "numpy>=2.5.0",
+    "scikit-learn>=1.9.0",
+    "tensorflow>=2.21.0",
+    "tensorflow-model-optimization>=0.8.1",
+    "tf-keras>=2.21.0",
+]
