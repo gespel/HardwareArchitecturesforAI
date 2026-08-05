@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matmul.c" path="/home/sten/Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c"/>
+  </source>
+  <testbench>
+    <originFiles name="matmul_tb.c" path="/home/sten/Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul_tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/sten/vivado/Vivado/2019.1/prj_adder/solution1/./sim/autowrap/testbench/adder.cpp_pre.cpp.tb.cpp

@@ -1,0 +1,5 @@
+   Build using "/home/sten/vivado/Vivado/2019.1/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling adder.cpp_pre.cpp.tb.cpp
+   Compiling adder_tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_adder.cpp
+   Generating cosim.tv.exe

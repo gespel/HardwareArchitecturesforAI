@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="adder.h" path="/home/sten/Downloads/HAAI_lab2_source/code/adder/adder.h"/>
+    <originFiles name="adder.cpp" path="/home/sten/Downloads/HAAI_lab2_source/code/adder/adder.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="adder_tb.cpp" path="/home/sten/Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
