@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="mlp.cpp" path="/home/sten/Downloads/HAAI_Lab7_source(1)/HAAI_Lab7_source/mlp_FP/mlp.cpp"/>
+    <originFiles name="mlp.h" path="/home/sten/Downloads/HAAI_Lab7_source(1)/HAAI_Lab7_source/mlp_FP/mlp.h"/>
+  </source>
+  <testbench>
+    <originFiles name="mlp_tb.cpp" path="/home/sten/Downloads/HAAI_Lab7_source(1)/HAAI_Lab7_source/mlp_FP/mlp_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
