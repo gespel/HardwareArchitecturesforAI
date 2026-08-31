@@ -1,0 +1,126 @@
+================================================================================
+ HARDWARE ARCHITECTURES FOR AI - LAB 6   /   EXERCISE : CROSS-COMPARISON
+ FloatingPoint  vs.  Quantized  vs.  Pruned   MNIST MLP
+================================================================================
+
+All three designs share the SAME architecture (4,135 parameters):
+    Input(28x28) -> Flatten(784) -> Dense(5) -> ReLU -> Dense(8) -> ReLU
+                 -> Dense(8) -> ReLU -> Dense(10) -> Softmax
+Numbers are taken from the notebook run HAAI_Lab6_source.ipynb (In[217]..In[260]).
+
+
+================================================================================
+ Q1.  HOW DOES THE MLP ACCURACY CHANGE ACROSS THE THREE DESIGNS?
+================================================================================
+
+  design                                   test Top-1 acc     vs. FP32 baseline
+  --------------------------------------    --------------     -----------------
+  FloatingPoint  (float32, In[232])            0.9000  (90.00 %)     -   (baseline)
+  Quantized      Q1.2.5 = 8 bit  (In[252])     0.8959  (89.59 %)   -0.41 pp   (drop 0.41 %)
+  Pruned         80 % sparsity   (In[257])     0.7213  (72.13 %)  -17.87 pp   (drop 17.87 %)
+
+  Reading:
+  * Quantization is almost free: going from 32-bit floats to a 1+2+5 = 8-bit
+    signed fixed-point format costs only 0.41 percentage points of Top-1
+    accuracy (train 90.72 % -> 89.59 %). The fixed-point bit-width sweep
+    (In[255], BW_int = 1) shows the trade-off clearly:
+        frac bits  total bits   test acc     acc drop
+            0          2          11.82 %     78.18 %
+            2          4          56.33 %     33.67 %
+            3          5          86.35 %      3.65 %
+            4          6          89.60 %      0.40 %
+            6          8          89.92 %      0.08 %
+            8         10          90.04 %     -0.04 %   (matches / beats FP32)
+           12-14     14-16        90.00 %      0.00 %   (identical to FP32)
+    From ~5 total bits upward accuracy is within a few tenths of FP32; from
+    ~10 bits it is numerically identical.
+
+  * Pruning to 80 % sparsity as done in In[257] is expensive here: the pruned
+    network is re-initialised (clone_model) and trained from scratch while being
+    pruned, so it only reaches 72.13 % and its training even diverges in the
+    last epochs (val_acc 90 % -> 72 %).
+    When instead the ALREADY-TRAINED model is pruned and fine-tuned (In[260]),
+    accuracy is robust up to moderate sparsity:
+        sparsity   test acc     acc drop
+          10 %      90.41 %      -0.41 %
+          30 %      90.83 %      -0.83 %   (best - extra fine-tuning helps)
+          50 %      90.00 %       0.00 %
+          60 %      88.86 %       1.14 %
+          70 %      85.56 %       4.44 %
+          80 %      48.43 %      41.57 %
+          90 %      17.51 %      72.49 %
+    So <=50 % of the weights can be pruned with no accuracy loss; past ~70 %
+    the 4,135-parameter model is too small to keep working.
+
+  Ranking (accuracy, high -> low):
+      FloatingPoint (90.00 %)  ~  Quantized 8-bit (89.59 %)  >>  Pruned 80 % (72.13 %)
+      ( Quantized >= 10 bit  ==  FloatingPoint ;  Pruned <= 50 %  ==  FloatingPoint )
+
+
+================================================================================
+ Q2.  HOW DOES THE MODEL'S SIZE CHANGE?
+================================================================================
+
+Parameter count is unchanged (4,135) in every design - only the storage cost
+per parameter (quantization) or the number of non-zero parameters (pruning)
+changes.
+
+  design                          bits/weight   weight memory        memory saved
+  ----------------------------    -----------   -----------------    ------------
+  FloatingPoint (float32)             32         4135*32 b = 16.152 KB      -
+  Quantized Q1.2.5 (8-bit)             8         4135* 8 b =  4.039 KB    75.00 %
+  Pruned 80 % (In[257] metric)     32 (kept)     ~864*32 b + 31 biases    78.947 %
+                                                 ~= 3.50 KB of kernels
+                                                 (zeros assumed free)
+
+  Details:
+
+  * Quantization (In[253]-[254]):
+        total_bits_quantized = 1 + BW_int + BW_frac = 1 + 2 + 5 = 8
+        saved_memory = 1 - 8/32 = 0.75                 -> "Saved memory: 75.0 %"
+    Every weight AND bias is stored in 8 bits instead of 32 -> exactly 4x
+    smaller (16.152 KB -> 4.039 KB), independent of the values.
+    The In[255] sweep (BW_int = 1) scales linearly:
+        total bits  2   4   5   6   8   10   14   16
+        saved      93.75 87.5 84.4 81.25 75.0 68.75 56.25 50.0  (%)
+
+  * Pruning (In[257]):
+        weights_total          = 3920+40+64+80 = 4104   (kernel weights only)
+        weights_pruned_remained = sum(masks)   ~= 864
+        saved = 1 - 864/4104 = 0.78947       -> "saved memory space ... 78.947%"
+    Assumption in the notebook: a stored 0 costs nothing, so the memory saving
+    equals the kernel sparsity (78.947 %). Biases (31) are never pruned.
+    Caveat: this ignores the bookkeeping a real sparse format needs (index /
+    bitmap per non-zero, typically +1 bit..+log2(N) bits per kept weight), and
+    during training the pruning wrappers actually make the checkpoint LARGER
+    (Total params 8,252, 32.27 KB) because of the masks/thresholds/step vars.
+    After `strip_pruning` the file is back to a 4,135-parameter dense model
+    that merely contains ~79 % zeros.
+
+  * Combined view (weight storage, "zeros are free" for the pruned column):
+
+        FloatingPoint : 16.152 KB    (1.00x)   accuracy 90.00 %
+        Quantized 8b  :  4.039 KB    (0.25x)   accuracy 89.59 %
+        Pruned 80 %   :  ~3.5  KB    (~0.22x)  accuracy 72.13 %   (In[257])
+                         but only ~0.13x if the surviving weights are ALSO
+                         quantised to 8 bit (864*8 b ~= 0.87 KB)
+
+  Bottom line:
+    - Quantization: 4x smaller for <0.5 % accuracy loss (8-bit); free above 10-bit.
+    - Pruning: up to 2x fewer non-zero weights (50 % sparsity) for 0 % accuracy
+      loss; the aggressive 80 % run trades 17.9 % accuracy for ~4.7x fewer
+      non-zero weights, and needs a sparse storage format to realise the saving.
+    - The two techniques are complementary: prune to ~50 % then quantise the
+      rest to 8 bit -> ~8x smaller at ~FP32 accuracy.
+
+
+================================================================================
+ SOURCE VALUES (from the notebook execution log)
+================================================================================
+  acc_floatingpoint  = 0.8999999761581421      (In[232])
+  acc_quantized      = 0.8959000110626221      (In[252], Q1.2.5 / 8-bit)
+  acc_pruned_model   = 0.7213                   (In[257], 80 % sparsity)
+  quant "Saved memory: 75.0 %" , "Accuracy drop: 0.41 %"        (In[254])
+  prune "saved memory space ... 78.947 %" , "accuracy drop ... 17.870 %"  (In[257])
+  In[255] fixed-point bit-width sweep  and  In[260] pruning-sparsity sweep
+  are reproduced in full in Lab6/deliverables/mlp_pruning_log.txt (appendix).
