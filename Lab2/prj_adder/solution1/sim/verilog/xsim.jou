@@ -2,16 +2,15 @@
 # xsim v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri May  8 13:20:47 2026
-# Process ID: 128271
-# Current directory: /home/sten/vivado/Vivado/2019.1/prj_adder/solution1/sim/verilog
+# Start of session at: Mon Aug 31 20:07:09 2026
+# Process ID: 122997
+# Current directory: /home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog
 # Command line: xsim -source {xsim.dir/adder/xsim_script.tcl}
-# Log file: /home/sten/vivado/Vivado/2019.1/prj_adder/solution1/sim/verilog/xsim.log
-# Journal file: /home/sten/vivado/Vivado/2019.1/prj_adder/solution1/sim/verilog/xsim.jou
+# Log file: /home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/xsim.log
+# Journal file: /home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/xsim.jou
 #-----------------------------------------------------------
 start_gui
 source xsim.dir/adder/xsim_script.tcl
 open_wave_config adder_dataflow_ana.wcfg
 source adder.tcl
-create_wave_config; add_wave /; set_property needs_save false [current_wave_config]
 close_sim

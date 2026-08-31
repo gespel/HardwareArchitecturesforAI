@@ -1,4 +1,4 @@
 <annotationInfo>
-<item  id="12" filename="../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp" linenumber="51" name="add_ln51" contextFuncName="adder" moduleName="adder" rtlName="add_ln51_fu_34_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="32" fileDirectory="/home/sten/vivado/Vivado/2019.1"><\/item>
-<item  id="13" filename="../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp" linenumber="51" name="add_ln51_1" contextFuncName="adder" moduleName="adder" rtlName="ap_return" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="32" fileDirectory="/home/sten/vivado/Vivado/2019.1"><\/item>
+<item  id="12" filename="prj_adder/adder.cpp" linenumber="51" name="add_ln51" contextFuncName="adder" moduleName="adder" rtlName="add_ln51_fu_34_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="32" fileDirectory="/home/sten/Uni/HardwareArchitecturesforAI/Lab2"><\/item>
+<item  id="13" filename="prj_adder/adder.cpp" linenumber="51" name="add_ln51_1" contextFuncName="adder" moduleName="adder" rtlName="ap_return" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="32" fileDirectory="/home/sten/Uni/HardwareArchitecturesforAI/Lab2"><\/item>
 </annotationInfo>

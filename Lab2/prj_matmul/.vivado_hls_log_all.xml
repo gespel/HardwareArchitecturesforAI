@@ -6,10 +6,7 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="prj_matmul" solutionName="solution1" date="2026-05-22T12:46:13.443+0200"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="prj_matmul" solutionName="solution1" date="2026-05-22T12:44:53.064+0200"/>
-      </csimLog>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>

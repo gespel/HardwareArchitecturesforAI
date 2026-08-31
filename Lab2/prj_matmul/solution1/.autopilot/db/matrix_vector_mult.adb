@@ -104,7 +104,7 @@
               <type>0</type>
               <id>8</id>
               <name>_ln7</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>7</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -112,13 +112,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
                     <item class_id="12" tracking_level="0" version="0">
                       <first class_id="13" tracking_level="0" version="0">
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>7</second>
@@ -189,7 +189,7 @@
               <type>0</type>
               <id>11</id>
               <name>icmp_ln7</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>7</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -197,13 +197,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>7</second>
@@ -238,7 +238,7 @@
               <type>0</type>
               <id>13</id>
               <name>i</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>7</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -246,13 +246,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>7</second>
@@ -287,7 +287,7 @@
               <type>0</type>
               <id>14</id>
               <name>_ln7</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>7</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -295,13 +295,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>7</second>
@@ -337,7 +337,7 @@
               <type>0</type>
               <id>16</id>
               <name>zext_ln8</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>8</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -345,13 +345,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>8</second>
@@ -385,7 +385,7 @@
               <type>0</type>
               <id>17</id>
               <name>zext_ln10_1</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -393,13 +393,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -433,7 +433,7 @@
               <type>0</type>
               <id>18</id>
               <name>tmp</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -441,13 +441,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -483,7 +483,7 @@
               <type>0</type>
               <id>19</id>
               <name>zext_ln10_2</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -491,13 +491,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -531,7 +531,7 @@
               <type>0</type>
               <id>20</id>
               <name>sub_ln10</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -539,13 +539,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -580,7 +580,7 @@
               <type>0</type>
               <id>21</id>
               <name>result_addr</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>8</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -588,13 +588,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>8</second>
@@ -630,7 +630,7 @@
               <type>0</type>
               <id>22</id>
               <name>_ln9</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>9</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -638,13 +638,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>9</second>
@@ -678,7 +678,7 @@
               <type>0</type>
               <id>24</id>
               <name>result_load</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -686,13 +686,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -766,7 +766,7 @@
               <type>0</type>
               <id>26</id>
               <name>result_addr_write_ln10</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -774,13 +774,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -815,7 +815,7 @@
               <type>0</type>
               <id>27</id>
               <name>icmp_ln9</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>9</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -823,13 +823,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>9</second>
@@ -864,7 +864,7 @@
               <type>0</type>
               <id>29</id>
               <name>j</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>9</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -872,13 +872,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>9</second>
@@ -913,7 +913,7 @@
               <type>0</type>
               <id>30</id>
               <name>_ln9</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>9</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -921,13 +921,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>9</second>
@@ -963,7 +963,7 @@
               <type>0</type>
               <id>32</id>
               <name>zext_ln10</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -971,13 +971,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -1011,7 +1011,7 @@
               <type>0</type>
               <id>33</id>
               <name>zext_ln10_3</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -1019,13 +1019,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -1059,7 +1059,7 @@
               <type>0</type>
               <id>34</id>
               <name>add_ln10_1</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -1067,13 +1067,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -1108,7 +1108,7 @@
               <type>0</type>
               <id>35</id>
               <name>sext_ln10</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -1116,13 +1116,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -1156,7 +1156,7 @@
               <type>0</type>
               <id>36</id>
               <name>mat_addr</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -1164,13 +1164,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -1206,7 +1206,7 @@
               <type>0</type>
               <id>37</id>
               <name>mat_load</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -1214,13 +1214,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -1254,7 +1254,7 @@
               <type>0</type>
               <id>38</id>
               <name>vec_addr</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -1262,13 +1262,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -1304,7 +1304,7 @@
               <type>0</type>
               <id>39</id>
               <name>vec_load</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -1312,13 +1312,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -1352,7 +1352,7 @@
               <type>0</type>
               <id>40</id>
               <name>mul_ln10</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -1360,13 +1360,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -1401,7 +1401,7 @@
               <type>0</type>
               <id>41</id>
               <name>add_ln10</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>10</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -1409,13 +1409,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>10</second>
@@ -1450,7 +1450,7 @@
               <type>0</type>
               <id>42</id>
               <name>_ln9</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>9</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -1458,13 +1458,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>9</second>
@@ -1532,7 +1532,7 @@
               <type>0</type>
               <id>46</id>
               <name>_ln13</name>
-              <fileName>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</fileName>
+              <fileName>prj_matmul/matmul.c</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
               <contextFuncName>matrix_vector_mult</contextFuncName>
@@ -1540,13 +1540,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</first>
+                        <first>prj_matmul/matmul.c</first>
                         <second>matrix_vector_mult</second>
                       </first>
                       <second>13</second>

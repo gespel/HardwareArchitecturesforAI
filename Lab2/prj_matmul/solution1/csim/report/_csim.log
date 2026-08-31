@@ -1,8 +1,0 @@
-INFO: [SIM 2] *************** CSIM start ***************
-INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling(apcc) ../../../../../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul_tb.c in debug mode
-/bin/sh: -c: Zeile 1: Syntaxfehler beim unerwarteten Symbol »(«
-/bin/sh: -c: Zeile 1: `apcc   -c -MMD  -fPIC -I "/home/sten/vivado/Vivado/2019.1/lnx64/tools/systemc/include" -I "/home/sten/vivado/Vivado/2019.1/include" -I "/home/sten/vivado/Vivado/2019.1/include/opencv" -I "/home/sten/vivado/Vivado/2019.1/include/ap_sysc" -I "/home/sten/vivado/Vivado/2019.1/common/technology/generic/SystemC" -I "/home/sten/vivado/Vivado/2019.1/common/technology/generic/SystemC/AESL_FP_comp" -I "/home/sten/vivado/Vivado/2019.1/common/technology/generic/SystemC/AESL_comp" -I "/home/sten/vivado/Vivado/2019.1/lnx64/tools/auto_cc/include" -D__SIM_FPO__ -D__SIM_OPENCV__ -D__SIM_FFT__ -D__SIM_FIR__ -D__SIM_DDS__ -D__DSP48E2__ -g -I . -I "/home/sten/vivado/Vivado/2019.1/lnx64/tools/systemc/include" -I "/home/sten/vivado/Vivado/2019.1/include" -I "/home/sten/vivado/Vivado/2019.1/common/technology/generic/SystemC/AESL_comp" -DAUTOCC -D__xilinx_ip_top= -DAESL_TB ../../../../../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul_tb.c -o obj/matmul_tb.o ; \'
-make: *** [csim.mk:77: obj/matmul_tb.o] Fehler 2
-ERR: [SIM 100] 'csim_design' failed: compilation error(s).
-INFO: [SIM 3] *************** CSIM finish ***************

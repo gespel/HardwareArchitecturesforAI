@@ -40,10 +40,10 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xczu3eg:-sbva484:-1-i
-set SourceFiles {sc {} c ../../../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp}
+set SourceFiles {sc {} c ../adder.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /home/sten/vivado/Vivado/2019.1/prj_adder/solution1/solution1.directive
-set TBFiles {verilog ../../../../../Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp bc ../../../../../Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp vhdl ../../../../../Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp sc ../../../../../Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp cas ../../../../../Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp c {}}
+set DirectiveFile /home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/solution1.directive
+set TBFiles {verilog ../adder_tb.cpp bc ../adder_tb.cpp vhdl ../adder_tb.cpp sc ../adder_tb.cpp cas ../adder_tb.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

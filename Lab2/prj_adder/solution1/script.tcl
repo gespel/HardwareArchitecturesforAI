@@ -5,9 +5,9 @@
 ############################################################
 open_project prj_adder
 set_top adder
-add_files ../../../Downloads/HAAI_lab2_source/code/adder/adder.h
-add_files ../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp
-add_files -tb ../../../Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files prj_adder/adder.h
+add_files prj_adder/adder.cpp
+add_files -tb prj_adder/adder_tb.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xczu3eg-sbva484-1-i} -tool vivado
 create_clock -period 10 -name default

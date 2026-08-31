@@ -1,49 +1,80 @@
 INFO: [HLS 200-10] Running '/home/sten/vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'sten' on host 'home' (Linux_x86_64 version 7.1.8-arch1-3) on Fri Aug 14 21:54:28 CEST 2026
+INFO: [HLS 200-10] For user 'sten' on host 'home' (Linux_x86_64 version 7.1.8-arch1-3) on Mon Aug 31 20:29:06 CEST 2026
 INFO: [HLS 200-10] In directory '/home/sten/Uni/HardwareArchitecturesforAI/Lab2'
-Sourcing Tcl script '/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/csynth.tcl'
-INFO: [HLS 200-10] Opening project '/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder'.
-INFO: [HLS 200-10] Adding design file 'prj_adder/adder.h' to the project
-INFO: [HLS 200-10] Adding design file 'prj_adder/adder.cpp' to the project
-INFO: [HLS 200-10] Adding test bench file 'prj_adder/adder_tb.cpp' to the project
-INFO: [HLS 200-10] Opening solution '/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1'.
+Sourcing Tcl script '/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/cosim.tcl'
+INFO: [HLS 200-10] Opening project '/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul'.
+INFO: [HLS 200-10] Opening solution '/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xczu3eg-sbva484-1-i'
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
-INFO: [HLS 200-10] Analyzing design file 'prj_adder/adder.cpp' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 820.793 ; gain = 126.996 ; free physical = 10684 ; free virtual = 19254
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 820.793 ; gain = 126.996 ; free physical = 10684 ; free virtual = 19254
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 820.793 ; gain = 126.996 ; free physical = 10685 ; free virtual = 19260
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 820.793 ; gain = 126.996 ; free physical = 10685 ; free virtual = 19261
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 820.793 ; gain = 126.996 ; free physical = 10682 ; free virtual = 19257
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 820.793 ; gain = 126.996 ; free physical = 10682 ; free virtual = 19258
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'adder' ...
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'adder' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 9.93 seconds; current allocated memory: 77.961 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 78.009 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'adder' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'adder/a' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'adder/b' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'adder/c' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'adder' to 'ap_ctrl_hs'.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'adder'.
-INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 78.177 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 820.793 ; gain = 126.996 ; free physical = 10673 ; free virtual = 19255
-INFO: [VHDL 208-304] Generating VHDL RTL for adder.
-INFO: [VLOG 209-307] Generating Verilog RTL for adder.
-INFO: [HLS 200-112] Total elapsed time: 10.32 seconds; peak allocated memory: 78.177 MB.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/home/sten/vivado/Vivado/2019.1/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_matrix_vector_mult.cpp
+   Compiling (apcc) matmul.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/home/sten/vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sten' on host 'home' (Linux_x86_64 version 7.1.8-arch1-3) on Mon Aug 31 20:29:17 CEST 2026
+INFO: [HLS 200-10] In directory '/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sten/1373861788200957057295
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) matmul_tb.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/home/sten/vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sten' on host 'home' (Linux_x86_64 version 7.1.8-arch1-3) on Mon Aug 31 20:29:22 CEST 2026
+INFO: [HLS 200-10] In directory '/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sten/1374511788200962929528
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Result vector: 
+20 47 74 INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/home/sten/vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/sten/vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_matrix_vector_mult_top glbl -prj matrix_vector_mult.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /home/sten/vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s matrix_vector_mult -debug wave 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/sim/verilog/AESL_automem_result.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_result
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/sim/verilog/matrix_vector_mult.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_matrix_vector_mult_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/sim/verilog/AESL_automem_vec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_vec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/sim/verilog/matrix_vector_mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_vector_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/sim/verilog/AESL_automem_mat.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_mat
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.matrix_vector_mult
+Compiling module xil_defaultlib.AESL_automem_mat
+Compiling module xil_defaultlib.AESL_automem_vec
+Compiling module xil_defaultlib.AESL_automem_result
+Compiling module xil_defaultlib.apatb_matrix_vector_mult_top
+Compiling module work.glbl
+Built simulation snapshot matrix_vector_mult
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/sim/verilog/xsim.dir/matrix_vector_mult/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Aug 31 20:29:30 2026...
+
+****** xsim v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+start_gui

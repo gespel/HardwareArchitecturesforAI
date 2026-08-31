@@ -1,10 +1,10 @@
-# 1 "/home/sten/Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp"
+# 1 "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/adder_tb.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/home/sten/Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp"
-# 47 "/home/sten/Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp"
+# 1 "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/adder_tb.cpp"
+# 47 "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/adder_tb.cpp"
 # 1 "/home/sten/vivado/Vivado/2019.1/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/iostream" 1 3
 # 36 "/home/sten/vivado/Vivado/2019.1/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/iostream" 3
        
@@ -9322,7 +9322,7 @@ typedef __pid_t pid_t;
 
 
 # 1 "/usr/include/bits/sched.h" 1 3 4
-# 63 "/usr/include/bits/sched.h" 3 4
+# 66 "/usr/include/bits/sched.h" 3 4
 # 1 "/usr/include/linux/sched/types.h" 1 3 4
 
 
@@ -9518,15 +9518,15 @@ struct sched_attr {
  __u32 sched_util_max;
 
 };
-# 64 "/usr/include/bits/sched.h" 2 3 4
-# 126 "/usr/include/bits/sched.h" 3 4
+# 67 "/usr/include/bits/sched.h" 2 3 4
+# 129 "/usr/include/bits/sched.h" 3 4
 # 1 "/usr/include/bits/types/struct_sched_param.h" 1 3 4
 # 23 "/usr/include/bits/types/struct_sched_param.h" 3 4
 struct sched_param
 {
   int sched_priority;
 };
-# 127 "/usr/include/bits/sched.h" 2 3 4
+# 130 "/usr/include/bits/sched.h" 2 3 4
 
 extern "C" {
 
@@ -10011,7 +10011,7 @@ struct __pthread_mutex_s
   int __kind;
 
   short __spins;
-  short __unused;
+  short __glibc_reserved;
   __pthread_list_t __list;
 # 52 "/usr/include/bits/struct_mutex.h" 3 4
 };
@@ -27768,15 +27768,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 48 "/home/sten/Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp" 2
+# 48 "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/adder_tb.cpp" 2
 
-# 48 "/home/sten/Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp"
+# 48 "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/adder_tb.cpp"
 using namespace std;
 
-# 1 "/home/sten/Downloads/HAAI_lab2_source/code/adder/adder.h" 1
-# 50 "/home/sten/Downloads/HAAI_lab2_source/code/adder/adder.h"
+# 1 "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/adder.h" 1
+# 50 "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/adder.h"
 int adder(int a, int b, int c);
-# 51 "/home/sten/Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp" 2
+# 51 "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/adder_tb.cpp" 2
 
 int main()
 {

@@ -40,10 +40,10 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xczu3eg:-sbva484:-1-i
-set SourceFiles {sc {} c ../../../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c}
+set SourceFiles {sc {} c ../matmul.c}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /home/sten/vivado/Vivado/2019.1/prj_matmul/solution1/solution1.directive
-set TBFiles {verilog ../../../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul_tb.c bc ../../../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul_tb.c vhdl ../../../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul_tb.c sc ../../../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul_tb.c cas ../../../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul_tb.c c {}}
+set DirectiveFile /home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/solution1.directive
+set TBFiles {verilog ../matmul_tb.c bc ../matmul_tb.c vhdl ../matmul_tb.c sc ../matmul_tb.c cas ../matmul_tb.c c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

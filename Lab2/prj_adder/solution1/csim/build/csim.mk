@@ -18,7 +18,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../../../../Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp ../../../../../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp
+HLS_SOURCES = ../../../adder_tb.cpp ../../../adder.cpp
 
 TARGET := csim.exe
 
@@ -56,6 +56,7 @@ IFLAG += -D__SIM_FIR__
 IFLAG += -D__SIM_DDS__
 
 IFLAG += -D__DSP48E2__
+IFLAG += -Wno-unknown-pragmas 
 IFLAG += -g
 DFLAG += -D__xilinx_ip_top= -DAESL_TB
 CCFLAG += 
@@ -69,14 +70,14 @@ all: $(TARGET)
 
 
 
-$(ObjDir)/adder_tb.o: ../../../../../../../Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../../../Downloads/HAAI_lab2_source/code/adder/adder_tb.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/adder_tb.o: ../../../adder_tb.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../adder_tb.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/adder_tb.d
 
-$(ObjDir)/adder.o: ../../../../../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/adder.o: ../../../adder.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../adder.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/adder.d

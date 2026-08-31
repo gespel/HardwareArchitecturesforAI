@@ -3,21 +3,16 @@
 2 Adder Output : 15 
 3 Adder Output : 16 
 4 Adder Output : 17 
-0 Adder Output : 13 
-1 Adder Output : 14 
-2 Adder Output : 15 
-3 Adder Output : 16 
-4 Adder Output : 17 
 INFO: [XSIM 43-3496] Using init file passed via -initfile option "/home/sten/vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: /home/sten/vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_adder_top glbl -prj adder.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /home/sten/vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s adder -debug wave 
 Multi-threading is on. Using 6 slave threads.
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/vivado/Vivado/2019.1/prj_adder/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/vivado/Vivado/2019.1/prj_adder/solution1/sim/verilog/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/adder.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/vivado/Vivado/2019.1/prj_adder/solution1/sim/verilog/adder.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/adder.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_adder_top
 Starting static elaboration
 Completed static elaboration
@@ -34,8 +29,8 @@ Built simulation snapshot adder
   **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source /home/sten/vivado/Vivado/2019.1/prj_adder/solution1/sim/verilog/xsim.dir/adder/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri May  8 13:20:46 2026...
+source /home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/xsim.dir/adder/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Aug 31 19:09:33 2026...
 
 ****** xsim v2019.1 (64-bit)
   **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
@@ -43,7 +38,277 @@ INFO: [Common 17-206] Exiting Webtalk at Fri May  8 13:20:46 2026...
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 start_gui
-INFO: [Common 17-206] Exiting xsim at Mon May 11 07:04:34 2026...
+java.lang.reflect.InvocationTargetException
+	at java.desktop/java.awt.EventQueue.invokeAndWait(Unknown Source)
+	at java.desktop/java.awt.EventQueue.invokeAndWait(Unknown Source)
+	at java.desktop/javax.swing.SwingUtilities.invokeAndWait(Unknown Source)
+	at ui.PlanAhead.i(SourceFile:1525)
+	at ui.PlanAhead.ev(SourceFile:613)
+	at ui.PlanAhead.eC(SourceFile:944)
+	at ui.PlanAhead.a(SourceFile:1631)
+	at ui.frmwork.b.l.d(SourceFile:42)
+	at ui.frmwork.HTclEventBroker.i(SourceFile:256)
+	at ui.frmwork.HTclEventBroker.fireTclEvent(SourceFile:351)
+Caused by: java.lang.IllegalArgumentException: Window must not be zero
+	at java.desktop/sun.awt.X11.XAtom.checkWindow(Unknown Source)
+	at java.desktop/sun.awt.X11.XAtom.getAtomData(Unknown Source)
+	at java.desktop/sun.awt.X11.XToolkit.getWorkArea(Unknown Source)
+	at java.desktop/sun.awt.X11.XToolkit.getInsets(Unknown Source)
+	at java.desktop/sun.awt.X11.XToolkit.getScreenInsets(Unknown Source)
+	at java.desktop/sun.java2d.SunGraphicsEnvironment.getUsableBounds(Unknown Source)
+	at java.desktop/sun.awt.X11GraphicsEnvironment.getXineramaWindowBounds(Unknown Source)
+	at java.desktop/sun.awt.X11GraphicsEnvironment.getMaximumWindowBounds(Unknown Source)
+	at com.jidesoft.utils.PortingUtils.getLocalScreenBounds(Unknown Source)
+	at com.jidesoft.utils.PortingUtils.ensureVisible(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.m(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.f(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.resetToDefault(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.a(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.loadLayoutFrom(Unknown Source)
+	at com.jidesoft.swing.AbstractLayoutPersistence.loadLayoutDataFrom(Unknown Source)
+	at com.jidesoft.swing.AbstractLayoutPersistence.loadLayoutData(Unknown Source)
+	at ui.q.ai(SourceFile:145)
+	at ui.bm.bM(SourceFile:901)
+	at ui.bm.<init>(SourceFile:152)
+	at ui.dc.d(SourceFile:1417)
+	at ui.dc.run(SourceFile:1380)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue.access$500(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at ui.frmwork.b.d.dispatchEvent(SourceFile:88)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Failed to open 'Vivado application'. Please check your system resources and launch again.
+0 Adder Output : 13 
+1 Adder Output : 14 
+2 Adder Output : 15 
+3 Adder Output : 16 
+4 Adder Output : 17 
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/home/sten/vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/sten/vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_adder_top glbl -prj adder.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /home/sten/vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s adder -debug wave 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/adder.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_adder_top
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.apatb_adder_top
+Compiling module work.glbl
+Built simulation snapshot adder
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/xsim.dir/adder/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Aug 31 19:12:55 2026...
+
+****** xsim v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+start_gui
+java.lang.reflect.InvocationTargetException
+	at java.desktop/java.awt.EventQueue.invokeAndWait(Unknown Source)
+	at java.desktop/java.awt.EventQueue.invokeAndWait(Unknown Source)
+	at java.desktop/javax.swing.SwingUtilities.invokeAndWait(Unknown Source)
+	at ui.PlanAhead.i(SourceFile:1525)
+	at ui.PlanAhead.ev(SourceFile:613)
+	at ui.PlanAhead.eC(SourceFile:944)
+	at ui.PlanAhead.a(SourceFile:1631)
+	at ui.frmwork.b.l.d(SourceFile:42)
+	at ui.frmwork.HTclEventBroker.i(SourceFile:256)
+	at ui.frmwork.HTclEventBroker.fireTclEvent(SourceFile:351)
+Caused by: java.lang.IllegalArgumentException: Window must not be zero
+	at java.desktop/sun.awt.X11.XAtom.checkWindow(Unknown Source)
+	at java.desktop/sun.awt.X11.XAtom.getAtomData(Unknown Source)
+	at java.desktop/sun.awt.X11.XToolkit.getWorkArea(Unknown Source)
+	at java.desktop/sun.awt.X11.XToolkit.getInsets(Unknown Source)
+	at java.desktop/sun.awt.X11.XToolkit.getScreenInsets(Unknown Source)
+	at java.desktop/sun.java2d.SunGraphicsEnvironment.getUsableBounds(Unknown Source)
+	at java.desktop/sun.awt.X11GraphicsEnvironment.getXineramaWindowBounds(Unknown Source)
+	at java.desktop/sun.awt.X11GraphicsEnvironment.getMaximumWindowBounds(Unknown Source)
+	at com.jidesoft.utils.PortingUtils.getLocalScreenBounds(Unknown Source)
+	at com.jidesoft.utils.PortingUtils.ensureVisible(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.m(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.f(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.resetToDefault(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.a(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.loadLayoutFrom(Unknown Source)
+	at com.jidesoft.swing.AbstractLayoutPersistence.loadLayoutDataFrom(Unknown Source)
+	at com.jidesoft.swing.AbstractLayoutPersistence.loadLayoutData(Unknown Source)
+	at ui.q.ai(SourceFile:145)
+	at ui.bm.bM(SourceFile:901)
+	at ui.bm.<init>(SourceFile:152)
+	at ui.dc.d(SourceFile:1417)
+	at ui.dc.run(SourceFile:1380)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue.access$500(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at ui.frmwork.b.d.dispatchEvent(SourceFile:88)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Failed to open 'Vivado application'. Please check your system resources and launch again.
+0 Adder Output : 13 
+1 Adder Output : 14 
+2 Adder Output : 15 
+3 Adder Output : 16 
+4 Adder Output : 17 
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/home/sten/vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/sten/vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_adder_top glbl -prj adder.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /home/sten/vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s adder -debug wave 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/adder.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_adder_top
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.apatb_adder_top
+Compiling module work.glbl
+Built simulation snapshot adder
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/xsim.dir/adder/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Aug 31 20:00:18 2026...
+
+****** xsim v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+start_gui
+java.lang.reflect.InvocationTargetException
+	at java.desktop/java.awt.EventQueue.invokeAndWait(Unknown Source)
+	at java.desktop/java.awt.EventQueue.invokeAndWait(Unknown Source)
+	at java.desktop/javax.swing.SwingUtilities.invokeAndWait(Unknown Source)
+	at ui.PlanAhead.i(SourceFile:1525)
+	at ui.PlanAhead.ev(SourceFile:613)
+	at ui.PlanAhead.eC(SourceFile:944)
+	at ui.PlanAhead.a(SourceFile:1631)
+	at ui.frmwork.b.l.d(SourceFile:42)
+	at ui.frmwork.HTclEventBroker.i(SourceFile:256)
+	at ui.frmwork.HTclEventBroker.fireTclEvent(SourceFile:351)
+Caused by: java.lang.IllegalArgumentException: Window must not be zero
+	at java.desktop/sun.awt.X11.XAtom.checkWindow(Unknown Source)
+	at java.desktop/sun.awt.X11.XAtom.getAtomData(Unknown Source)
+	at java.desktop/sun.awt.X11.XToolkit.getWorkArea(Unknown Source)
+	at java.desktop/sun.awt.X11.XToolkit.getInsets(Unknown Source)
+	at java.desktop/sun.awt.X11.XToolkit.getScreenInsets(Unknown Source)
+	at java.desktop/sun.java2d.SunGraphicsEnvironment.getUsableBounds(Unknown Source)
+	at java.desktop/sun.awt.X11GraphicsEnvironment.getXineramaWindowBounds(Unknown Source)
+	at java.desktop/sun.awt.X11GraphicsEnvironment.getMaximumWindowBounds(Unknown Source)
+	at com.jidesoft.utils.PortingUtils.getLocalScreenBounds(Unknown Source)
+	at com.jidesoft.utils.PortingUtils.ensureVisible(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.m(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.f(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.resetToDefault(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.a(Unknown Source)
+	at com.jidesoft.action.DefaultDockableBarManager.loadLayoutFrom(Unknown Source)
+	at com.jidesoft.swing.AbstractLayoutPersistence.loadLayoutDataFrom(Unknown Source)
+	at com.jidesoft.swing.AbstractLayoutPersistence.loadLayoutData(Unknown Source)
+	at ui.q.ai(SourceFile:145)
+	at ui.bm.bM(SourceFile:901)
+	at ui.bm.<init>(SourceFile:152)
+	at ui.dc.d(SourceFile:1417)
+	at ui.dc.run(SourceFile:1380)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue.access$500(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$3.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at ui.frmwork.b.d.dispatchEvent(SourceFile:88)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Failed to open 'Vivado application'. Please check your system resources and launch again.
+0 Adder Output : 13 
+1 Adder Output : 14 
+2 Adder Output : 15 
+3 Adder Output : 16 
+4 Adder Output : 17 
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/home/sten/vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/sten/vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_adder_top glbl -prj adder.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /home/sten/vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s adder -debug wave 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/adder.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_adder_top
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.adder
+Compiling module xil_defaultlib.apatb_adder_top
+Compiling module work.glbl
+Built simulation snapshot adder
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/sim/verilog/xsim.dir/adder/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Aug 31 20:07:08 2026...
+
+****** xsim v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+start_gui
+INFO: [Common 17-206] Exiting xsim at Mon Aug 31 20:11:58 2026...
 0 Adder Output : 13 
 1 Adder Output : 14 
 2 Adder Output : 15 

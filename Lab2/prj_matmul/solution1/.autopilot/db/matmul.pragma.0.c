@@ -1,5 +1,5 @@
-# 1 "../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c"
-# 1 "../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c" 1
+# 1 "prj_matmul/matmul.c"
+# 1 "prj_matmul/matmul.c" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 149 "<built-in>" 3
@@ -135,7 +135,7 @@
     void _ssdm_op_SpecLicense() __attribute__ ((nothrow));
 # 7 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c" 2
+# 1 "prj_matmul/matmul.c" 2
 # 1 "/usr/include/stdio.h" 1 3 4
 # 28 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/bits/libc-header-start.h" 1 3 4
@@ -969,7 +969,7 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ )) __attrib
 # 953 "/usr/include/stdio.h" 3 4
 extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
-# 2 "../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c" 2
+# 2 "prj_matmul/matmul.c" 2
 
 
 

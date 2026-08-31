@@ -1,0 +1,7 @@
+INFO: [HLS 200-10] Running '/home/sten/vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'sten' on host 'home' (Linux_x86_64 version 7.1.8-arch1-3) on Mon Aug 31 20:29:22 CEST 2026
+INFO: [HLS 200-10] In directory '/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_sten/1374511788200962929528
+INFO: [APCC 202-1] APCC is done.

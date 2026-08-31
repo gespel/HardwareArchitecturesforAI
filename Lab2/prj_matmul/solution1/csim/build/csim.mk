@@ -18,7 +18,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul_tb.c ../../../../../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c
+HLS_SOURCES = ../../../matmul_tb.c ../../../matmul.c
 
 TARGET := csim.exe
 
@@ -72,14 +72,14 @@ all: $(TARGET)
 
 AUTOCC := apcc  
 
-$(ObjDir)/matmul_tb.o: ../../../../../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul_tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../../../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul_tb.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/matmul_tb.o: ../../../matmul_tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../matmul_tb.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/matmul_tb.d
 
-$(ObjDir)/matmul.o: ../../../../../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../../../../../Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/matmul.o: ../../../matmul.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../matmul.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/matmul.d

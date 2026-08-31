@@ -29,42 +29,42 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/home/sten/vivado/Vivado/2019.1/prj_matmul/.apc/.src</location>
+			<location>/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>/home/sten/vivado/Vivado/2019.1/prj_matmul/.apc/.tb</location>
+			<location>/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>/home/sten/vivado/Vivado/2019.1/prj_matmul/solution1/.tcls</location>
+			<location>/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/.tcls</location>
 		</link>
 		<link>
 			<name>source/matmul.c</name>
 			<type>1</type>
-			<location>/home/sten/Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul.c</location>
+			<location>/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/matmul.c</location>
 		</link>
 		<link>
 			<name>testbench/matmul_tb.c</name>
 			<type>1</type>
-			<location>/home/sten/Downloads/HAAI_lab2_source(1)/code/mat_mul/matmul_tb.c</location>
+			<location>/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/matmul_tb.c</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>/home/sten/vivado/Vivado/2019.1/prj_matmul/solution1/solution1.directive</location>
+			<location>/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>/home/sten/vivado/Vivado/2019.1/prj_matmul/solution1/directives.tcl</location>
+			<location>/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>/home/sten/vivado/Vivado/2019.1/prj_matmul/solution1/script.tcl</location>
+			<location>/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

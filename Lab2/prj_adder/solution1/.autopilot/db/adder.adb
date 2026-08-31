@@ -104,7 +104,7 @@
               <type>0</type>
               <id>9</id>
               <name>c_read</name>
-              <fileName>../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp</fileName>
+              <fileName>prj_adder/adder.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>49</lineNumber>
               <contextFuncName>adder</contextFuncName>
@@ -112,13 +112,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
                     <item class_id="12" tracking_level="0" version="0">
                       <first class_id="13" tracking_level="0" version="0">
-                        <first>../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp</first>
+                        <first>prj_adder/adder.cpp</first>
                         <second>adder</second>
                       </first>
                       <second>49</second>
@@ -153,7 +153,7 @@
               <type>0</type>
               <id>10</id>
               <name>b_read</name>
-              <fileName>../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp</fileName>
+              <fileName>prj_adder/adder.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>49</lineNumber>
               <contextFuncName>adder</contextFuncName>
@@ -161,13 +161,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp</first>
+                        <first>prj_adder/adder.cpp</first>
                         <second>adder</second>
                       </first>
                       <second>49</second>
@@ -202,7 +202,7 @@
               <type>0</type>
               <id>11</id>
               <name>a_read</name>
-              <fileName>../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp</fileName>
+              <fileName>prj_adder/adder.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>49</lineNumber>
               <contextFuncName>adder</contextFuncName>
@@ -210,13 +210,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp</first>
+                        <first>prj_adder/adder.cpp</first>
                         <second>adder</second>
                       </first>
                       <second>49</second>
@@ -251,7 +251,7 @@
               <type>0</type>
               <id>12</id>
               <name>add_ln51</name>
-              <fileName>../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp</fileName>
+              <fileName>prj_adder/adder.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>51</lineNumber>
               <contextFuncName>adder</contextFuncName>
@@ -259,13 +259,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp</first>
+                        <first>prj_adder/adder.cpp</first>
                         <second>adder</second>
                       </first>
                       <second>51</second>
@@ -300,7 +300,7 @@
               <type>0</type>
               <id>13</id>
               <name>add_ln51_1</name>
-              <fileName>../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp</fileName>
+              <fileName>prj_adder/adder.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>51</lineNumber>
               <contextFuncName>adder</contextFuncName>
@@ -308,13 +308,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp</first>
+                        <first>prj_adder/adder.cpp</first>
                         <second>adder</second>
                       </first>
                       <second>51</second>
@@ -349,7 +349,7 @@
               <type>0</type>
               <id>14</id>
               <name>_ln51</name>
-              <fileName>../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp</fileName>
+              <fileName>prj_adder/adder.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>51</lineNumber>
               <contextFuncName>adder</contextFuncName>
@@ -357,13 +357,13 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab2</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp</first>
+                        <first>prj_adder/adder.cpp</first>
                         <second>adder</second>
                       </first>
                       <second>51</second>

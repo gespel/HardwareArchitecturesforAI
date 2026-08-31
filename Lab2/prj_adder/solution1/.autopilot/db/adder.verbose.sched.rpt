@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'adder'
 ================================================================
-* Date:           Fri May  8 10:54:57 2026
+* Date:           Mon Aug 31 19:00:22 2026
 
 * Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
 * Project:        prj_adder
@@ -80,12 +80,12 @@ ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsM
 ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %c) nounwind, !map !17"   --->   Operation 4 'specbitsmap' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !21"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([6 x i8]* @adder_str) nounwind"   --->   Operation 6 'spectopmodule' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%c_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %c) nounwind" [../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp:49]   --->   Operation 7 'read' 'c_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%b_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %b) nounwind" [../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp:49]   --->   Operation 8 'read' 'b_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%a_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %a) nounwind" [../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp:49]   --->   Operation 9 'read' 'a_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln51 = add i32 %a_read, %c_read" [../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp:51]   --->   Operation 10 'add' 'add_ln51' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.44> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_1 : Operation 11 [1/1] (0.88ns) (root node of TernaryAdder)   --->   "%add_ln51_1 = add i32 %add_ln51, %b_read" [../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp:51]   --->   Operation 11 'add' 'add_ln51_1' <Predicate = true> <Delay = 0.88> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.44> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "ret i32 %add_ln51_1" [../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp:51]   --->   Operation 12 'ret' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%c_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %c) nounwind" [prj_adder/adder.cpp:49]   --->   Operation 7 'read' 'c_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%b_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %b) nounwind" [prj_adder/adder.cpp:49]   --->   Operation 8 'read' 'b_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%a_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %a) nounwind" [prj_adder/adder.cpp:49]   --->   Operation 9 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln51 = add i32 %a_read, %c_read" [prj_adder/adder.cpp:51]   --->   Operation 10 'add' 'add_ln51' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.44> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 11 [1/1] (0.88ns) (root node of TernaryAdder)   --->   "%add_ln51_1 = add i32 %add_ln51, %b_read" [prj_adder/adder.cpp:51]   --->   Operation 11 'add' 'add_ln51_1' <Predicate = true> <Delay = 0.88> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.44> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "ret i32 %add_ln51_1" [prj_adder/adder.cpp:51]   --->   Operation 12 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -95,9 +95,9 @@ Target clock period: 10ns, clock uncertainty: 1.25ns.
 
  <State 1>: 0.889ns
 The critical path consists of the following:
-	wire read on port 'c' (../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp:49) [9]  (0 ns)
-	'add' operation ('add_ln51', ../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp:51) [12]  (0 ns)
-	'add' operation ('add_ln51_1', ../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp:51) [13]  (0.889 ns)
+	wire read on port 'c' (prj_adder/adder.cpp:49) [9]  (0 ns)
+	'add' operation ('add_ln51', prj_adder/adder.cpp:51) [12]  (0 ns)
+	'add' operation ('add_ln51_1', prj_adder/adder.cpp:51) [13]  (0.889 ns)
 
 
 ============================================================

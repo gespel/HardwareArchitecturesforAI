@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_matmul/solution1/./sim/autowrap/testbench/matmul.c_pre.c.tb.c

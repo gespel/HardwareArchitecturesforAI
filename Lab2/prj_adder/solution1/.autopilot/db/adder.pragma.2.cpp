@@ -1,5 +1,5 @@
-# 1 "../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp"
-# 1 "../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp" 1
+# 1 "prj_adder/adder.cpp"
+# 1 "prj_adder/adder.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -149,12 +149,12 @@ extern "C" {
 }
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp" 2
-# 46 "../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp"
-# 1 "../../../Downloads/HAAI_lab2_source/code/adder/adder.h" 1
-# 50 "../../../Downloads/HAAI_lab2_source/code/adder/adder.h"
+# 1 "prj_adder/adder.cpp" 2
+# 46 "prj_adder/adder.cpp"
+# 1 "prj_adder/adder.h" 1
+# 50 "prj_adder/adder.h"
 int adder(int a, int b, int c);
-# 47 "../../../Downloads/HAAI_lab2_source/code/adder/adder.cpp" 2
+# 47 "prj_adder/adder.cpp" 2
 
 
 int adder(int a, int b, int c) {
