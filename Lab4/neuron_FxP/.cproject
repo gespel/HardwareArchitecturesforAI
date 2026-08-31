@@ -53,8 +53,6 @@
                                     									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/lnx64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include/ap_sysc"/>
@@ -62,6 +60,10 @@
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/lnx64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/sten/Uni/HardwareArchitecturesforAI/Lab4"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1"/>
                                     								
                                 </option>
                                 								
@@ -89,8 +91,6 @@
                                     									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/lnx64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include/ap_sysc"/>
@@ -98,6 +98,10 @@
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/lnx64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/sten/Uni/HardwareArchitecturesforAI/Lab4"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1"/>
                                     								
                                 </option>
                                 								
@@ -160,6 +164,36 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1648992878.1161081782" name="neuron_tb.cpp" rcbsApplicability="disable" resourcePath="testbench/neuron_tb.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1923945861.846083594">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1923945861.846083594" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1923945861">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.1941660388" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option id="gnu.cpp.compiler.option.include.paths.1226572272" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/lnx64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/lnx64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/sten/Uni/HardwareArchitecturesforAI/Lab4"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.669809902" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1977840883" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
                     					
                     <sourceEntries>
                         						
@@ -225,8 +259,6 @@
                                     									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/lnx64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include/ap_sysc"/>
@@ -234,6 +266,10 @@
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/lnx64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/sten/Uni/HardwareArchitecturesforAI/Lab4"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1"/>
                                     								
                                 </option>
                                 								
@@ -251,8 +287,6 @@
                                     									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/lnx64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include/ap_sysc"/>
@@ -260,6 +294,10 @@
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/lnx64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/sten/Uni/HardwareArchitecturesforAI/Lab4"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1"/>
                                     								
                                 </option>
                                 								
@@ -312,6 +350,36 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.23340188.436950392" name="neuron_tb.cpp" rcbsApplicability="disable" resourcePath="testbench/neuron_tb.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.600060331.1830544932">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.600060331.1830544932" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.600060331">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.1936690220" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option id="gnu.cpp.compiler.option.include.paths.552741813" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/lnx64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/sten/vivado/Vivado/2019.1/lnx64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/sten/Uni/HardwareArchitecturesforAI/Lab4"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.1308184178" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.504061857" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
                     					
                     <sourceEntries>
                         						

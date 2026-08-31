@@ -105,14 +105,14 @@
 						<id>9</id>
 						<name>b_fxp_V_read</name>
 						<fileName>neuron_FxP/neuron.cpp</fileName>
-						<fileDirectory>/home/sten/vivado/Vivado/2019.1</fileDirectory>
+						<fileDirectory>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</fileDirectory>
 						<lineNumber>53</lineNumber>
 						<contextFuncName>neuron</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="10" tracking_level="0" version="0">
-								<first>/home/sten/vivado/Vivado/2019.1</first>
+								<first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
 								<second class_id="11" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -154,14 +154,14 @@
 						<id>10</id>
 						<name>x_fxp_V_read</name>
 						<fileName>neuron_FxP/neuron.cpp</fileName>
-						<fileDirectory>/home/sten/vivado/Vivado/2019.1</fileDirectory>
+						<fileDirectory>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</fileDirectory>
 						<lineNumber>53</lineNumber>
 						<contextFuncName>neuron</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/sten/vivado/Vivado/2019.1</first>
+								<first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -203,14 +203,14 @@
 						<id>11</id>
 						<name>w_fxp_V_read</name>
 						<fileName>neuron_FxP/neuron.cpp</fileName>
-						<fileDirectory>/home/sten/vivado/Vivado/2019.1</fileDirectory>
+						<fileDirectory>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</fileDirectory>
 						<lineNumber>53</lineNumber>
 						<contextFuncName>neuron</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/sten/vivado/Vivado/2019.1</first>
+								<first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -252,14 +252,14 @@
 						<id>12</id>
 						<name>sext_ln700</name>
 						<fileName>neuron_FxP/neuron.cpp</fileName>
-						<fileDirectory>/home/sten/vivado/Vivado/2019.1</fileDirectory>
+						<fileDirectory>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</fileDirectory>
 						<lineNumber>53</lineNumber>
 						<contextFuncName>neuron</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/sten/vivado/Vivado/2019.1</first>
+								<first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -300,14 +300,14 @@
 						<id>13</id>
 						<name>sext_ln700_1</name>
 						<fileName>neuron_FxP/neuron.cpp</fileName>
-						<fileDirectory>/home/sten/vivado/Vivado/2019.1</fileDirectory>
+						<fileDirectory>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</fileDirectory>
 						<lineNumber>53</lineNumber>
 						<contextFuncName>neuron</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/sten/vivado/Vivado/2019.1</first>
+								<first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -348,14 +348,14 @@
 						<id>14</id>
 						<name>mul_ln700</name>
 						<fileName>neuron_FxP/neuron.cpp</fileName>
-						<fileDirectory>/home/sten/vivado/Vivado/2019.1</fileDirectory>
+						<fileDirectory>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</fileDirectory>
 						<lineNumber>53</lineNumber>
 						<contextFuncName>neuron</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/sten/vivado/Vivado/2019.1</first>
+								<first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -397,14 +397,14 @@
 						<id>15</id>
 						<name>rhs_V</name>
 						<fileName>neuron_FxP/neuron.cpp</fileName>
-						<fileDirectory>/home/sten/vivado/Vivado/2019.1</fileDirectory>
+						<fileDirectory>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</fileDirectory>
 						<lineNumber>53</lineNumber>
 						<contextFuncName>neuron</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/sten/vivado/Vivado/2019.1</first>
+								<first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -447,14 +447,14 @@
 						<id>16</id>
 						<name>ret_V</name>
 						<fileName>neuron_FxP/neuron.cpp</fileName>
-						<fileDirectory>/home/sten/vivado/Vivado/2019.1</fileDirectory>
+						<fileDirectory>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</fileDirectory>
 						<lineNumber>53</lineNumber>
 						<contextFuncName>neuron</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/sten/vivado/Vivado/2019.1</first>
+								<first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -496,14 +496,14 @@
 						<id>17</id>
 						<name>out_V</name>
 						<fileName>neuron_FxP/neuron.cpp</fileName>
-						<fileDirectory>/home/sten/vivado/Vivado/2019.1</fileDirectory>
+						<fileDirectory>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</fileDirectory>
 						<lineNumber>53</lineNumber>
 						<contextFuncName>neuron</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/sten/vivado/Vivado/2019.1</first>
+								<first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -547,14 +547,14 @@
 						<id>18</id>
 						<name>_ln55</name>
 						<fileName>neuron_FxP/neuron.cpp</fileName>
-						<fileDirectory>/home/sten/vivado/Vivado/2019.1</fileDirectory>
+						<fileDirectory>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</fileDirectory>
 						<lineNumber>55</lineNumber>
 						<contextFuncName>neuron</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>/home/sten/vivado/Vivado/2019.1</first>
+								<first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>

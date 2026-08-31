@@ -42,7 +42,7 @@ set SCTraceOption all
 set TargetInfo xczu3eg:-sbva484:-1-i
 set SourceFiles {sc {} c ../neuron.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /home/sten/vivado/Vivado/2019.1/neuron_FxP/solution1/solution1.directive
+set DirectiveFile /home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FxP/solution1/solution1.directive
 set TBFiles {verilog ../neuron_tb.cpp bc ../neuron_tb.cpp vhdl ../neuron_tb.cpp sc ../neuron_tb.cpp cas ../neuron_tb.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

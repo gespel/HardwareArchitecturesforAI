@@ -1,4 +1,7 @@
-Running: xsim.dir/neuron/xsimk -simmode gui -wdb neuron.wdb -simrunnum 0 -socket 35049
+Running: xsim.dir/neuron/xsimk -simmode gui -wdb neuron.wdb -simrunnum 0 -socket 57411
 Design successfully loaded
-Design Loading Memory Usage: 32756 KB (Peak: 33460 KB)
-Design Loading CPU Usage: 20 ms
+Design Loading Memory Usage: 33024 KB (Peak: 33488 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 127316 KB (Peak: 172292 KB)
+Simulation CPU Usage: 10 ms

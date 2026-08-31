@@ -41,4 +41,5 @@ set tb_w_fxp_group [add_wave_group w_fxp(wire) -into $tbcinputgroup]
 add_wave /apatb_neuron_top/w_fxp_V -into $tb_w_fxp_group -radix hex
 save_wave_config neuron.wcfg
 run all
+quit
 

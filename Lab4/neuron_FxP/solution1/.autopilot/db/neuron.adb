@@ -112,7 +112,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="10" tracking_level="0" version="0">
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
                   <second class_id="11" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -161,7 +161,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -210,7 +210,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -259,7 +259,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -307,7 +307,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -355,7 +355,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -404,7 +404,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -454,7 +454,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -503,7 +503,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -554,7 +554,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/sten/vivado/Vivado/2019.1</first>
+                  <first>/home/sten/Uni/HardwareArchitecturesforAI/Lab4</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
