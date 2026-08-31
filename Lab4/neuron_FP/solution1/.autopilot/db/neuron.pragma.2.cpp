@@ -1,5 +1,5 @@
-# 1 "../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp"
-# 1 "../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp" 1
+# 1 "neuron_FP/neuron.cpp"
+# 1 "neuron_FP/neuron.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 155 "<built-in>" 3
@@ -149,10 +149,10 @@ extern "C" {
 }
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp" 2
-# 46 "../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp"
-# 1 "../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.h" 1
-# 49 "../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.h"
+# 1 "neuron_FP/neuron.cpp" 2
+# 46 "neuron_FP/neuron.cpp"
+# 1 "neuron_FP/neuron.h" 1
+# 49 "neuron_FP/neuron.h"
 # 1 "/home/sten/vivado/Vivado/2019.1/common/technology/autopilot/ap_int.h" 1
 # 54 "/home/sten/vivado/Vivado/2019.1/common/technology/autopilot/ap_int.h"
 # 1 "/home/sten/vivado/Vivado/2019.1/common/technology/autopilot/ap_common.h" 1
@@ -6360,11 +6360,11 @@ inline bool operator!=(
 }
 # 399 "/home/sten/vivado/Vivado/2019.1/common/technology/autopilot/ap_fixed.h" 2
 # 368 "/home/sten/vivado/Vivado/2019.1/common/technology/autopilot/ap_int.h" 2
-# 50 "../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.h" 2
+# 50 "neuron_FP/neuron.h" 2
 
 
 float neuron(float w, float x, float b);
-# 47 "../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp" 2
+# 47 "neuron_FP/neuron.cpp" 2
 
 float neuron(float w, float x, float b) {
  float out = w * x + b;

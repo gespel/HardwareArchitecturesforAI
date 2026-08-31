@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'neuron'
 ================================================================
-* Date:           Fri Jun  5 11:12:02 2026
+* Date:           Mon Aug 31 20:49:04 2026
 
 * Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
 * Project:        neuron_FP
@@ -81,25 +81,25 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 8.28>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%x_read = call float @_ssdm_op_Read.ap_auto.float(float %x) nounwind" [../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp:48]   --->   Operation 8 'read' 'x_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%w_read = call float @_ssdm_op_Read.ap_auto.float(float %w) nounwind" [../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp:48]   --->   Operation 9 'read' 'w_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [3/3] (8.28ns)   --->   "%tmp = fmul float %w_read, %x_read" [../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp:49]   --->   Operation 10 'fmul' 'tmp' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%x_read = call float @_ssdm_op_Read.ap_auto.float(float %x) nounwind" [neuron_FP/neuron.cpp:48]   --->   Operation 8 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%w_read = call float @_ssdm_op_Read.ap_auto.float(float %w) nounwind" [neuron_FP/neuron.cpp:48]   --->   Operation 9 'read' 'w_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [3/3] (8.28ns)   --->   "%tmp = fmul float %w_read, %x_read" [neuron_FP/neuron.cpp:49]   --->   Operation 10 'fmul' 'tmp' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 2 <SV = 1> <Delay = 8.28>
-ST_2 : Operation 11 [2/3] (8.28ns)   --->   "%tmp = fmul float %w_read, %x_read" [../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp:49]   --->   Operation 11 'fmul' 'tmp' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [2/3] (8.28ns)   --->   "%tmp = fmul float %w_read, %x_read" [neuron_FP/neuron.cpp:49]   --->   Operation 11 'fmul' 'tmp' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 3 <SV = 2> <Delay = 8.28>
-ST_3 : Operation 12 [1/3] (8.28ns)   --->   "%tmp = fmul float %w_read, %x_read" [../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp:49]   --->   Operation 12 'fmul' 'tmp' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 12 [1/3] (8.28ns)   --->   "%tmp = fmul float %w_read, %x_read" [neuron_FP/neuron.cpp:49]   --->   Operation 12 'fmul' 'tmp' <Predicate = true> <Delay = 8.28> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 2> <II = 1> <Delay = 8.28> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 4 <SV = 3> <Delay = 7.71>
-ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%b_read = call float @_ssdm_op_Read.ap_auto.float(float %b) nounwind" [../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp:48]   --->   Operation 13 'read' 'b_read' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 14 [4/4] (7.71ns)   --->   "%out = fadd float %tmp, %b_read" [../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp:49]   --->   Operation 14 'fadd' 'out' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%b_read = call float @_ssdm_op_Read.ap_auto.float(float %b) nounwind" [neuron_FP/neuron.cpp:48]   --->   Operation 13 'read' 'b_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [4/4] (7.71ns)   --->   "%out = fadd float %tmp, %b_read" [neuron_FP/neuron.cpp:49]   --->   Operation 14 'fadd' 'out' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 5 <SV = 4> <Delay = 7.71>
-ST_5 : Operation 15 [3/4] (7.71ns)   --->   "%out = fadd float %tmp, %b_read" [../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp:49]   --->   Operation 15 'fadd' 'out' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 15 [3/4] (7.71ns)   --->   "%out = fadd float %tmp, %b_read" [neuron_FP/neuron.cpp:49]   --->   Operation 15 'fadd' 'out' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 6 <SV = 5> <Delay = 7.71>
-ST_6 : Operation 16 [2/4] (7.71ns)   --->   "%out = fadd float %tmp, %b_read" [../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp:49]   --->   Operation 16 'fadd' 'out' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 16 [2/4] (7.71ns)   --->   "%out = fadd float %tmp, %b_read" [neuron_FP/neuron.cpp:49]   --->   Operation 16 'fadd' 'out' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 7 <SV = 6> <Delay = 7.71>
 ST_7 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float %w) nounwind, !map !7"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
@@ -107,8 +107,8 @@ ST_7 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBits
 ST_7 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float %b) nounwind, !map !17"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float 0.000000e+00) nounwind, !map !21"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @neuron_str) nounwind"   --->   Operation 21 'spectopmodule' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 22 [1/4] (7.71ns)   --->   "%out = fadd float %tmp, %b_read" [../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp:49]   --->   Operation 22 'fadd' 'out' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 23 [1/1] (0.00ns)   --->   "ret float %out" [../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp:51]   --->   Operation 23 'ret' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 22 [1/4] (7.71ns)   --->   "%out = fadd float %tmp, %b_read" [neuron_FP/neuron.cpp:49]   --->   Operation 22 'fadd' 'out' <Predicate = true> <Delay = 7.71> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 7.71> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 23 [1/1] (0.00ns)   --->   "ret float %out" [neuron_FP/neuron.cpp:51]   --->   Operation 23 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================

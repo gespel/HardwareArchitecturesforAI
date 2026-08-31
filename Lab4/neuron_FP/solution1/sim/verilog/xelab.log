@@ -4,19 +4,19 @@ Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: /home/sten/vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_neuron_top glbl -prj neuron.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /home/sten/vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s neuron -debug wave 
 Multi-threading is on. Using 6 slave threads.
 Determining compilation order of HDL files.
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/vivado/Vivado/2019.1/neuron_FP/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/vivado/Vivado/2019.1/neuron_FP/solution1/sim/verilog/neuron_fadd_32ns_32ns_32_4_full_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/sim/verilog/neuron_fadd_32ns_32ns_32_4_full_dsp_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module neuron_fadd_32ns_32ns_32_4_full_dsp_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/vivado/Vivado/2019.1/neuron_FP/solution1/sim/verilog/neuron_fmul_32ns_32ns_32_3_max_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/sim/verilog/neuron_fmul_32ns_32ns_32_3_max_dsp_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module neuron_fmul_32ns_32ns_32_3_max_dsp_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/vivado/Vivado/2019.1/neuron_FP/solution1/sim/verilog/neuron.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/sim/verilog/neuron.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module neuron
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/vivado/Vivado/2019.1/neuron_FP/solution1/sim/verilog/neuron.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/sim/verilog/neuron.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_neuron_top
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/sten/vivado/Vivado/2019.1/neuron_FP/solution1/sim/verilog/ip/xil_defaultlib/neuron_ap_fmul_1_max_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/sim/verilog/ip/xil_defaultlib/neuron_ap_fmul_1_max_dsp_32.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'neuron_ap_fmul_1_max_dsp_32'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/sten/vivado/Vivado/2019.1/neuron_FP/solution1/sim/verilog/ip/xil_defaultlib/neuron_ap_fadd_2_full_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/sim/verilog/ip/xil_defaultlib/neuron_ap_fadd_2_full_dsp_32.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'neuron_ap_fadd_2_full_dsp_32'
 Starting static elaboration
 WARNING: [VRFC 10-3499] library name 'floating_point_v7_1_8' of instantiated unit conflicts with visible identifier [ip/xil_defaultlib/neuron_ap_fadd_2_full_dsp_32.vhd:201]

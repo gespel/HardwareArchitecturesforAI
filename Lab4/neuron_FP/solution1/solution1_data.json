@@ -67,7 +67,7 @@
     "AutoFamilySupport": ""
   },
   "Files": {
-    "CSource": ["..\/..\/..\/..\/..\/Downloads\/HAAI_lab4_source\/source\/neuron_FP\/neuron.cpp"],
+    "CSource": ["..\/neuron.cpp"],
     "Vhdl": [
       "impl\/vhdl\/neuron_fadd_32ns_32ns_32_4_full_dsp_1.vhd",
       "impl\/vhdl\/neuron_fmul_32ns_32ns_32_3_max_dsp_1.vhd",
@@ -83,9 +83,9 @@
       "impl\/misc\/neuron_ap_fadd_2_full_dsp_32_ip.tcl",
       "impl\/misc\/neuron_ap_fmul_1_max_dsp_32_ip.tcl"
     ],
-    "DesignXml": "\/home\/sten\/vivado\/Vivado\/2019.1\/neuron_FP\/solution1\/.autopilot\/db\/neuron.design.xml",
-    "DebugDir": "\/home\/sten\/vivado\/Vivado\/2019.1\/neuron_FP\/solution1\/.debug",
-    "ProtoInst": ["\/home\/sten\/vivado\/Vivado\/2019.1\/neuron_FP\/solution1\/.debug\/neuron.protoinst"]
+    "DesignXml": "\/home\/sten\/Uni\/HardwareArchitecturesforAI\/Lab4\/neuron_FP\/solution1\/.autopilot\/db\/neuron.design.xml",
+    "DebugDir": "\/home\/sten\/Uni\/HardwareArchitecturesforAI\/Lab4\/neuron_FP\/solution1\/.debug",
+    "ProtoInst": ["\/home\/sten\/Uni\/HardwareArchitecturesforAI\/Lab4\/neuron_FP\/solution1\/.debug\/neuron.protoinst"]
   },
   "SubcoreInfo": {
     "HasXpmMemory": false,
@@ -257,7 +257,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2026-06-05 11:12:02 CEST",
+    "Time": "2026-08-31 20:49:05 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.1"
   }

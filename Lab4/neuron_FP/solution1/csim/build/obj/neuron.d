@@ -1,6 +1,4 @@
-obj/neuron.o: \
- ../../../../../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp \
- ../../../../../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.h \
+obj/neuron.o: ../../../neuron.cpp ../../../neuron.h \
  /home/sten/vivado/Vivado/2019.1/include/ap_int.h \
  /home/sten/vivado/Vivado/2019.1/include/ap_common.h \
  /home/sten/vivado/Vivado/2019.1/include/ap_decl.h \

@@ -40,10 +40,10 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xczu3eg:-sbva484:-1-i
-set SourceFiles {sc {} c ../../../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp}
+set SourceFiles {sc {} c ../neuron.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /home/sten/vivado/Vivado/2019.1/neuron_FP/solution1/solution1.directive
-set TBFiles {verilog ../../../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron_tb.cpp bc ../../../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron_tb.cpp vhdl ../../../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron_tb.cpp sc ../../../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron_tb.cpp cas ../../../../../Downloads/HAAI_lab4_source/source/neuron_FP/neuron_tb.cpp c {}}
+set DirectiveFile /home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/solution1.directive
+set TBFiles {verilog ../neuron_tb.cpp bc ../neuron_tb.cpp vhdl ../neuron_tb.cpp sc ../neuron_tb.cpp cas ../neuron_tb.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

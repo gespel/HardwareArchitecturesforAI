@@ -1,1 +1,1 @@
-set ::AESL_AUTOSIM::gTopFileName /home/sten/vivado/Vivado/2019.1/neuron_FP/solution1/./sim/autowrap/testbench/neuron.cpp_pre.cpp.tb.cpp
+set ::AESL_AUTOSIM::gTopFileName /home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/./sim/autowrap/testbench/neuron.cpp_pre.cpp.tb.cpp

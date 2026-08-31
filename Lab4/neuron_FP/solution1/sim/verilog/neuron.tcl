@@ -43,4 +43,5 @@ set tb_w_group [add_wave_group w(wire) -into $tbcinputgroup]
 add_wave /apatb_neuron_top/w -into $tb_w_group -radix hex
 save_wave_config neuron.wcfg
 run all
+quit
 

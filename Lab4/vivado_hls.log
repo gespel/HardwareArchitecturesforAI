@@ -1,0 +1,45 @@
+INFO: [HLS 200-10] Running '/home/sten/vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'sten' on host 'home' (Linux_x86_64 version 7.1.8-arch1-3) on Mon Aug 31 20:51:38 CEST 2026
+INFO: [HLS 200-10] In directory '/home/sten/Uni/HardwareArchitecturesforAI/Lab4'
+Sourcing Tcl script '/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/export.tcl'
+INFO: [HLS 200-10] Opening project '/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP'.
+INFO: [HLS 200-10] Opening solution '/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sbva484-1-i'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/sten/vivado/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'neuron_ap_fadd_2_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1447.004 ; gain = 42.160 ; free physical = 1900 ; free virtual = 12438
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'neuron_ap_fadd_2_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'neuron_ap_fadd_2_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'neuron_ap_fmul_1_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'neuron_ap_fmul_1_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'neuron_ap_fmul_1_max_dsp_32'...
+bad lexical cast: source type value could not be interpreted as target
+    while executing
+"rdi::set_property core_revision 2608312051 {component component_1}"
+    invoked from within
+"set_property core_revision $Revision $core"
+    (file "run_ippack.tcl" line 801)
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 31 20:51:58 2026...
+ERROR: [IMPL 213-28] Failed to generate IP.
+command 'ap_source' returned error code
+    while executing
+"source /home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/export.tcl"
+    invoked from within
+"hls::main /home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/export.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"

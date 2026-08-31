@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="/home/sten/vivado/Vivado/2019.1/neuron_FP/solution1/.autopilot/db/ip_tmp/prj.xpr">
+<Project Version="7" Minor="40" Path="/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/.autopilot/db/ip_tmp/prj.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="fbcdba93d31d49da985daee4fd5d97e1"/>
+    <Option Name="Id" Val="19e6debcabf346ee91d6fb4835fc89a9"/>
     <Option Name="Part" Val="xczu3eg-sbva484-1-i"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

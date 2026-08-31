@@ -2,27 +2,17 @@
 # xsim v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Jun  5 11:15:15 2026
-# Process ID: 89535
-# Current directory: /home/sten/vivado/Vivado/2019.1/neuron_FP/solution1/sim/verilog
-# Command line: xsim -source {xsim.dir/neuron/xsim_script.tcl}
-# Log file: /home/sten/vivado/Vivado/2019.1/neuron_FP/solution1/sim/verilog/xsim.log
-# Journal file: /home/sten/vivado/Vivado/2019.1/neuron_FP/solution1/sim/verilog/xsim.jou
+# Start of session at: Mon Aug 31 20:50:56 2026
+# Process ID: 152620
+# Current directory: /home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/neuron/xsim_script.tcl}
+# Log file: /home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/sim/verilog/xsim.log
+# Journal file: /home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/sim/verilog/xsim.jou
 #-----------------------------------------------------------
-start_gui
 source xsim.dir/neuron/xsim_script.tcl
-# set_param project.enableReportConfiguration 0
-# load_feature core
-# current_fileset
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/sten/vivado/Vivado/2019.1/data/ip'.
-# xsim {neuron} -view {{neuron_dataflow_ana.wcfg}} -tclbatch {neuron.tcl} -protoinst {neuron.protoinst}
+# xsim {neuron} -autoloadwcfg -tclbatch {neuron.tcl}
 Vivado Simulator 2019.1
-INFO: [Wavedata 42-565] Reading protoinst file neuron.protoinst
-INFO: [Wavedata 42-564]   Found protocol instance at /apatb_neuron_top/AESL_inst_neuron//AESL_inst_neuron_activity
 Time resolution is 1 ps
-open_wave_config neuron_dataflow_ana.wcfg
 source neuron.tcl
 ## log_wave -r /
 WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
@@ -90,8 +80,6 @@ Time: 155 ns  Iteration: 12  Process: /apatb_neuron_top/AESL_inst_neuron/neuron_
 // RTL Simulation : 10 / 11 [100.00%] @ "835000"
 // RTL Simulation : 11 / 11 [100.00%] @ "905000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 945 ns : File "/home/sten/vivado/Vivado/2019.1/neuron_FP/solution1/sim/verilog/neuron.autotb.v" Line 380
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-exit
-INFO: [Common 17-206] Exiting xsim at Fri Jun  5 11:18:20 2026...
+$finish called at time : 945 ns : File "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/solution1/sim/verilog/neuron.autotb.v" Line 380
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Aug 31 20:51:06 2026...

@@ -2,3 +2,6 @@ Running: xsim.dir/matrix_vector_mult/xsimk -simmode gui -wdb matrix_vector_mult.
 Design successfully loaded
 Design Loading Memory Usage: 33156 KB (Peak: 33568 KB)
 Design Loading CPU Usage: 20 ms
+Simulation completed
+Simulation Memory Usage: 123348 KB (Peak: 172424 KB)
+Simulation CPU Usage: 40 ms

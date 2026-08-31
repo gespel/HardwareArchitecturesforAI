@@ -2,15 +2,15 @@
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
-# 1 "/home/sten/Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp"
+# 1 "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/neuron.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/home/sten/Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp"
-# 46 "/home/sten/Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp"
-# 1 "/home/sten/Downloads/HAAI_lab4_source/source/neuron_FP/neuron.h" 1
-# 49 "/home/sten/Downloads/HAAI_lab4_source/source/neuron_FP/neuron.h"
+# 1 "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/neuron.cpp"
+# 46 "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/neuron.cpp"
+# 1 "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/neuron.h" 1
+# 49 "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/neuron.h"
 # 1 "/home/sten/vivado/Vivado/2019.1/include/ap_int.h" 1
 # 54 "/home/sten/vivado/Vivado/2019.1/include/ap_int.h"
 # 1 "/home/sten/vivado/Vivado/2019.1/include/ap_common.h" 1
@@ -118,9 +118,9 @@ enum {
 # 11 "/usr/include/gnu/stubs.h" 2 3 4
 # 565 "/usr/include/features.h" 2 3 4
 # 36 "/usr/include/assert.h" 2 3 4
-# 92 "/usr/include/assert.h" 3 4
+# 91 "/usr/include/assert.h" 3 4
 
-# 92 "/usr/include/assert.h" 3 4
+# 91 "/usr/include/assert.h" 3 4
 extern "C" {
 
 
@@ -138,7 +138,7 @@ extern void __assert_perror_fail (int __errnum, const char *__file,
 
 extern void __assert (const char *__assertion, const char *__file, int __line)
      noexcept (true) __attribute__ ((__noreturn__)) __attribute__ ((__cold__));
-# 118 "/usr/include/assert.h" 3 4
+# 117 "/usr/include/assert.h" 3 4
 }
 # 67 "/home/sten/vivado/Vivado/2019.1/include/ap_common.h" 2
 # 75 "/home/sten/vivado/Vivado/2019.1/include/ap_common.h"
@@ -1824,7 +1824,7 @@ struct __pthread_mutex_s
   int __kind;
 
   short __spins;
-  short __unused;
+  short __glibc_reserved;
   __pthread_list_t __list;
 # 52 "/usr/include/bits/struct_mutex.h" 3 4
 };
@@ -11673,7 +11673,7 @@ namespace __cxx11 {
 # 30 "/usr/include/sched.h" 2 3 4
 # 43 "/usr/include/sched.h" 3 4
 # 1 "/usr/include/bits/sched.h" 1 3 4
-# 63 "/usr/include/bits/sched.h" 3 4
+# 66 "/usr/include/bits/sched.h" 3 4
 # 1 "/usr/include/linux/sched/types.h" 1 3 4
 
 
@@ -11869,15 +11869,15 @@ struct sched_attr {
  __u32 sched_util_max;
 
 };
-# 64 "/usr/include/bits/sched.h" 2 3 4
-# 126 "/usr/include/bits/sched.h" 3 4
+# 67 "/usr/include/bits/sched.h" 2 3 4
+# 129 "/usr/include/bits/sched.h" 3 4
 # 1 "/usr/include/bits/types/struct_sched_param.h" 1 3 4
 # 23 "/usr/include/bits/types/struct_sched_param.h" 3 4
 struct sched_param
 {
   int sched_priority;
 };
-# 127 "/usr/include/bits/sched.h" 2 3 4
+# 130 "/usr/include/bits/sched.h" 2 3 4
 
 extern "C" {
 
@@ -29090,6 +29090,7 @@ extern double compoundn (double __x, long long int __y) noexcept (true); extern 
 extern double pown (double __x, long long int __y) noexcept (true); extern double __pown (double __x, long long int __y) noexcept (true);
 
 
+ extern double powr (double __x, double __y) noexcept (true); extern double __powr (double __x, double __y) noexcept (true);
 extern double powr (double __x, double __y) noexcept (true); extern double __powr (double __x, double __y) noexcept (true);
 
 
@@ -29113,7 +29114,7 @@ extern double floor (double __x) noexcept (true) __attribute__ ((__const__));
 
 
 extern double fmod (double __x, double __y) noexcept (true); extern double __fmod (double __x, double __y) noexcept (true);
-# 237 "/usr/include/bits/mathcalls.h" 3 4
+# 238 "/usr/include/bits/mathcalls.h" 3 4
 extern int finite (double __value) noexcept (true)
   __attribute__ ((__const__));
 
@@ -29135,7 +29136,7 @@ extern double copysign (double __x, double __y) noexcept (true) __attribute__ ((
 
 
 extern double nan (const char *__tagb) noexcept (true); extern double __nan (const char *__tagb) noexcept (true);
-# 274 "/usr/include/bits/mathcalls.h" 3 4
+# 275 "/usr/include/bits/mathcalls.h" 3 4
 extern double j0 (double) noexcept (true); extern double __j0 (double) noexcept (true);
 extern double j1 (double) noexcept (true); extern double __j1 (double) noexcept (true);
 extern double jn (int, double) noexcept (true); extern double __jn (int, double) noexcept (true);
@@ -29528,6 +29529,7 @@ extern float compoundnf (float __x, long long int __y) noexcept (true); extern f
 extern float pownf (float __x, long long int __y) noexcept (true); extern float __pownf (float __x, long long int __y) noexcept (true);
 
 
+ extern float powrf (float __x, float __y) noexcept (true); extern float __powrf (float __x, float __y) noexcept (true);
 extern float powrf (float __x, float __y) noexcept (true); extern float __powrf (float __x, float __y) noexcept (true);
 
 
@@ -29551,7 +29553,7 @@ extern float floorf (float __x) noexcept (true) __attribute__ ((__const__));
 
 
 extern float fmodf (float __x, float __y) noexcept (true); extern float __fmodf (float __x, float __y) noexcept (true);
-# 231 "/usr/include/bits/mathcalls.h" 3 4
+# 232 "/usr/include/bits/mathcalls.h" 3 4
 extern int isinff (float __value) noexcept (true)
   __attribute__ ((__const__));
 
@@ -29579,7 +29581,7 @@ extern float copysignf (float __x, float __y) noexcept (true) __attribute__ ((__
 
 
 extern float nanf (const char *__tagb) noexcept (true); extern float __nanf (const char *__tagb) noexcept (true);
-# 267 "/usr/include/bits/mathcalls.h" 3 4
+# 268 "/usr/include/bits/mathcalls.h" 3 4
 extern int isnanf (float __value) noexcept (true)
   __attribute__ ((__const__));
 
@@ -29979,6 +29981,7 @@ extern long double compoundnl (long double __x, long long int __y) noexcept (tru
 extern long double pownl (long double __x, long long int __y) noexcept (true); extern long double __pownl (long double __x, long long int __y) noexcept (true);
 
 
+ extern long double powrl (long double __x, long double __y) noexcept (true); extern long double __powrl (long double __x, long double __y) noexcept (true);
 extern long double powrl (long double __x, long double __y) noexcept (true); extern long double __powrl (long double __x, long double __y) noexcept (true);
 
 
@@ -30002,7 +30005,7 @@ extern long double floorl (long double __x) noexcept (true) __attribute__ ((__co
 
 
 extern long double fmodl (long double __x, long double __y) noexcept (true); extern long double __fmodl (long double __x, long double __y) noexcept (true);
-# 231 "/usr/include/bits/mathcalls.h" 3 4
+# 232 "/usr/include/bits/mathcalls.h" 3 4
 extern int isinfl (long double __value) noexcept (true)
   __attribute__ ((__const__));
 
@@ -30030,7 +30033,7 @@ extern long double copysignl (long double __x, long double __y) noexcept (true) 
 
 
 extern long double nanl (const char *__tagb) noexcept (true); extern long double __nanl (const char *__tagb) noexcept (true);
-# 267 "/usr/include/bits/mathcalls.h" 3 4
+# 268 "/usr/include/bits/mathcalls.h" 3 4
 extern int isnanl (long double __value) noexcept (true)
   __attribute__ ((__const__));
 
@@ -30401,6 +30404,7 @@ extern _Float32 compoundnf32 (_Float32 __x, long long int __y) noexcept (true); 
 extern _Float32 pownf32 (_Float32 __x, long long int __y) noexcept (true); extern _Float32 __pownf32 (_Float32 __x, long long int __y) noexcept (true);
 
 
+ extern _Float32 powrf32 (_Float32 __x, _Float32 __y) noexcept (true); extern _Float32 __powrf32 (_Float32 __x, _Float32 __y) noexcept (true);
 extern _Float32 powrf32 (_Float32 __x, _Float32 __y) noexcept (true); extern _Float32 __powrf32 (_Float32 __x, _Float32 __y) noexcept (true);
 
 
@@ -30424,14 +30428,14 @@ extern _Float32 floorf32 (_Float32 __x) noexcept (true) __attribute__ ((__const_
 
 
 extern _Float32 fmodf32 (_Float32 __x, _Float32 __y) noexcept (true); extern _Float32 __fmodf32 (_Float32 __x, _Float32 __y) noexcept (true);
-# 252 "/usr/include/bits/mathcalls.h" 3 4
+# 253 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float32 copysignf32 (_Float32 __x, _Float32 __y) noexcept (true) __attribute__ ((__const__));
 
 
 
 
 extern _Float32 nanf32 (const char *__tagb) noexcept (true); extern _Float32 __nanf32 (const char *__tagb) noexcept (true);
-# 274 "/usr/include/bits/mathcalls.h" 3 4
+# 275 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float32 j0f32 (_Float32) noexcept (true); extern _Float32 __j0f32 (_Float32) noexcept (true);
 extern _Float32 j1f32 (_Float32) noexcept (true); extern _Float32 __j1f32 (_Float32) noexcept (true);
 extern _Float32 jnf32 (int, _Float32) noexcept (true); extern _Float32 __jnf32 (int, _Float32) noexcept (true);
@@ -30451,7 +30455,7 @@ extern _Float32 lgammaf32 (_Float32) noexcept (true); extern _Float32 __lgammaf3
 
 
 extern _Float32 tgammaf32 (_Float32) noexcept (true); extern _Float32 __tgammaf32 (_Float32) noexcept (true);
-# 306 "/usr/include/bits/mathcalls.h" 3 4
+# 307 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float32 lgammaf32_r (_Float32, int *__signgamp) noexcept (true); extern _Float32 __lgammaf32_r (_Float32, int *__signgamp) noexcept (true);
 
 
@@ -30775,6 +30779,7 @@ extern _Float64 compoundnf64 (_Float64 __x, long long int __y) noexcept (true); 
 extern _Float64 pownf64 (_Float64 __x, long long int __y) noexcept (true); extern _Float64 __pownf64 (_Float64 __x, long long int __y) noexcept (true);
 
 
+ extern _Float64 powrf64 (_Float64 __x, _Float64 __y) noexcept (true); extern _Float64 __powrf64 (_Float64 __x, _Float64 __y) noexcept (true);
 extern _Float64 powrf64 (_Float64 __x, _Float64 __y) noexcept (true); extern _Float64 __powrf64 (_Float64 __x, _Float64 __y) noexcept (true);
 
 
@@ -30798,14 +30803,14 @@ extern _Float64 floorf64 (_Float64 __x) noexcept (true) __attribute__ ((__const_
 
 
 extern _Float64 fmodf64 (_Float64 __x, _Float64 __y) noexcept (true); extern _Float64 __fmodf64 (_Float64 __x, _Float64 __y) noexcept (true);
-# 252 "/usr/include/bits/mathcalls.h" 3 4
+# 253 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float64 copysignf64 (_Float64 __x, _Float64 __y) noexcept (true) __attribute__ ((__const__));
 
 
 
 
 extern _Float64 nanf64 (const char *__tagb) noexcept (true); extern _Float64 __nanf64 (const char *__tagb) noexcept (true);
-# 274 "/usr/include/bits/mathcalls.h" 3 4
+# 275 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float64 j0f64 (_Float64) noexcept (true); extern _Float64 __j0f64 (_Float64) noexcept (true);
 extern _Float64 j1f64 (_Float64) noexcept (true); extern _Float64 __j1f64 (_Float64) noexcept (true);
 extern _Float64 jnf64 (int, _Float64) noexcept (true); extern _Float64 __jnf64 (int, _Float64) noexcept (true);
@@ -30825,7 +30830,7 @@ extern _Float64 lgammaf64 (_Float64) noexcept (true); extern _Float64 __lgammaf6
 
 
 extern _Float64 tgammaf64 (_Float64) noexcept (true); extern _Float64 __tgammaf64 (_Float64) noexcept (true);
-# 306 "/usr/include/bits/mathcalls.h" 3 4
+# 307 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float64 lgammaf64_r (_Float64, int *__signgamp) noexcept (true); extern _Float64 __lgammaf64_r (_Float64, int *__signgamp) noexcept (true);
 
 
@@ -31180,6 +31185,7 @@ extern _Float128 compoundnf128 (_Float128 __x, long long int __y) noexcept (true
 extern _Float128 pownf128 (_Float128 __x, long long int __y) noexcept (true); extern _Float128 __pownf128 (_Float128 __x, long long int __y) noexcept (true);
 
 
+ extern _Float128 powrf128 (_Float128 __x, _Float128 __y) noexcept (true); extern _Float128 __powrf128 (_Float128 __x, _Float128 __y) noexcept (true);
 extern _Float128 powrf128 (_Float128 __x, _Float128 __y) noexcept (true); extern _Float128 __powrf128 (_Float128 __x, _Float128 __y) noexcept (true);
 
 
@@ -31203,14 +31209,14 @@ extern _Float128 floorf128 (_Float128 __x) noexcept (true) __attribute__ ((__con
 
 
 extern _Float128 fmodf128 (_Float128 __x, _Float128 __y) noexcept (true); extern _Float128 __fmodf128 (_Float128 __x, _Float128 __y) noexcept (true);
-# 252 "/usr/include/bits/mathcalls.h" 3 4
+# 253 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float128 copysignf128 (_Float128 __x, _Float128 __y) noexcept (true) __attribute__ ((__const__));
 
 
 
 
 extern _Float128 nanf128 (const char *__tagb) noexcept (true); extern _Float128 __nanf128 (const char *__tagb) noexcept (true);
-# 274 "/usr/include/bits/mathcalls.h" 3 4
+# 275 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float128 j0f128 (_Float128) noexcept (true); extern _Float128 __j0f128 (_Float128) noexcept (true);
 extern _Float128 j1f128 (_Float128) noexcept (true); extern _Float128 __j1f128 (_Float128) noexcept (true);
 extern _Float128 jnf128 (int, _Float128) noexcept (true); extern _Float128 __jnf128 (int, _Float128) noexcept (true);
@@ -31230,7 +31236,7 @@ extern _Float128 lgammaf128 (_Float128) noexcept (true); extern _Float128 __lgam
 
 
 extern _Float128 tgammaf128 (_Float128) noexcept (true); extern _Float128 __tgammaf128 (_Float128) noexcept (true);
-# 306 "/usr/include/bits/mathcalls.h" 3 4
+# 307 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float128 lgammaf128_r (_Float128, int *__signgamp) noexcept (true); extern _Float128 __lgammaf128_r (_Float128, int *__signgamp) noexcept (true);
 
 
@@ -31554,6 +31560,7 @@ extern _Float32x compoundnf32x (_Float32x __x, long long int __y) noexcept (true
 extern _Float32x pownf32x (_Float32x __x, long long int __y) noexcept (true); extern _Float32x __pownf32x (_Float32x __x, long long int __y) noexcept (true);
 
 
+ extern _Float32x powrf32x (_Float32x __x, _Float32x __y) noexcept (true); extern _Float32x __powrf32x (_Float32x __x, _Float32x __y) noexcept (true);
 extern _Float32x powrf32x (_Float32x __x, _Float32x __y) noexcept (true); extern _Float32x __powrf32x (_Float32x __x, _Float32x __y) noexcept (true);
 
 
@@ -31577,14 +31584,14 @@ extern _Float32x floorf32x (_Float32x __x) noexcept (true) __attribute__ ((__con
 
 
 extern _Float32x fmodf32x (_Float32x __x, _Float32x __y) noexcept (true); extern _Float32x __fmodf32x (_Float32x __x, _Float32x __y) noexcept (true);
-# 252 "/usr/include/bits/mathcalls.h" 3 4
+# 253 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float32x copysignf32x (_Float32x __x, _Float32x __y) noexcept (true) __attribute__ ((__const__));
 
 
 
 
 extern _Float32x nanf32x (const char *__tagb) noexcept (true); extern _Float32x __nanf32x (const char *__tagb) noexcept (true);
-# 274 "/usr/include/bits/mathcalls.h" 3 4
+# 275 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float32x j0f32x (_Float32x) noexcept (true); extern _Float32x __j0f32x (_Float32x) noexcept (true);
 extern _Float32x j1f32x (_Float32x) noexcept (true); extern _Float32x __j1f32x (_Float32x) noexcept (true);
 extern _Float32x jnf32x (int, _Float32x) noexcept (true); extern _Float32x __jnf32x (int, _Float32x) noexcept (true);
@@ -31604,7 +31611,7 @@ extern _Float32x lgammaf32x (_Float32x) noexcept (true); extern _Float32x __lgam
 
 
 extern _Float32x tgammaf32x (_Float32x) noexcept (true); extern _Float32x __tgammaf32x (_Float32x) noexcept (true);
-# 306 "/usr/include/bits/mathcalls.h" 3 4
+# 307 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float32x lgammaf32x_r (_Float32x, int *__signgamp) noexcept (true); extern _Float32x __lgammaf32x_r (_Float32x, int *__signgamp) noexcept (true);
 
 
@@ -31928,6 +31935,7 @@ extern _Float64x compoundnf64x (_Float64x __x, long long int __y) noexcept (true
 extern _Float64x pownf64x (_Float64x __x, long long int __y) noexcept (true); extern _Float64x __pownf64x (_Float64x __x, long long int __y) noexcept (true);
 
 
+ extern _Float64x powrf64x (_Float64x __x, _Float64x __y) noexcept (true); extern _Float64x __powrf64x (_Float64x __x, _Float64x __y) noexcept (true);
 extern _Float64x powrf64x (_Float64x __x, _Float64x __y) noexcept (true); extern _Float64x __powrf64x (_Float64x __x, _Float64x __y) noexcept (true);
 
 
@@ -31951,14 +31959,14 @@ extern _Float64x floorf64x (_Float64x __x) noexcept (true) __attribute__ ((__con
 
 
 extern _Float64x fmodf64x (_Float64x __x, _Float64x __y) noexcept (true); extern _Float64x __fmodf64x (_Float64x __x, _Float64x __y) noexcept (true);
-# 252 "/usr/include/bits/mathcalls.h" 3 4
+# 253 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float64x copysignf64x (_Float64x __x, _Float64x __y) noexcept (true) __attribute__ ((__const__));
 
 
 
 
 extern _Float64x nanf64x (const char *__tagb) noexcept (true); extern _Float64x __nanf64x (const char *__tagb) noexcept (true);
-# 274 "/usr/include/bits/mathcalls.h" 3 4
+# 275 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float64x j0f64x (_Float64x) noexcept (true); extern _Float64x __j0f64x (_Float64x) noexcept (true);
 extern _Float64x j1f64x (_Float64x) noexcept (true); extern _Float64x __j1f64x (_Float64x) noexcept (true);
 extern _Float64x jnf64x (int, _Float64x) noexcept (true); extern _Float64x __jnf64x (int, _Float64x) noexcept (true);
@@ -31978,7 +31986,7 @@ extern _Float64x lgammaf64x (_Float64x) noexcept (true); extern _Float64x __lgam
 
 
 extern _Float64x tgammaf64x (_Float64x) noexcept (true); extern _Float64x __tgammaf64x (_Float64x) noexcept (true);
-# 306 "/usr/include/bits/mathcalls.h" 3 4
+# 307 "/usr/include/bits/mathcalls.h" 3 4
 extern _Float64x lgammaf64x_r (_Float64x, int *__signgamp) noexcept (true); extern _Float64x __lgammaf64x_r (_Float64x, int *__signgamp) noexcept (true);
 
 
@@ -34149,7 +34157,7 @@ using std::trunc;
 
 
 # 1 "/usr/include/assert.h" 1 3 4
-# 92 "/usr/include/assert.h" 3 4
+# 91 "/usr/include/assert.h" 3 4
 extern "C" {
 
 
@@ -34167,7 +34175,7 @@ extern void __assert_perror_fail (int __errnum, const char *__file,
 
 extern void __assert (const char *__assertion, const char *__file, int __line)
      noexcept (true) __attribute__ ((__noreturn__)) __attribute__ ((__cold__));
-# 118 "/usr/include/assert.h" 3 4
+# 117 "/usr/include/assert.h" 3 4
 }
 # 63 "/home/sten/vivado/Vivado/2019.1/include/hls_fpo.h" 2
 # 186 "/home/sten/vivado/Vivado/2019.1/include/hls_fpo.h"
@@ -51327,9 +51335,9 @@ DataType inline max(DataType a, DataType b) {
 
 
 # 1 "/usr/include/assert.h" 1 3 4
-# 92 "/usr/include/assert.h" 3 4
+# 91 "/usr/include/assert.h" 3 4
 
-# 92 "/usr/include/assert.h" 3 4
+# 91 "/usr/include/assert.h" 3 4
 extern "C" {
 
 
@@ -51347,7 +51355,7 @@ extern void __assert_perror_fail (int __errnum, const char *__file,
 
 extern void __assert (const char *__assertion, const char *__file, int __line)
      noexcept (true) __attribute__ ((__noreturn__)) __attribute__ ((__cold__));
-# 118 "/usr/include/assert.h" 3 4
+# 117 "/usr/include/assert.h" 3 4
 }
 # 44 "/home/sten/vivado/Vivado/2019.1/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cassert" 2 3
 # 117 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 2
@@ -56459,11 +56467,15 @@ static inline std::string oct2Bin(char oct) {
   }
   
 # 295 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 295 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  0 && "Invalid character in digit string"
 # 295 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 295 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ 0 && "Invalid character in digit string"
+# 295 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 295 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "0 && \"Invalid character in digit string\""
 # 295 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -56538,11 +56550,15 @@ static inline std::string hex2Bin(char hex) {
   }
   
 # 362 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 362 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  0 && "Invalid character in digit string"
 # 362 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 362 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ 0 && "Invalid character in digit string"
+# 362 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 362 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "0 && \"Invalid character in digit string\""
 # 362 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -56561,11 +56577,15 @@ static inline uint32_t decode_digit(char cdigit, int radix) {
 
     if (!(((cdigit) >= '0' && (cdigit) <= '9') || ((cdigit) >= 'a' && (cdigit) <= 'f') || ((cdigit) >= 'A' && (cdigit) <= 'F'))) 
 # 373 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-                          (static_cast <bool> (
+                          ((
 # 373 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
                           0 && "Invalid hex digit in string"
 # 373 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-                          ) ? void (0) : __assert_fail (
+                          ) ? void (1 ? 1 : bool (
+# 373 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+                          0 && "Invalid hex digit in string"
+# 373 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+                          )) : __assert_fail (
 # 373 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
                           "0 && \"Invalid hex digit in string\""
 # 373 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -56581,11 +56601,15 @@ static inline uint32_t decode_digit(char cdigit, int radix) {
     else
       
 # 381 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     (static_cast <bool> (
+     ((
 # 381 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      0 && "huh? we shouldn't get here"
 # 381 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     ) ? void (0) : __assert_fail (
+     ) ? void (1 ? 1 : bool (
+# 381 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+     0 && "huh? we shouldn't get here"
+# 381 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+     )) : __assert_fail (
 # 381 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      "0 && \"huh? we shouldn't get here\""
 # 381 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -56597,11 +56621,15 @@ static inline uint32_t decode_digit(char cdigit, int radix) {
   } else {
     
 # 385 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 385 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    0 && "Invalid character in digit string"
 # 385 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 385 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   0 && "Invalid character in digit string"
+# 385 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 385 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "0 && \"Invalid character in digit string\""
 # 385 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -56708,11 +56736,15 @@ static inline std::string parseString(const std::string& input, unsigned char& r
 
     
 # 484 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 484 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    startPos <= expPos
 # 484 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 484 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   startPos <= expPos
+# 484 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 484 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "startPos <= expPos"
 # 484 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -56911,11 +56943,15 @@ static inline void mul(uint64_t dest[], const uint64_t x[], uint32_t xlen,
                        const uint64_t y[], uint32_t ylen, uint32_t destlen) {
   
 # 683 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 683 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  xlen > 0
 # 683 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 683 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ xlen > 0
+# 683 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 683 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "xlen > 0"
 # 683 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -56924,11 +56960,15 @@ static inline void mul(uint64_t dest[], const uint64_t x[], uint32_t xlen,
                  ;
   
 # 684 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 684 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  ylen > 0
 # 684 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 684 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ ylen > 0
+# 684 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 684 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "ylen > 0"
 # 684 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -56937,11 +56977,15 @@ static inline void mul(uint64_t dest[], const uint64_t x[], uint32_t xlen,
                  ;
   
 # 685 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 685 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  destlen >= xlen + ylen
 # 685 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 685 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ destlen >= xlen + ylen
+# 685 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 685 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "destlen >= xlen + ylen"
 # 685 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -56984,11 +57028,15 @@ static inline void KnuthDiv(uint32_t* u, uint32_t* v, uint32_t* q, uint32_t* r,
                             uint32_t m, uint32_t n) {
   
 # 720 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 720 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  u && "Must provide dividend"
 # 720 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 720 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ u && "Must provide dividend"
+# 720 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 720 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "u && \"Must provide dividend\""
 # 720 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -56997,11 +57045,15 @@ static inline void KnuthDiv(uint32_t* u, uint32_t* v, uint32_t* q, uint32_t* r,
                                      ;
   
 # 721 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 721 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  v && "Must provide divisor"
 # 721 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 721 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ v && "Must provide divisor"
+# 721 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 721 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "v && \"Must provide divisor\""
 # 721 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57010,11 +57062,15 @@ static inline void KnuthDiv(uint32_t* u, uint32_t* v, uint32_t* q, uint32_t* r,
                                     ;
   
 # 722 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 722 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  q && "Must provide quotient"
 # 722 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 722 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ q && "Must provide quotient"
+# 722 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 722 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "q && \"Must provide quotient\""
 # 722 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57023,11 +57079,15 @@ static inline void KnuthDiv(uint32_t* u, uint32_t* v, uint32_t* q, uint32_t* r,
                                      ;
   
 # 723 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 723 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  u != v && u != q && v != q && "Must us different memory"
 # 723 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 723 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ u != v && u != q && v != q && "Must us different memory"
+# 723 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 723 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "u != v && u != q && v != q && \"Must us different memory\""
 # 723 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57036,11 +57096,15 @@ static inline void KnuthDiv(uint32_t* u, uint32_t* v, uint32_t* q, uint32_t* r,
                                                                  ;
   
 # 724 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 724 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  n > 1 && "n must be > 1"
 # 724 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 724 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ n > 1 && "n must be > 1"
+# 724 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 724 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "n > 1 && \"n must be > 1\""
 # 724 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57177,11 +57241,15 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
             ap_private<_AP_W, _AP_S>* Remainder) {
   
 # 899 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 899 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  lhsWords >= rhsWords && "Fractional result"
 # 899 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 899 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ lhsWords >= rhsWords && "Fractional result"
+# 899 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 899 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "lhsWords >= rhsWords && \"Fractional result\""
 # 899 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57258,11 +57326,15 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
 
   
 # 968 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 968 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  n != 0 && "Divide by zero?"
 # 968 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 968 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ n != 0 && "Divide by zero?"
+# 968 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 968 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "n != 0 && \"Divide by zero?\""
 # 968 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57312,11 +57384,15 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
     } else {
       
 # 1010 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     (static_cast <bool> (
+     ((
 # 1010 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      !Quotient->isSingleWord() && "Quotient ap_private not large enough"
 # 1010 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     ) ? void (0) : __assert_fail (
+     ) ? void (1 ? 1 : bool (
+# 1010 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+     !Quotient->isSingleWord() && "Quotient ap_private not large enough"
+# 1010 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+     )) : __assert_fail (
 # 1010 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      "!Quotient->isSingleWord() && \"Quotient ap_private not large enough\""
 # 1010 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57355,11 +57431,15 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
     } else {
       
 # 1035 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     (static_cast <bool> (
+     ((
 # 1035 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      !Remainder->isSingleWord() && "Remainder ap_private not large enough"
 # 1035 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     ) ? void (0) : __assert_fail (
+     ) ? void (1 ? 1 : bool (
+# 1035 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+     !Remainder->isSingleWord() && "Remainder ap_private not large enough"
+# 1035 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+     )) : __assert_fail (
 # 1035 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      "!Remainder->isSingleWord() && \"Remainder ap_private not large enough\""
 # 1035 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57397,11 +57477,15 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
   uint32_t rhsWords = 1;
   
 # 1059 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 1059 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  lhsWords >= rhsWords && "Fractional result"
 # 1059 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 1059 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ lhsWords >= rhsWords && "Fractional result"
+# 1059 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 1059 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "lhsWords >= rhsWords && \"Fractional result\""
 # 1059 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57475,11 +57559,15 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
 
   
 # 1125 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 1125 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  n != 0 && "Divide by zero?"
 # 1125 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 1125 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ n != 0 && "Divide by zero?"
+# 1125 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 1125 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "n != 0 && \"Divide by zero?\""
 # 1125 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57529,11 +57617,15 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
     } else {
       
 # 1167 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     (static_cast <bool> (
+     ((
 # 1167 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      !Quotient->isSingleWord() && "Quotient ap_private not large enough"
 # 1167 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     ) ? void (0) : __assert_fail (
+     ) ? void (1 ? 1 : bool (
+# 1167 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+     !Quotient->isSingleWord() && "Quotient ap_private not large enough"
+# 1167 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+     )) : __assert_fail (
 # 1167 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      "!Quotient->isSingleWord() && \"Quotient ap_private not large enough\""
 # 1167 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57572,11 +57664,15 @@ void divide(const ap_private<_AP_W, _AP_S>& LHS, uint32_t lhsWords,
     } else {
       
 # 1192 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     (static_cast <bool> (
+     ((
 # 1192 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      !Remainder->isSingleWord() && "Remainder ap_private not large enough"
 # 1192 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     ) ? void (0) : __assert_fail (
+     ) ? void (1 ? 1 : bool (
+# 1192 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+     !Remainder->isSingleWord() && "Remainder ap_private not large enough"
+# 1192 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+     )) : __assert_fail (
 # 1192 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      "!Remainder->isSingleWord() && \"Remainder ap_private not large enough\""
 # 1192 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57768,11 +57864,15 @@ class ap_private<_AP_W, _AP_S, true> {
   inline const uint64_t* get_pVal() const {
     
 # 1411 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 1411 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    0 && "invalid usage"
 # 1411 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 1411 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   0 && "invalid usage"
+# 1411 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 1411 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "0 && \"invalid usage\""
 # 1411 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57785,11 +57885,15 @@ class ap_private<_AP_W, _AP_S, true> {
   inline uint64_t* get_pVal() const volatile {
     
 # 1416 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 1416 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    0 && "invalid usage"
 # 1416 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 1416 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   0 && "invalid usage"
+# 1416 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 1416 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "0 && \"invalid usage\""
 # 1416 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57950,11 +58054,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
 
     
 # 1546 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 1546 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    (radix == 10 || radix == 8 || radix == 16 || radix == 2) && "Radix should be 2, 8, 10, or 16!"
 # 1546 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 1546 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   (radix == 10 || radix == 8 || radix == 16 || radix == 2) && "Radix should be 2, 8, 10, or 16!"
+# 1546 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 1546 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "(radix == 10 || radix == 8 || radix == 16 || radix == 2) && \"Radix should be 2, 8, 10, or 16!\""
 # 1546 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57970,11 +58078,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
                                              ;
     
 # 1548 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 1548 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    strStart && "String is null?"
 # 1548 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 1548 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   strStart && "String is null?"
+# 1548 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 1548 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "strStart && \"String is null?\""
 # 1548 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -57992,11 +58104,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
         for (; *strStart; ++strStart) {
           
 # 1558 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-         (static_cast <bool> (
+         ((
 # 1558 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
          (*strStart == '0' || *strStart == '1') && ("Wrong binary number")
 # 1558 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-         ) ? void (0) : __assert_fail (
+         ) ? void (1 ? 1 : bool (
+# 1558 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+         (*strStart == '0' || *strStart == '1') && ("Wrong binary number")
+# 1558 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+         )) : __assert_fail (
 # 1558 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
          "(*strStart == '0' || *strStart == '1') && (\"Wrong binary number\")"
 # 1558 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58050,11 +58166,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
       default:
         
 # 1598 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-       (static_cast <bool> (
+       ((
 # 1598 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
        true && "Unknown radix"
 # 1598 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-       ) ? void (0) : __assert_fail (
+       ) ? void (1 ? 1 : bool (
+# 1598 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+       true && "Unknown radix"
+# 1598 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+       )) : __assert_fail (
 # 1598 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
        "true && \"Unknown radix\""
 # 1598 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58072,11 +58192,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
   inline ap_private(const std::string& val, uint8_t radix = 2) : VAL(0) {
     
 # 1608 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 1608 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    !val.empty() && "String empty?"
 # 1608 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 1608 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   !val.empty() && "String empty?"
+# 1608 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 1608 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "!val.empty() && \"String empty?\""
 # 1608 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58624,11 +58748,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
   inline ap_private urem(const ap_private<_AP_W, _AP_S2>& RHS) const {
     
 # 2173 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2173 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    RHS.get_VAL() != 0 && "Divide by 0"
 # 2173 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2173 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   RHS.get_VAL() != 0 && "Divide by 0"
+# 2173 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2173 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "RHS.get_VAL() != 0 && \"Divide by 0\""
 # 2173 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58812,11 +58940,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
   inline void invert(int i) {
     
 # 2349 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2349 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i >= 0 && "Attempting to read bit with negative index"
 # 2349 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2349 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i >= 0 && "Attempting to read bit with negative index"
+# 2349 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2349 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i >= 0 && \"Attempting to read bit with negative index\""
 # 2349 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58825,11 +58957,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
                                                                  ;
     
 # 2350 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2350 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i < _AP_W && "Attempting to read bit beyond MSB"
 # 2350 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2350 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i < _AP_W && "Attempting to read bit beyond MSB"
+# 2350 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2350 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i < _AP_W && \"Attempting to read bit beyond MSB\""
 # 2350 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58843,11 +58979,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
   inline bool test(int i) const {
     
 # 2356 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2356 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i >= 0 && "Attempting to read bit with negative index"
 # 2356 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2356 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i >= 0 && "Attempting to read bit with negative index"
+# 2356 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2356 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i >= 0 && \"Attempting to read bit with negative index\""
 # 2356 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58856,11 +58996,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
                                                                  ;
     
 # 2357 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2357 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i < _AP_W && "Attempting to read bit beyond MSB"
 # 2357 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2357 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i < _AP_W && "Attempting to read bit beyond MSB"
+# 2357 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2357 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i < _AP_W && \"Attempting to read bit beyond MSB\""
 # 2357 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58875,11 +59019,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
   inline void lrotate(int n) {
     
 # 2364 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2364 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    n >= 0 && "Attempting to shift negative index"
 # 2364 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2364 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   n >= 0 && "Attempting to shift negative index"
+# 2364 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2364 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "n >= 0 && \"Attempting to shift negative index\""
 # 2364 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58888,11 +59036,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
                                                          ;
     
 # 2365 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2365 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    n < _AP_W && "Shift value larger than bit width"
 # 2365 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2365 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   n < _AP_W && "Shift value larger than bit width"
+# 2365 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2365 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "n < _AP_W && \"Shift value larger than bit width\""
 # 2365 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58907,11 +59059,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
   inline void rrotate(int n) {
     
 # 2372 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2372 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    n >= 0 && "Attempting to shift negative index"
 # 2372 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2372 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   n >= 0 && "Attempting to shift negative index"
+# 2372 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2372 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "n >= 0 && \"Attempting to shift negative index\""
 # 2372 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58920,11 +59076,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
                                                          ;
     
 # 2373 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2373 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    n < _AP_W && "Shift value larger than bit width"
 # 2373 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2373 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   n < _AP_W && "Shift value larger than bit width"
+# 2373 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2373 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "n < _AP_W && \"Shift value larger than bit width\""
 # 2373 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58938,11 +59098,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
   inline void set(int i, bool v) {
     
 # 2379 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2379 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i >= 0 && "Attempting to write bit with negative index"
 # 2379 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2379 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i >= 0 && "Attempting to write bit with negative index"
+# 2379 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2379 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i >= 0 && \"Attempting to write bit with negative index\""
 # 2379 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58951,11 +59115,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
                                                                   ;
     
 # 2380 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2380 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i < _AP_W && "Attempting to write bit beyond MSB"
 # 2380 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2380 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i < _AP_W && "Attempting to write bit beyond MSB"
+# 2380 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2380 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i < _AP_W && \"Attempting to write bit beyond MSB\""
 # 2380 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58969,11 +59137,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
   inline void set_bit(int i, bool v) {
     
 # 2386 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2386 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i >= 0 && "Attempting to write bit with negative index"
 # 2386 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2386 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i >= 0 && "Attempting to write bit with negative index"
+# 2386 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2386 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i >= 0 && \"Attempting to write bit with negative index\""
 # 2386 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -58982,11 +59154,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
                                                                   ;
     
 # 2387 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2387 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i < _AP_W && "Attempting to write bit beyond MSB"
 # 2387 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2387 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i < _AP_W && "Attempting to write bit beyond MSB"
+# 2387 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2387 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i < _AP_W && \"Attempting to write bit beyond MSB\""
 # 2387 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59000,11 +59176,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
   inline bool get_bit(int i) const {
     
 # 2393 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2393 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i >= 0 && "Attempting to read bit with negative index"
 # 2393 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2393 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i >= 0 && "Attempting to read bit with negative index"
+# 2393 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2393 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i >= 0 && \"Attempting to read bit with negative index\""
 # 2393 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59013,11 +59193,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
                                                                  ;
     
 # 2394 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2394 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i < _AP_W && "Attempting to read bit beyond MSB"
 # 2394 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2394 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i < _AP_W && "Attempting to read bit beyond MSB"
+# 2394 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2394 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i < _AP_W && \"Attempting to read bit beyond MSB\""
 # 2394 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59038,11 +59222,15 @@ inline ap_private& operator=(const double v) { set_canary(); this->VAL = (ValTyp
   inline ap_private& flip(uint32_t bitPosition) {
     
 # 2407 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 2407 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    bitPosition < BitWidth && "Out of the bit-width range!"
 # 2407 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 2407 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   bitPosition < BitWidth && "Out of the bit-width range!"
+# 2407 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 2407 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "bitPosition < BitWidth && \"Out of the bit-width range!\""
 # 2407 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59321,11 +59509,15 @@ std::string ap_private<_AP_W, _AP_S, true>::toString(uint8_t radix,
                                                      bool wantSigned) const {
   
 # 2941 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 2941 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  (radix == 10 || radix == 8 || radix == 16 || radix == 2) && "Radix should be 2, 8, 10, or 16!"
 # 2941 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 2941 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ (radix == 10 || radix == 8 || radix == 16 || radix == 2) && "Radix should be 2, 8, 10, or 16!"
+# 2941 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 2941 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "(radix == 10 || radix == 8 || radix == 16 || radix == 2) && \"Radix should be 2, 8, 10, or 16!\""
 # 2941 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59364,11 +59556,15 @@ std::string ap_private<_AP_W, _AP_S, true>::toString(uint8_t radix,
         default:
           
 # 2966 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-         (static_cast <bool> (
+         ((
 # 2966 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
          "invalid radix" && 0
 # 2966 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-         ) ? void (0) : __assert_fail (
+         ) ? void (1 ? 1 : bool (
+# 2966 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+         "invalid radix" && 0
+# 2966 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+         )) : __assert_fail (
 # 2966 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
          "\"invalid radix\" && 0"
 # 2966 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59403,11 +59599,15 @@ std::string ap_private<_AP_W, _AP_S, true>::toString(uint8_t radix,
         default:
           
 # 2993 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-         (static_cast <bool> (
+         ((
 # 2993 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
          "invalid radix" && 0
 # 2993 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-         ) ? void (0) : __assert_fail (
+         ) ? void (1 ? 1 : bool (
+# 2993 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+         "invalid radix" && 0
+# 2993 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+         )) : __assert_fail (
 # 2993 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
          "\"invalid radix\" && 0"
 # 2993 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59459,11 +59659,15 @@ std::string ap_private<_AP_W, _AP_S, true>::toString(uint8_t radix,
       uint32_t digit = (uint32_t)(APdigit.getZExtValue());
       
 # 3037 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     (static_cast <bool> (
+     ((
 # 3037 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      digit < radix && "divide failed"
 # 3037 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     ) ? void (0) : __assert_fail (
+     ) ? void (1 ? 1 : bool (
+# 3037 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+     digit < radix && "divide failed"
+# 3037 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+     )) : __assert_fail (
 # 3037 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      "digit < radix && \"divide failed\""
 # 3037 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59496,11 +59700,15 @@ class ap_private<_AP_W, _AP_S, false> {
     set_canary();
     
 # 3071 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3071 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    bigVal && "Null pointer detected!"
 # 3071 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3071 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   bigVal && "Null pointer detected!"
+# 3071 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3071 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "bigVal && \"Null pointer detected!\""
 # 3071 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59525,11 +59733,15 @@ class ap_private<_AP_W, _AP_S, false> {
     set_canary();
     
 # 3096 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3096 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    !val.empty() && "The input string is empty."
 # 3096 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3096 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   !val.empty() && "The input string is empty."
+# 3096 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3096 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "!val.empty() && \"The input string is empty.\""
 # 3096 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59748,11 +59960,15 @@ class ap_private<_AP_W, _AP_S, false> {
 
   inline ap_private(uint64_t* val, uint32_t bits = _AP_W) { 
 # 3339 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-                                                           (static_cast <bool> (
+                                                           ((
 # 3339 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
                                                            0
 # 3339 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-                                                           ) ? void (0) : __assert_fail (
+                                                           ) ? void (1 ? 1 : bool (
+# 3339 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+                                                           0
+# 3339 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+                                                           )) : __assert_fail (
 # 3339 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
                                                            "0"
 # 3339 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59761,11 +59977,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                                                     ; }
   inline ap_private(const uint64_t* const val, uint32_t bits) { 
 # 3340 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-                                                               (static_cast <bool> (
+                                                               ((
 # 3340 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
                                                                0
 # 3340 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-                                                               ) ? void (0) : __assert_fail (
+                                                               ) ? void (1 ? 1 : bool (
+# 3340 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+                                                               0
+# 3340 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+                                                               )) : __assert_fail (
 # 3340 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
                                                                "0"
 # 3340 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59914,11 +60134,15 @@ class ap_private<_AP_W, _AP_S, false> {
 
     
 # 3470 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3470 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    (radix == 10 || radix == 8 || radix == 16 || radix == 2) && "Radix should be 2, 8, 10, or 16!"
 # 3470 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3470 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   (radix == 10 || radix == 8 || radix == 16 || radix == 2) && "Radix should be 2, 8, 10, or 16!"
+# 3470 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3470 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "(radix == 10 || radix == 8 || radix == 16 || radix == 2) && \"Radix should be 2, 8, 10, or 16!\""
 # 3470 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59934,11 +60158,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                              ;
     
 # 3472 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3472 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    str && "String is null?"
 # 3472 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3472 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   str && "String is null?"
+# 3472 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3472 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "str && \"String is null?\""
 # 3472 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59953,11 +60181,15 @@ class ap_private<_AP_W, _AP_S, false> {
     }
     
 # 3479 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3479 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    (slen <= numbits || radix != 2) && "Insufficient bit width"
 # 3479 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3479 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   (slen <= numbits || radix != 2) && "Insufficient bit width"
+# 3479 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3479 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "(slen <= numbits || radix != 2) && \"Insufficient bit width\""
 # 3479 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59966,11 +60198,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                                                       ;
     
 # 3480 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3480 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    ((slen - 1) * 3 <= numbits || radix != 8) && "Insufficient bit width"
 # 3480 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3480 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   ((slen - 1) * 3 <= numbits || radix != 8) && "Insufficient bit width"
+# 3480 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3480 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "((slen - 1) * 3 <= numbits || radix != 8) && \"Insufficient bit width\""
 # 3480 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -59986,11 +60222,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                    ;
     
 # 3482 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3482 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    ((slen - 1) * 4 <= numbits || radix != 16) && "Insufficient bit width"
 # 3482 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3482 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   ((slen - 1) * 4 <= numbits || radix != 16) && "Insufficient bit width"
+# 3482 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3482 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "((slen - 1) * 4 <= numbits || radix != 16) && \"Insufficient bit width\""
 # 3482 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60006,11 +60246,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                    ;
     
 # 3484 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3484 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    (((slen - 1) * 64) / 22 <= numbits || radix != 10) && "Insufficient bit width"
 # 3484 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3484 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   (((slen - 1) * 64) / 22 <= numbits || radix != 10) && "Insufficient bit width"
+# 3484 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3484 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "(((slen - 1) * 64) / 22 <= numbits || radix != 10) && \"Insufficient bit width\""
 # 3484 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60050,11 +60294,15 @@ class ap_private<_AP_W, _AP_S, false> {
 
         if (!(((cdigit) >= '0' && (cdigit) <= '9') || ((cdigit) >= 'a' && (cdigit) <= 'f') || ((cdigit) >= 'A' && (cdigit) <= 'F'))) 
 # 3510 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-                              (static_cast <bool> (
+                              ((
 # 3510 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
                               0 && "Invalid hex digit in string"
 # 3510 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-                              ) ? void (0) : __assert_fail (
+                              ) ? void (1 ? 1 : bool (
+# 3510 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+                              0 && "Invalid hex digit in string"
+# 3510 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+                              )) : __assert_fail (
 # 3510 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
                               "0 && \"Invalid hex digit in string\""
 # 3510 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60070,11 +60318,15 @@ class ap_private<_AP_W, _AP_S, false> {
         else
           
 # 3518 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-         (static_cast <bool> (
+         ((
 # 3518 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
          0 && "huh? we shouldn't get here"
 # 3518 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-         ) ? void (0) : __assert_fail (
+         ) ? void (1 ? 1 : bool (
+# 3518 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+         0 && "huh? we shouldn't get here"
+# 3518 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+         )) : __assert_fail (
 # 3518 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
          "0 && \"huh? we shouldn't get here\""
 # 3518 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60086,11 +60338,15 @@ class ap_private<_AP_W, _AP_S, false> {
       } else if (cdigit != '\0') {
         
 # 3522 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-       (static_cast <bool> (
+       ((
 # 3522 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
        0 && "Invalid character in digit string"
 # 3522 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-       ) ? void (0) : __assert_fail (
+       ) ? void (1 ? 1 : bool (
+# 3522 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+       0 && "Invalid character in digit string"
+# 3522 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+       )) : __assert_fail (
 # 3522 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
        "0 && \"Invalid character in digit string\""
 # 3522 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60186,11 +60442,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline void invert(int i) {
     
 # 3610 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3610 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i >= 0 && "Attempting to read bit with negative index"
 # 3610 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3610 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i >= 0 && "Attempting to read bit with negative index"
+# 3610 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3610 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i >= 0 && \"Attempting to read bit with negative index\""
 # 3610 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60199,11 +60459,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                                                  ;
     
 # 3611 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3611 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i < _AP_W && "Attempting to read bit beyond MSB"
 # 3611 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3611 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i < _AP_W && "Attempting to read bit beyond MSB"
+# 3611 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3611 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i < _AP_W && \"Attempting to read bit beyond MSB\""
 # 3611 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60217,11 +60481,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline bool test(int i) const {
     
 # 3617 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3617 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i >= 0 && "Attempting to read bit with negative index"
 # 3617 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3617 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i >= 0 && "Attempting to read bit with negative index"
+# 3617 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3617 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i >= 0 && \"Attempting to read bit with negative index\""
 # 3617 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60230,11 +60498,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                                                  ;
     
 # 3618 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3618 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i < _AP_W && "Attempting to read bit beyond MSB"
 # 3618 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3618 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i < _AP_W && "Attempting to read bit beyond MSB"
+# 3618 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3618 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i < _AP_W && \"Attempting to read bit beyond MSB\""
 # 3618 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60248,11 +60520,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline void set(int i, bool v) {
     
 # 3624 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3624 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i >= 0 && "Attempting to write bit with negative index"
 # 3624 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3624 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i >= 0 && "Attempting to write bit with negative index"
+# 3624 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3624 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i >= 0 && \"Attempting to write bit with negative index\""
 # 3624 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60261,11 +60537,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                                                   ;
     
 # 3625 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3625 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i < _AP_W && "Attempting to write bit beyond MSB"
 # 3625 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3625 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i < _AP_W && "Attempting to write bit beyond MSB"
+# 3625 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3625 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i < _AP_W && \"Attempting to write bit beyond MSB\""
 # 3625 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60279,11 +60559,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline void set_bit(int i, bool v) {
     
 # 3631 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3631 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i >= 0 && "Attempting to write bit with negative index"
 # 3631 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3631 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i >= 0 && "Attempting to write bit with negative index"
+# 3631 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3631 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i >= 0 && \"Attempting to write bit with negative index\""
 # 3631 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60292,11 +60576,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                                                   ;
     
 # 3632 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3632 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i < _AP_W && "Attempting to write bit beyond MSB"
 # 3632 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3632 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i < _AP_W && "Attempting to write bit beyond MSB"
+# 3632 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3632 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i < _AP_W && \"Attempting to write bit beyond MSB\""
 # 3632 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60322,11 +60610,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline bool get(int i) const {
     
 # 3650 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3650 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i >= 0 && "Attempting to read bit with negative index"
 # 3650 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3650 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i >= 0 && "Attempting to read bit with negative index"
+# 3650 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3650 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i >= 0 && \"Attempting to read bit with negative index\""
 # 3650 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60335,11 +60627,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                                                  ;
     
 # 3651 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3651 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i < _AP_W && "Attempting to read bit beyond MSB"
 # 3651 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3651 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i < _AP_W && "Attempting to read bit beyond MSB"
+# 3651 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3651 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i < _AP_W && \"Attempting to read bit beyond MSB\""
 # 3651 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60353,11 +60649,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline bool get_bit(int i) const {
     
 # 3657 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3657 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i >= 0 && "Attempting to read bit with negative index"
 # 3657 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3657 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i >= 0 && "Attempting to read bit with negative index"
+# 3657 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3657 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i >= 0 && \"Attempting to read bit with negative index\""
 # 3657 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60366,11 +60666,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                                                  ;
     
 # 3658 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3658 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    i < _AP_W && "Attempting to read bit beyond MSB"
 # 3658 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3658 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   i < _AP_W && "Attempting to read bit beyond MSB"
+# 3658 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3658 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "i < _AP_W && \"Attempting to read bit beyond MSB\""
 # 3658 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60385,11 +60689,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline void lrotate(int n) {
     
 # 3665 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3665 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    n >= 0 && "Attempting to shift negative index"
 # 3665 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3665 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   n >= 0 && "Attempting to shift negative index"
+# 3665 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3665 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "n >= 0 && \"Attempting to shift negative index\""
 # 3665 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60398,11 +60706,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                                          ;
     
 # 3666 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3666 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    n < _AP_W && "Shift value larger than bit width"
 # 3666 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3666 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   n < _AP_W && "Shift value larger than bit width"
+# 3666 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3666 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "n < _AP_W && \"Shift value larger than bit width\""
 # 3666 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60417,11 +60729,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline void rrotate(int n) {
     
 # 3673 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3673 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    n >= 0 && "Attempting to shift negative index"
 # 3673 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3673 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   n >= 0 && "Attempting to shift negative index"
+# 3673 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3673 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "n >= 0 && \"Attempting to shift negative index\""
 # 3673 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60430,11 +60746,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                                          ;
     
 # 3674 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3674 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    n < _AP_W && "Shift value larger than bit width"
 # 3674 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3674 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   n < _AP_W && "Shift value larger than bit width"
+# 3674 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3674 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "n < _AP_W && \"Shift value larger than bit width\""
 # 3674 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -60466,11 +60786,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline ap_private& flip(uint32_t bitPosition) {
     
 # 3698 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 3698 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    bitPosition < BitWidth && "Out of the bit-width range!"
 # 3698 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 3698 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   bitPosition < BitWidth && "Out of the bit-width range!"
+# 3698 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 3698 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "bitPosition < BitWidth && \"Out of the bit-width range!\""
 # 3698 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -61055,11 +61379,15 @@ class ap_private<_AP_W, _AP_S, false> {
     } else
       
 # 4563 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     (static_cast <bool> (
+     ((
 # 4563 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      0 && "Error in ap_private<_AP_W, _AP_S>::sqrt computation"
 # 4563 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     ) ? void (0) : __assert_fail (
+     ) ? void (1 ? 1 : bool (
+# 4563 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+     0 && "Error in ap_private<_AP_W, _AP_S>::sqrt computation"
+# 4563 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+     )) : __assert_fail (
 # 4563 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      "0 && \"Error in ap_private<_AP_W, _AP_S>::sqrt computation\""
 # 4563 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -61245,11 +61573,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline ap_private ashr(uint32_t shiftAmt) const {
     
 # 4779 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 4779 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    shiftAmt <= BitWidth && "Invalid shift amount, too big"
 # 4779 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 4779 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   shiftAmt <= BitWidth && "Invalid shift amount, too big"
+# 4779 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 4779 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "shiftAmt <= BitWidth && \"Invalid shift amount, too big\""
 # 4779 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -61386,11 +61718,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline ap_private shl(uint32_t shiftAmt) const {
     
 # 4908 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 4908 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    shiftAmt <= BitWidth && "Invalid shift amount, too big"
 # 4908 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 4908 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   shiftAmt <= BitWidth && "Invalid shift amount, too big"
+# 4908 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 4908 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "shiftAmt <= BitWidth && \"Invalid shift amount, too big\""
 # 4908 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -61476,11 +61812,15 @@ class ap_private<_AP_W, _AP_S, false> {
     uint32_t rhsWords = !rhsBits ? 0 : (whichWord(rhsBits - 1) + 1);
     
 # 4986 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 4986 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    rhsWords && "Divided by zero???"
 # 4986 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 4986 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   rhsWords && "Divided by zero???"
+# 4986 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 4986 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "rhsWords && \"Divided by zero???\""
 # 4986 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -61535,11 +61875,15 @@ class ap_private<_AP_W, _AP_S, false> {
     uint32_t rhsWords = !rhsBits ? 0 : (whichWord(rhsBits - 1) + 1);
     
 # 5041 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 5041 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    rhsWords && "Performing remainder operation by zero ???"
 # 5041 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 5041 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   rhsWords && "Performing remainder operation by zero ???"
+# 5041 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 5041 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "rhsWords && \"Performing remainder operation by zero ???\""
 # 5041 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -61578,11 +61922,15 @@ class ap_private<_AP_W, _AP_S, false> {
 
     
 # 5072 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 5072 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    rhsWords && "Performing remainder operation by zero ???"
 # 5072 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 5072 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   rhsWords && "Performing remainder operation by zero ???"
+# 5072 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 5072 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "rhsWords && \"Performing remainder operation by zero ???\""
 # 5072 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -61704,11 +62052,15 @@ class ap_private<_AP_W, _AP_S, false> {
       return pVal[0] < RHS;
     
 # 5186 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 5186 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    0
 # 5186 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 5186 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   0
+# 5186 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 5186 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "0"
 # 5186 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -61806,11 +62158,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline void cpSext(const ap_private<_AP_W1, _AP_S1>& that) {
     
 # 5276 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 5276 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    _AP_W1 < BitWidth && "Invalid ap_private SignExtend request"
 # 5276 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 5276 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   _AP_W1 < BitWidth && "Invalid ap_private SignExtend request"
+# 5276 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 5276 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "_AP_W1 < BitWidth && \"Invalid ap_private SignExtend request\""
 # 5276 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -61819,11 +62175,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                                                        ;
     
 # 5277 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 5277 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    _AP_W1 <= MAX_INT_BITS && "Too many bits"
 # 5277 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 5277 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   _AP_W1 <= MAX_INT_BITS && "Too many bits"
+# 5277 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 5277 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "_AP_W1 <= MAX_INT_BITS && \"Too many bits\""
 # 5277 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -61866,11 +62226,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline void cpZext(const ap_private<_AP_W1, _AP_S1>& that) {
     
 # 5312 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 5312 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    _AP_W1 < BitWidth && "Invalid ap_private ZeroExtend request"
 # 5312 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 5312 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   _AP_W1 < BitWidth && "Invalid ap_private ZeroExtend request"
+# 5312 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 5312 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "_AP_W1 < BitWidth && \"Invalid ap_private ZeroExtend request\""
 # 5312 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -61879,11 +62243,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                                                        ;
     
 # 5313 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 5313 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    _AP_W1 <= MAX_INT_BITS && "Too many bits"
 # 5313 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 5313 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   _AP_W1 <= MAX_INT_BITS && "Too many bits"
+# 5313 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 5313 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "_AP_W1 <= MAX_INT_BITS && \"Too many bits\""
 # 5313 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -61948,11 +62316,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline uint64_t getZExtValue() const {
     
 # 5370 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 5370 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    getActiveBits() <= 64 && "Too many bits for uint64_t"
 # 5370 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 5370 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   getActiveBits() <= 64 && "Too many bits for uint64_t"
+# 5370 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 5370 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "getActiveBits() <= 64 && \"Too many bits for uint64_t\""
 # 5370 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -61970,11 +62342,15 @@ class ap_private<_AP_W, _AP_S, false> {
   inline int64_t getSExtValue() const {
     
 # 5380 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 5380 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    getActiveBits() <= 64 && "Too many bits for int64_t"
 # 5380 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 5380 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   getActiveBits() <= 64 && "Too many bits for int64_t"
+# 5380 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 5380 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "getActiveBits() <= 64 && \"Too many bits for int64_t\""
 # 5380 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -61991,11 +62367,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                        uint8_t radix) {
     
 # 5389 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 5389 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    str != 0 && "Invalid value string"
 # 5389 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 5389 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   str != 0 && "Invalid value string"
+# 5389 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 5389 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "str != 0 && \"Invalid value string\""
 # 5389 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -62004,11 +62384,15 @@ class ap_private<_AP_W, _AP_S, false> {
                                              ;
     
 # 5390 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 5390 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    slen > 0 && "Invalid string length"
 # 5390 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 5390 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   slen > 0 && "Invalid string length"
+# 5390 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 5390 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "slen > 0 && \"Invalid string length\""
 # 5390 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -62031,11 +62415,15 @@ class ap_private<_AP_W, _AP_S, false> {
 
     
 # 5405 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   (static_cast <bool> (
+   ((
 # 5405 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    radix == 10 && "Invalid radix"
 # 5405 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 5405 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+   radix == 10 && "Invalid radix"
+# 5405 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+   )) : __assert_fail (
 # 5405 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
    "radix == 10 && \"Invalid radix\""
 # 5405 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -62199,11 +62587,15 @@ class ap_private<_AP_W, _AP_S, false> {
     } else {
       
 # 5568 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     (static_cast <bool> (
+     ((
 # 5568 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      hiWord > 0 && "High word is negative?"
 # 5568 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     ) ? void (0) : __assert_fail (
+     ) ? void (1 ? 1 : bool (
+# 5568 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+     hiWord > 0 && "High word is negative?"
+# 5568 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+     )) : __assert_fail (
 # 5568 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      "hiWord > 0 && \"High word is negative?\""
 # 5568 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -62423,11 +62815,15 @@ inline std::string ap_private<_AP_W, _AP_S, false>::toString(
     uint8_t radix, bool wantSigned) const {
   
 # 5780 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- (static_cast <bool> (
+ ((
 # 5780 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  (radix == 10 || radix == 8 || radix == 16 || radix == 2) && "Radix should be 2, 8, 10, or 16!"
 # 5780 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
- ) ? void (0) : __assert_fail (
+ ) ? void (1 ? 1 : bool (
+# 5780 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+ (radix == 10 || radix == 8 || radix == 16 || radix == 2) && "Radix should be 2, 8, 10, or 16!"
+# 5780 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+ )) : __assert_fail (
 # 5780 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
  "(radix == 10 || radix == 8 || radix == 16 || radix == 2) && \"Radix should be 2, 8, 10, or 16!\""
 # 5780 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -62481,11 +62877,15 @@ inline std::string ap_private<_AP_W, _AP_S, false>::toString(
         default:
           
 # 5820 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-         (static_cast <bool> (
+         ((
 # 5820 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
          "invalid radix" && 0
 # 5820 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-         ) ? void (0) : __assert_fail (
+         ) ? void (1 ? 1 : bool (
+# 5820 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+         "invalid radix" && 0
+# 5820 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+         )) : __assert_fail (
 # 5820 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
          "\"invalid radix\" && 0"
 # 5820 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -62536,11 +62936,15 @@ inline std::string ap_private<_AP_W, _AP_S, false>::toString(
       uint64_t digit = APdigit.getZExtValue();
       
 # 5863 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     (static_cast <bool> (
+     ((
 # 5863 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      digit < radix && "divide failed"
 # 5863 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
-     ) ? void (0) : __assert_fail (
+     ) ? void (1 ? 1 : bool (
+# 5863 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
+     digit < radix && "divide failed"
+# 5863 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
+     )) : __assert_fail (
 # 5863 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h"
      "digit < radix && \"divide failed\""
 # 5863 "/home/sten/vivado/Vivado/2019.1/include/etc/ap_private.h" 3 4
@@ -63786,11 +64190,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
   inline void clear(int i) {
     
 # 605 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 605 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (i >= 0 && i < _AP_W) && ("position out of range")
 # 605 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 605 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (i >= 0 && i < _AP_W) && ("position out of range")
+# 605 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 605 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(i >= 0 && i < _AP_W) && (\"position out of range\")"
 # 605 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -63804,11 +64212,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
   inline void invert(int i) {
     
 # 611 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 611 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (i >= 0 && i < _AP_W) && ("position out of range")
 # 611 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 611 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (i >= 0 && i < _AP_W) && ("position out of range")
+# 611 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 611 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(i >= 0 && i < _AP_W) && (\"position out of range\")"
 # 611 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -63825,11 +64237,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
   inline bool test(int i) const {
     
 # 620 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 620 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (i >= 0 && i < _AP_W) && ("position out of range")
 # 620 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 620 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (i >= 0 && i < _AP_W) && ("position out of range")
+# 620 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 620 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(i >= 0 && i < _AP_W) && (\"position out of range\")"
 # 620 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -63846,11 +64262,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
   inline void set(int i) {
     
 # 629 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 629 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (i >= 0 && i < _AP_W) && ("position out of range")
 # 629 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 629 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (i >= 0 && i < _AP_W) && ("position out of range")
+# 629 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 629 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(i >= 0 && i < _AP_W) && (\"position out of range\")"
 # 629 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -63864,11 +64284,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
   inline void set(int i, bool v) {
     
 # 635 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 635 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (i >= 0 && i < _AP_W) && ("position out of range")
 # 635 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 635 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (i >= 0 && i < _AP_W) && ("position out of range")
+# 635 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 635 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(i >= 0 && i < _AP_W) && (\"position out of range\")"
 # 635 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -63883,11 +64307,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
   inline ap_int_base& lrotate(int n) {
     
 # 642 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 642 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (n >= 0 && n < _AP_W) && ("shift value out of range")
 # 642 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 642 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (n >= 0 && n < _AP_W) && ("shift value out of range")
+# 642 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 642 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(n >= 0 && n < _AP_W) && (\"shift value out of range\")"
 # 642 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -63910,11 +64338,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
   inline ap_int_base& rrotate(int n) {
     
 # 657 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 657 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (n >= 0 && n < _AP_W) && ("shift value out of range")
 # 657 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 657 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (n >= 0 && n < _AP_W) && ("shift value out of range")
+# 657 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 657 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(n >= 0 && n < _AP_W) && (\"shift value out of range\")"
 # 657 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -64239,11 +64671,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
   inline ap_bit_ref<_AP_W, _AP_S> operator[](int index) {
     
 # 987 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 987 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (index >= 0) && ("Attempting to read bit with negative index")
 # 987 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 987 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (index >= 0) && ("Attempting to read bit with negative index")
+# 987 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 987 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(index >= 0) && (\"Attempting to read bit with negative index\")"
 # 987 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -64252,11 +64688,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
                                                                       ;
     
 # 988 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 988 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (index < _AP_W) && ("Attempting to read bit beyond MSB")
 # 988 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 988 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (index < _AP_W) && ("Attempting to read bit beyond MSB")
+# 988 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 988 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(index < _AP_W) && (\"Attempting to read bit beyond MSB\")"
 # 988 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -64272,11 +64712,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
       const ap_int_base<_AP_W2, _AP_S2>& index) {
     
 # 996 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 996 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (index >= 0) && ("Attempting to read bit with negative index")
 # 996 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 996 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (index >= 0) && ("Attempting to read bit with negative index")
+# 996 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 996 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(index >= 0) && (\"Attempting to read bit with negative index\")"
 # 996 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -64285,11 +64729,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
                                                                       ;
     
 # 997 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 997 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (index < _AP_W) && ("Attempting to read bit beyond MSB")
 # 997 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 997 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (index < _AP_W) && ("Attempting to read bit beyond MSB")
+# 997 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 997 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(index < _AP_W) && (\"Attempting to read bit beyond MSB\")"
 # 997 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -64303,11 +64751,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
   inline bool operator[](int index) const {
     
 # 1003 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 1003 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (index >= 0) && ("Attempting to read bit with negative index")
 # 1003 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 1003 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (index >= 0) && ("Attempting to read bit with negative index")
+# 1003 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 1003 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(index >= 0) && (\"Attempting to read bit with negative index\")"
 # 1003 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -64316,11 +64768,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
                                                                       ;
     
 # 1004 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 1004 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (index < _AP_W) && ("Attempting to read bit beyond MSB")
 # 1004 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 1004 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (index < _AP_W) && ("Attempting to read bit beyond MSB")
+# 1004 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 1004 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(index < _AP_W) && (\"Attempting to read bit beyond MSB\")"
 # 1004 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -64334,11 +64790,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
   inline bool operator[](const ap_int_base<_AP_W2, _AP_S2>& index) const {
     
 # 1010 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 1010 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (index < _AP_W) && ("Attempting to read bit beyond MSB")
 # 1010 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 1010 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (index < _AP_W) && ("Attempting to read bit beyond MSB")
+# 1010 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 1010 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(index < _AP_W) && (\"Attempting to read bit beyond MSB\")"
 # 1010 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -64352,11 +64812,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
   inline ap_bit_ref<_AP_W, _AP_S> bit(int index) {
     
 # 1016 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 1016 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (index >= 0) && ("Attempting to read bit with negative index")
 # 1016 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 1016 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (index >= 0) && ("Attempting to read bit with negative index")
+# 1016 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 1016 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(index >= 0) && (\"Attempting to read bit with negative index\")"
 # 1016 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -64365,11 +64829,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
                                                                       ;
     
 # 1017 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 1017 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (index < _AP_W) && ("Attempting to read bit beyond MSB")
 # 1017 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 1017 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (index < _AP_W) && ("Attempting to read bit beyond MSB")
+# 1017 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 1017 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(index < _AP_W) && (\"Attempting to read bit beyond MSB\")"
 # 1017 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -64384,11 +64852,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
       const ap_int_base<_AP_W2, _AP_S2>& index) {
     
 # 1024 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 1024 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (index >= 0) && ("Attempting to read bit with negative index")
 # 1024 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 1024 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (index >= 0) && ("Attempting to read bit with negative index")
+# 1024 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 1024 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(index >= 0) && (\"Attempting to read bit with negative index\")"
 # 1024 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -64397,11 +64869,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
                                                                       ;
     
 # 1025 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 1025 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (index < _AP_W) && ("Attempting to read bit beyond MSB")
 # 1025 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 1025 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (index < _AP_W) && ("Attempting to read bit beyond MSB")
+# 1025 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 1025 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(index < _AP_W) && (\"Attempting to read bit beyond MSB\")"
 # 1025 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -64415,11 +64891,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
   inline bool bit(int index) const {
     
 # 1031 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 1031 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (index >= 0) && ("Attempting to read bit with negative index")
 # 1031 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 1031 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (index >= 0) && ("Attempting to read bit with negative index")
+# 1031 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 1031 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(index >= 0) && (\"Attempting to read bit with negative index\")"
 # 1031 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -64428,11 +64908,15 @@ struct ap_int_base : public ssdm_int_sim<_AP_W, _AP_S> {
                                                                       ;
     
 # 1032 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   (static_cast <bool> (
+   ((
 # 1032 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    (index < _AP_W) && ("Attempting to read bit beyond MSB")
 # 1032 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
-   ) ? void (0) : __assert_fail (
+   ) ? void (1 ? 1 : bool (
+# 1032 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
+   (index < _AP_W) && ("Attempting to read bit beyond MSB")
+# 1032 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
+   )) : __assert_fail (
 # 1032 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h"
    "(index < _AP_W) && (\"Attempting to read bit beyond MSB\")"
 # 1032 "/home/sten/vivado/Vivado/2019.1/include/ap_int_base.h" 3 4
@@ -69608,11 +70092,11 @@ inline bool operator!=(
 }
 # 399 "/home/sten/vivado/Vivado/2019.1/include/ap_fixed.h" 2
 # 368 "/home/sten/vivado/Vivado/2019.1/include/ap_int.h" 2
-# 50 "/home/sten/Downloads/HAAI_lab4_source/source/neuron_FP/neuron.h" 2
+# 50 "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/neuron.h" 2
 
 
 float neuron(float w, float x, float b);
-# 47 "/home/sten/Downloads/HAAI_lab4_source/source/neuron_FP/neuron.cpp" 2
+# 47 "/home/sten/Uni/HardwareArchitecturesforAI/Lab4/neuron_FP/neuron.cpp" 2
 
 float neuron(float w, float x, float b) {
  float out = w * x + b;
