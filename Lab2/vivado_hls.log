@@ -1,0 +1,49 @@
+INFO: [HLS 200-10] Running '/home/sten/vivado/Vivado/2019.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'sten' on host 'home' (Linux_x86_64 version 7.1.8-arch1-3) on Fri Aug 14 21:54:28 CEST 2026
+INFO: [HLS 200-10] In directory '/home/sten/Uni/HardwareArchitecturesforAI/Lab2'
+Sourcing Tcl script '/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project '/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder'.
+INFO: [HLS 200-10] Adding design file 'prj_adder/adder.h' to the project
+INFO: [HLS 200-10] Adding design file 'prj_adder/adder.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'prj_adder/adder_tb.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/home/sten/Uni/HardwareArchitecturesforAI/Lab2/prj_adder/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sbva484-1-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'prj_adder/adder.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 820.793 ; gain = 126.996 ; free physical = 10684 ; free virtual = 19254
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 820.793 ; gain = 126.996 ; free physical = 10684 ; free virtual = 19254
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 820.793 ; gain = 126.996 ; free physical = 10685 ; free virtual = 19260
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 820.793 ; gain = 126.996 ; free physical = 10685 ; free virtual = 19261
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 820.793 ; gain = 126.996 ; free physical = 10682 ; free virtual = 19257
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 820.793 ; gain = 126.996 ; free physical = 10682 ; free virtual = 19258
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'adder' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'adder' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 9.93 seconds; current allocated memory: 77.961 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 78.009 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'adder' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'adder/a' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'adder/b' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'adder/c' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'adder' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'adder'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 78.177 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 820.793 ; gain = 126.996 ; free physical = 10673 ; free virtual = 19255
+INFO: [VHDL 208-304] Generating VHDL RTL for adder.
+INFO: [VLOG 209-307] Generating Verilog RTL for adder.
+INFO: [HLS 200-112] Total elapsed time: 10.32 seconds; peak allocated memory: 78.177 MB.
