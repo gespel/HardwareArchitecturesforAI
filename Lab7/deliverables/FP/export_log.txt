@@ -1,0 +1,20 @@
+  spliced: /home/sten/Uni/HardwareArchitecturesforAI/Lab7/mlp_FP/mlp.cpp
+  spliced: /home/sten/Uni/HardwareArchitecturesforAI/Lab7/mlp_FP/mlp_tb.cpp
+==========================================================================
+ Lab 7 - Step 1 : weight / bias / input export
+==========================================================================
+  dense_1 W  shape (784, 5)   min -0.980545  max +1.159184  mean +0.043734
+  dense_1 b  shape (5,)       min +0.023832  max +0.361222  mean +0.216746
+  dense_2 W  shape (5, 8)     min -0.714713  max +1.078010  mean +0.161105
+  dense_2 b  shape (8,)       min -0.653330  max +0.582107  mean +0.019589
+  dense_3 W  shape (8, 8)     min -0.804891  max +1.124477  mean +0.078470
+  dense_3 b  shape (8,)       min -0.546434  max +0.908276  mean +0.147526
+  output  W  shape (8, 10)    min -1.427473  max +0.896233  mean -0.146496
+  output  b  shape (10,)      min -1.248808  max +0.745292  mean +0.043420
+
+  MNIST test images exported : 5  (indices 0..4)
+    img 0: label 7  argmax 7  p(max)=0.98303
+    img 1: label 2  argmax 2  p(max)=0.99626
+    img 2: label 1  argmax 1  p(max)=0.96253
+    img 3: label 0  argmax 0  p(max)=0.99472
+    img 4: label 4  argmax 4  p(max)=0.92035

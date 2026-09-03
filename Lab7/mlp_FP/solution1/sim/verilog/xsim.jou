@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# xsim v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Sep  3 10:44:31 2026
+# Process ID: 191508
+# Current directory: /home/sten/Uni/HardwareArchitecturesforAI/Lab7/mlp_FP/solution1/sim/verilog
+# Command line: xsim -source {xsim.dir/mlp/xsim_script.tcl}
+# Log file: /home/sten/Uni/HardwareArchitecturesforAI/Lab7/mlp_FP/solution1/sim/verilog/xsim.log
+# Journal file: /home/sten/Uni/HardwareArchitecturesforAI/Lab7/mlp_FP/solution1/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+start_gui
+source xsim.dir/mlp/xsim_script.tcl
+open_wave_config mlp_dataflow_ana.wcfg
+source mlp.tcl

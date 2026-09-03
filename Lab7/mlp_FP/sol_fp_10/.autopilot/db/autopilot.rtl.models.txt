@@ -1,0 +1,17 @@
+mlp_faddfsub_32ns_32ns_32_4_full_dsp_1
+mlp_fmul_32ns_32ns_32_3_max_dsp_1
+mlp_fdiv_32ns_32ns_32_9_1
+mlp_fcmp_32ns_32ns_1_2_1
+mlp_fexp_32ns_32ns_32_8_full_dsp_1
+mlp_B1
+mlp_W1
+mlp_B2
+mlp_W2
+mlp_B3
+mlp_W3
+mlp_B4
+mlp_W4
+mlp_a1
+mlp_a2
+mlp_z4
+mlp

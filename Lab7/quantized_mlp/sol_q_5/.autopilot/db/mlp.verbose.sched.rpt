@@ -1,0 +1,1243 @@
+
+
+================================================================
+== Vivado HLS Report for 'mlp'
+================================================================
+* Date:           Thu Sep  3 11:23:46 2026
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        quantized_mlp
+* Solution:       sol_q_5
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.354|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  8857|  8866|  8857|  8866|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+------+------+----------+-----------+-----------+------+----------+
+        |                |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   |  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+------+------+----------+-----------+-----------+------+----------+
+        |- layer1        |  7855|  7855|      1571|          -|          -|     5|    no    |
+        | + neuron_mac   |  1568|  1568|         2|          -|          -|   784|    no    |
+        |- layer2        |   104|   104|        13|          -|          -|     8|    no    |
+        | + neuron_mac   |    10|    10|         2|          -|          -|     5|    no    |
+        |- layer3        |   152|   152|        19|          -|          -|     8|    no    |
+        | + neuron_mac   |    16|    16|         2|          -|          -|     8|    no    |
+        |- layer4        |   190|   190|        19|          -|          -|    10|    no    |
+        | + neuron_mac   |    16|    16|         2|          -|          -|     8|    no    |
+        |- Loop 5        |    45|    54|   5 ~ 6  |          -|          -|     9|    no    |
+        |- softmax_exp   |   310|   310|        31|          -|          -|    10|    no    |
+        |- softmax_norm  |   190|   190|        19|          -|          -|    10|    no    |
+        +----------------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 77
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 6 
+3 --> 4 
+4 --> 5 2 
+5 --> 4 
+6 --> 7 10 
+7 --> 8 
+8 --> 9 6 
+9 --> 8 
+10 --> 11 14 
+11 --> 12 
+12 --> 13 10 
+13 --> 12 
+14 --> 15 18 
+15 --> 16 
+16 --> 17 14 
+17 --> 16 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 28 
+23 --> 24 25 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 22 
+28 --> 29 59 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 28 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 75 
+75 --> 76 
+76 --> 77 
+77 --> 59 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.75>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([784 x i20]* %input_V), !map !88"   --->   Operation 78 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([10 x float]* %output_r), !map !94"   --->   Operation 79 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @mlp_str) nounwind"   --->   Operation 80 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%a1_V = alloca [5 x i19], align 4" [quantized_mlp/mlp.cpp:81]   --->   Operation 81 'alloca' 'a1_V' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%a2_V = alloca [8 x i19], align 4" [quantized_mlp/mlp.cpp:82]   --->   Operation 82 'alloca' 'a2_V' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%a3_V = alloca [8 x i19], align 4" [quantized_mlp/mlp.cpp:83]   --->   Operation 83 'alloca' 'a3_V' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%z4_V = alloca [10 x i20], align 4" [quantized_mlp/mlp.cpp:84]   --->   Operation 84 'alloca' 'z4_V' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%logits = alloca [10 x float], align 16" [quantized_mlp/mlp.cpp:107]   --->   Operation 85 'alloca' 'logits' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_1 : Operation 86 [1/1] (0.75ns)   --->   "br label %.preheader277" [quantized_mlp/mlp.cpp:88]   --->   Operation 86 'br' <Predicate = true> <Delay = 0.75>
+
+State 2 <SV = 1> <Delay = 1.35>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%j_0 = phi i3 [ %j, %neuron.2.exit ], [ 0, %arrayctor.loop1.preheader ]"   --->   Operation 87 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%phi_mul = phi i12 [ %add_ln88, %neuron.2.exit ], [ 0, %arrayctor.loop1.preheader ]" [quantized_mlp/mlp.cpp:88]   --->   Operation 88 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 89 [1/1] (0.96ns)   --->   "%add_ln88 = add i12 %phi_mul, 784" [quantized_mlp/mlp.cpp:88]   --->   Operation 89 'add' 'add_ln88' <Predicate = true> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 90 [1/1] (0.69ns)   --->   "%icmp_ln88 = icmp eq i3 %j_0, -3" [quantized_mlp/mlp.cpp:88]   --->   Operation 90 'icmp' 'icmp_ln88' <Predicate = true> <Delay = 0.69> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5)"   --->   Operation 91 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 92 [1/1] (0.74ns)   --->   "%j = add i3 %j_0, 1" [quantized_mlp/mlp.cpp:88]   --->   Operation 92 'add' 'j' <Predicate = true> <Delay = 0.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "br i1 %icmp_ln88, label %.preheader276.preheader, label %0" [quantized_mlp/mlp.cpp:88]   --->   Operation 93 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%zext_ln89 = zext i3 %j_0 to i64" [quantized_mlp/mlp.cpp:89]   --->   Operation 94 'zext' 'zext_ln89' <Predicate = (!icmp_ln88)> <Delay = 0.00>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%B1_V_addr = getelementptr [5 x i13]* @B1_V, i64 0, i64 %zext_ln89" [quantized_mlp/mlp.cpp:89]   --->   Operation 95 'getelementptr' 'B1_V_addr' <Predicate = (!icmp_ln88)> <Delay = 0.00>
+ST_2 : Operation 96 [2/2] (1.35ns)   --->   "%acc_V = load i13* %B1_V_addr, align 2" [quantized_mlp/mlp.cpp:89]   --->   Operation 96 'load' 'acc_V' <Predicate = (!icmp_ln88)> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_2 : Operation 97 [1/1] (0.75ns)   --->   "br label %.preheader276" [quantized_mlp/mlp.cpp:93]   --->   Operation 97 'br' <Predicate = (icmp_ln88)> <Delay = 0.75>
+
+State 3 <SV = 2> <Delay = 1.35>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str8) nounwind" [quantized_mlp/mlp.cpp:89]   --->   Operation 98 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 99 [1/2] (1.35ns)   --->   "%acc_V = load i13* %B1_V_addr, align 2" [quantized_mlp/mlp.cpp:89]   --->   Operation 99 'load' 'acc_V' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%zext_ln89_1 = zext i13 %acc_V to i20" [quantized_mlp/mlp.cpp:89]   --->   Operation 100 'zext' 'zext_ln89_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (0.75ns)   --->   "br label %1" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:89]   --->   Operation 101 'br' <Predicate = true> <Delay = 0.75>
+
+State 4 <SV = 3> <Delay = 2.31>
+ST_4 : Operation 102 [1/1] (0.00ns)   --->   "%p_Val2_1 = phi i20 [ %zext_ln89_1, %0 ], [ %acc_V_2, %_ZN13ap_fixed_baseILi41ELi13ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi20ELi6ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i ]"   --->   Operation 102 'phi' 'p_Val2_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 103 [1/1] (0.00ns)   --->   "%i_0_i = phi i10 [ 0, %0 ], [ %i, %_ZN13ap_fixed_baseILi41ELi13ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi20ELi6ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i ]"   --->   Operation 103 'phi' 'i_0_i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 104 [1/1] (0.00ns)   --->   "%empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)"   --->   Operation 104 'speclooptripcount' 'empty_15' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 105 [1/1] (0.85ns)   --->   "%icmp_ln68 = icmp eq i10 %i_0_i, -240" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:89]   --->   Operation 105 'icmp' 'icmp_ln68' <Predicate = true> <Delay = 0.85> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 106 [1/1] (0.93ns)   --->   "%i = add i10 %i_0_i, 1" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:89]   --->   Operation 106 'add' 'i' <Predicate = true> <Delay = 0.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 107 [1/1] (0.00ns)   --->   "br i1 %icmp_ln68, label %neuron.2.exit, label %_ZN13ap_fixed_baseILi41ELi13ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi20ELi6ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:89]   --->   Operation 107 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 108 [1/1] (0.00ns)   --->   "%zext_ln69 = zext i10 %i_0_i to i64" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 108 'zext' 'zext_ln69' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_4 : Operation 109 [1/1] (0.00ns)   --->   "%zext_ln1117_2 = zext i10 %i_0_i to i12" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 109 'zext' 'zext_ln1117_2' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_4 : Operation 110 [1/1] (0.96ns)   --->   "%add_ln1117_1 = add i12 %zext_ln1117_2, %phi_mul" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 110 'add' 'add_ln1117_1' <Predicate = (!icmp_ln68)> <Delay = 0.96> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 111 [1/1] (0.00ns)   --->   "%zext_ln1117_3 = zext i12 %add_ln1117_1 to i64" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 111 'zext' 'zext_ln1117_3' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_4 : Operation 112 [1/1] (0.00ns)   --->   "%W1_V_addr = getelementptr [3920 x i16]* @W1_V, i64 0, i64 %zext_ln1117_3" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 112 'getelementptr' 'W1_V_addr' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_4 : Operation 113 [1/1] (0.00ns)   --->   "%input_V_addr = getelementptr [784 x i20]* %input_V, i64 0, i64 %zext_ln69" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 113 'getelementptr' 'input_V_addr' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_4 : Operation 114 [2/2] (1.35ns)   --->   "%input_V_load = load i20* %input_V_addr, align 4" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 114 'load' 'input_V_load' <Predicate = (!icmp_ln68)> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_4 : Operation 115 [2/2] (1.35ns)   --->   "%W1_V_load = load i16* %W1_V_addr, align 2" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 115 'load' 'W1_V_load' <Predicate = (!icmp_ln68)> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_4 : Operation 116 [1/1] (0.00ns)   --->   "%empty_16 = trunc i20 %p_Val2_1 to i19" [quantized_mlp/mlp.cpp:89]   --->   Operation 116 'trunc' 'empty_16' <Predicate = (icmp_ln68)> <Delay = 0.00>
+ST_4 : Operation 117 [1/1] (0.00ns)   --->   "%tmp_10 = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %p_Val2_1, i32 19)" [quantized_mlp/mlp.cpp:72->quantized_mlp/mlp.cpp:89]   --->   Operation 117 'bitselect' 'tmp_10' <Predicate = (icmp_ln68)> <Delay = 0.00>
+ST_4 : Operation 118 [1/1] (0.43ns)   --->   "%p_Val2_s = select i1 %tmp_10, i19 0, i19 %empty_16" [quantized_mlp/mlp.cpp:72->quantized_mlp/mlp.cpp:89]   --->   Operation 118 'select' 'p_Val2_s' <Predicate = (icmp_ln68)> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 119 [1/1] (0.00ns)   --->   "%a1_V_addr = getelementptr [5 x i19]* %a1_V, i64 0, i64 %zext_ln89" [quantized_mlp/mlp.cpp:89]   --->   Operation 119 'getelementptr' 'a1_V_addr' <Predicate = (icmp_ln68)> <Delay = 0.00>
+ST_4 : Operation 120 [1/1] (0.79ns)   --->   "store i19 %p_Val2_s, i19* %a1_V_addr, align 4" [quantized_mlp/mlp.cpp:89]   --->   Operation 120 'store' <Predicate = (icmp_ln68)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_4 : Operation 121 [1/1] (0.00ns)   --->   "br label %.preheader277" [quantized_mlp/mlp.cpp:88]   --->   Operation 121 'br' <Predicate = (icmp_ln68)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 4.19>
+ST_5 : Operation 122 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str) nounwind" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:89]   --->   Operation 122 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 123 [1/2] (1.35ns)   --->   "%input_V_load = load i20* %input_V_addr, align 4" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 123 'load' 'input_V_load' <Predicate = true> <Delay = 1.35> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_5 : Operation 124 [1/1] (0.00ns)   --->   "%sext_ln1192 = sext i20 %input_V_load to i34" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 124 'sext' 'sext_ln1192' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 125 [1/2] (1.35ns)   --->   "%W1_V_load = load i16* %W1_V_addr, align 2" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 125 'load' 'W1_V_load' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_5 : Operation 126 [1/1] (0.00ns)   --->   "%sext_ln1192_1 = sext i16 %W1_V_load to i34" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 126 'sext' 'sext_ln1192_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 127 [1/1] (0.63ns) (grouped into DSP with root node ret_V)   --->   "%mul_ln1192 = mul i34 %sext_ln1192, %sext_ln1192_1" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 127 'mul' 'mul_ln1192' <Predicate = true> <Delay = 0.63> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 128 [1/1] (0.00ns)   --->   "%lhs_V = call i34 @_ssdm_op_BitConcatenate.i34.i20.i14(i20 %p_Val2_1, i14 0)" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 128 'bitconcatenate' 'lhs_V' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 129 [1/1] (2.20ns) (root node of the DSP)   --->   "%ret_V = add i34 %lhs_V, %mul_ln1192" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 129 'add' 'ret_V' <Predicate = true> <Delay = 2.20> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 130 [1/1] (0.00ns)   --->   "%acc_V_2 = call i20 @_ssdm_op_PartSelect.i20.i34.i32.i32(i34 %ret_V, i32 14, i32 33)" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89]   --->   Operation 130 'partselect' 'acc_V_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 131 [1/1] (0.00ns)   --->   "br label %1" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:89]   --->   Operation 131 'br' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 2> <Delay = 1.35>
+ST_6 : Operation 132 [1/1] (0.00ns)   --->   "%j4_0 = phi i4 [ %j_1, %neuron.1.exit ], [ 0, %.preheader276.preheader ]"   --->   Operation 132 'phi' 'j4_0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 133 [1/1] (0.88ns)   --->   "%icmp_ln93 = icmp eq i4 %j4_0, -8" [quantized_mlp/mlp.cpp:93]   --->   Operation 133 'icmp' 'icmp_ln93' <Predicate = true> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 134 [1/1] (0.00ns)   --->   "%empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 134 'speclooptripcount' 'empty_17' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 135 [1/1] (0.86ns)   --->   "%j_1 = add i4 %j4_0, 1" [quantized_mlp/mlp.cpp:93]   --->   Operation 135 'add' 'j_1' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 136 [1/1] (0.00ns)   --->   "br i1 %icmp_ln93, label %.preheader275.preheader, label %2" [quantized_mlp/mlp.cpp:93]   --->   Operation 136 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 137 [1/1] (0.00ns)   --->   "%zext_ln94 = zext i4 %j4_0 to i64" [quantized_mlp/mlp.cpp:94]   --->   Operation 137 'zext' 'zext_ln94' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_6 : Operation 138 [1/1] (0.00ns)   --->   "%B2_V_addr = getelementptr [8 x i15]* @B2_V, i64 0, i64 %zext_ln94" [quantized_mlp/mlp.cpp:94]   --->   Operation 138 'getelementptr' 'B2_V_addr' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_6 : Operation 139 [2/2] (1.35ns)   --->   "%acc_V_1 = load i15* %B2_V_addr, align 2" [quantized_mlp/mlp.cpp:94]   --->   Operation 139 'load' 'acc_V_1' <Predicate = (!icmp_ln93)> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_6 : Operation 140 [1/1] (0.75ns)   --->   "br label %.preheader275" [quantized_mlp/mlp.cpp:98]   --->   Operation 140 'br' <Predicate = (icmp_ln93)> <Delay = 0.75>
+
+State 7 <SV = 3> <Delay = 1.35>
+ST_7 : Operation 141 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str9) nounwind" [quantized_mlp/mlp.cpp:94]   --->   Operation 141 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 142 [1/1] (0.00ns)   --->   "%zext_ln1117 = zext i4 %j4_0 to i7" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 142 'zext' 'zext_ln1117' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 143 [1/1] (0.00ns)   --->   "%tmp_7 = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %j4_0, i2 0)" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 143 'bitconcatenate' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 144 [1/1] (0.00ns)   --->   "%zext_ln1117_1 = zext i6 %tmp_7 to i7" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 144 'zext' 'zext_ln1117_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 145 [1/1] (0.88ns)   --->   "%add_ln1117 = add i7 %zext_ln1117, %zext_ln1117_1" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 145 'add' 'add_ln1117' <Predicate = true> <Delay = 0.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 146 [1/2] (1.35ns)   --->   "%acc_V_1 = load i15* %B2_V_addr, align 2" [quantized_mlp/mlp.cpp:94]   --->   Operation 146 'load' 'acc_V_1' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_7 : Operation 147 [1/1] (0.00ns)   --->   "%sext_ln94 = sext i15 %acc_V_1 to i20" [quantized_mlp/mlp.cpp:94]   --->   Operation 147 'sext' 'sext_ln94' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 148 [1/1] (0.75ns)   --->   "br label %3" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:94]   --->   Operation 148 'br' <Predicate = true> <Delay = 0.75>
+
+State 8 <SV = 4> <Delay = 2.24>
+ST_8 : Operation 149 [1/1] (0.00ns)   --->   "%p_Val2_4 = phi i20 [ %sext_ln94, %2 ], [ %acc_V_4, %_ZN13ap_fixed_baseILi41ELi13ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi20ELi6ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i23 ]"   --->   Operation 149 'phi' 'p_Val2_4' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 150 [1/1] (0.00ns)   --->   "%i_0_i10 = phi i3 [ 0, %2 ], [ %i_1, %_ZN13ap_fixed_baseILi41ELi13ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi20ELi6ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i23 ]"   --->   Operation 150 'phi' 'i_0_i10' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 151 [1/1] (0.00ns)   --->   "%empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5)"   --->   Operation 151 'speclooptripcount' 'empty_18' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 152 [1/1] (0.69ns)   --->   "%icmp_ln68_1 = icmp eq i3 %i_0_i10, -3" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:94]   --->   Operation 152 'icmp' 'icmp_ln68_1' <Predicate = true> <Delay = 0.69> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 153 [1/1] (0.74ns)   --->   "%i_1 = add i3 %i_0_i10, 1" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:94]   --->   Operation 153 'add' 'i_1' <Predicate = true> <Delay = 0.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 154 [1/1] (0.00ns)   --->   "br i1 %icmp_ln68_1, label %neuron.1.exit, label %_ZN13ap_fixed_baseILi41ELi13ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi20ELi6ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i23" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:94]   --->   Operation 154 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 155 [1/1] (0.00ns)   --->   "%zext_ln69_1 = zext i3 %i_0_i10 to i64" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 155 'zext' 'zext_ln69_1' <Predicate = (!icmp_ln68_1)> <Delay = 0.00>
+ST_8 : Operation 156 [1/1] (0.00ns)   --->   "%zext_ln1117_4 = zext i3 %i_0_i10 to i7" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 156 'zext' 'zext_ln1117_4' <Predicate = (!icmp_ln68_1)> <Delay = 0.00>
+ST_8 : Operation 157 [1/1] (0.89ns)   --->   "%add_ln1117_2 = add i7 %zext_ln1117_4, %add_ln1117" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 157 'add' 'add_ln1117_2' <Predicate = (!icmp_ln68_1)> <Delay = 0.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 158 [1/1] (0.00ns)   --->   "%zext_ln1117_5 = zext i7 %add_ln1117_2 to i64" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 158 'zext' 'zext_ln1117_5' <Predicate = (!icmp_ln68_1)> <Delay = 0.00>
+ST_8 : Operation 159 [1/1] (0.00ns)   --->   "%W2_V_addr = getelementptr [40 x i16]* @W2_V, i64 0, i64 %zext_ln1117_5" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 159 'getelementptr' 'W2_V_addr' <Predicate = (!icmp_ln68_1)> <Delay = 0.00>
+ST_8 : Operation 160 [1/1] (0.00ns)   --->   "%a1_V_addr_1 = getelementptr [5 x i19]* %a1_V, i64 0, i64 %zext_ln69_1" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 160 'getelementptr' 'a1_V_addr_1' <Predicate = (!icmp_ln68_1)> <Delay = 0.00>
+ST_8 : Operation 161 [2/2] (0.79ns)   --->   "%a1_V_load = load i19* %a1_V_addr_1, align 4" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 161 'load' 'a1_V_load' <Predicate = (!icmp_ln68_1)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_8 : Operation 162 [2/2] (1.35ns)   --->   "%W2_V_load = load i16* %W2_V_addr, align 2" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 162 'load' 'W2_V_load' <Predicate = (!icmp_ln68_1)> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_8 : Operation 163 [1/1] (0.00ns)   --->   "%empty_19 = trunc i20 %p_Val2_4 to i19" [quantized_mlp/mlp.cpp:94]   --->   Operation 163 'trunc' 'empty_19' <Predicate = (icmp_ln68_1)> <Delay = 0.00>
+ST_8 : Operation 164 [1/1] (0.00ns)   --->   "%tmp_11 = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %p_Val2_4, i32 19)" [quantized_mlp/mlp.cpp:72->quantized_mlp/mlp.cpp:94]   --->   Operation 164 'bitselect' 'tmp_11' <Predicate = (icmp_ln68_1)> <Delay = 0.00>
+ST_8 : Operation 165 [1/1] (0.43ns)   --->   "%p_Val2_3 = select i1 %tmp_11, i19 0, i19 %empty_19" [quantized_mlp/mlp.cpp:72->quantized_mlp/mlp.cpp:94]   --->   Operation 165 'select' 'p_Val2_3' <Predicate = (icmp_ln68_1)> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 166 [1/1] (0.00ns)   --->   "%a2_V_addr = getelementptr [8 x i19]* %a2_V, i64 0, i64 %zext_ln94" [quantized_mlp/mlp.cpp:94]   --->   Operation 166 'getelementptr' 'a2_V_addr' <Predicate = (icmp_ln68_1)> <Delay = 0.00>
+ST_8 : Operation 167 [1/1] (0.79ns)   --->   "store i19 %p_Val2_3, i19* %a2_V_addr, align 4" [quantized_mlp/mlp.cpp:94]   --->   Operation 167 'store' <Predicate = (icmp_ln68_1)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_8 : Operation 168 [1/1] (0.00ns)   --->   "br label %.preheader276" [quantized_mlp/mlp.cpp:93]   --->   Operation 168 'br' <Predicate = (icmp_ln68_1)> <Delay = 0.00>
+
+State 9 <SV = 5> <Delay = 4.19>
+ST_9 : Operation 169 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str) nounwind" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:94]   --->   Operation 169 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 170 [1/2] (0.79ns)   --->   "%a1_V_load = load i19* %a1_V_addr_1, align 4" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 170 'load' 'a1_V_load' <Predicate = true> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_9 : Operation 171 [1/1] (0.00ns)   --->   "%zext_ln1192 = zext i19 %a1_V_load to i34" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 171 'zext' 'zext_ln1192' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 172 [1/2] (1.35ns)   --->   "%W2_V_load = load i16* %W2_V_addr, align 2" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 172 'load' 'W2_V_load' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_9 : Operation 173 [1/1] (0.00ns)   --->   "%sext_ln1192_2 = sext i16 %W2_V_load to i34" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 173 'sext' 'sext_ln1192_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 174 [1/1] (0.63ns) (grouped into DSP with root node ret_V_1)   --->   "%mul_ln1192_1 = mul i34 %zext_ln1192, %sext_ln1192_2" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 174 'mul' 'mul_ln1192_1' <Predicate = true> <Delay = 0.63> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 175 [1/1] (0.00ns)   --->   "%lhs_V_1 = call i34 @_ssdm_op_BitConcatenate.i34.i20.i14(i20 %p_Val2_4, i14 0)" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 175 'bitconcatenate' 'lhs_V_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 176 [1/1] (2.20ns) (root node of the DSP)   --->   "%ret_V_1 = add i34 %lhs_V_1, %mul_ln1192_1" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 176 'add' 'ret_V_1' <Predicate = true> <Delay = 2.20> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 177 [1/1] (0.00ns)   --->   "%acc_V_4 = call i20 @_ssdm_op_PartSelect.i20.i34.i32.i32(i34 %ret_V_1, i32 14, i32 33)" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94]   --->   Operation 177 'partselect' 'acc_V_4' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 178 [1/1] (0.00ns)   --->   "br label %3" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:94]   --->   Operation 178 'br' <Predicate = true> <Delay = 0.00>
+
+State 10 <SV = 3> <Delay = 1.35>
+ST_10 : Operation 179 [1/1] (0.00ns)   --->   "%j5_0 = phi i4 [ %j_2, %neuron.141.exit ], [ 0, %.preheader275.preheader ]"   --->   Operation 179 'phi' 'j5_0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 180 [1/1] (0.88ns)   --->   "%icmp_ln98 = icmp eq i4 %j5_0, -8" [quantized_mlp/mlp.cpp:98]   --->   Operation 180 'icmp' 'icmp_ln98' <Predicate = true> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 181 [1/1] (0.00ns)   --->   "%empty_20 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 181 'speclooptripcount' 'empty_20' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 182 [1/1] (0.86ns)   --->   "%j_2 = add i4 %j5_0, 1" [quantized_mlp/mlp.cpp:98]   --->   Operation 182 'add' 'j_2' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 183 [1/1] (0.00ns)   --->   "br i1 %icmp_ln98, label %.preheader274.preheader, label %4" [quantized_mlp/mlp.cpp:98]   --->   Operation 183 'br' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 184 [1/1] (0.00ns)   --->   "%zext_ln99 = zext i4 %j5_0 to i64" [quantized_mlp/mlp.cpp:99]   --->   Operation 184 'zext' 'zext_ln99' <Predicate = (!icmp_ln98)> <Delay = 0.00>
+ST_10 : Operation 185 [1/1] (0.00ns)   --->   "%B3_V_addr = getelementptr [8 x i15]* @B3_V, i64 0, i64 %zext_ln99" [quantized_mlp/mlp.cpp:99]   --->   Operation 185 'getelementptr' 'B3_V_addr' <Predicate = (!icmp_ln98)> <Delay = 0.00>
+ST_10 : Operation 186 [2/2] (1.35ns)   --->   "%acc_V_3 = load i15* %B3_V_addr, align 2" [quantized_mlp/mlp.cpp:99]   --->   Operation 186 'load' 'acc_V_3' <Predicate = (!icmp_ln98)> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_10 : Operation 187 [1/1] (0.75ns)   --->   "br label %.preheader274" [quantized_mlp/mlp.cpp:103]   --->   Operation 187 'br' <Predicate = (icmp_ln98)> <Delay = 0.75>
+
+State 11 <SV = 4> <Delay = 1.35>
+ST_11 : Operation 188 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str10) nounwind" [quantized_mlp/mlp.cpp:99]   --->   Operation 188 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 189 [1/1] (0.00ns)   --->   "%tmp_8 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %j5_0, i3 0)" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 189 'bitconcatenate' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 190 [1/1] (0.00ns)   --->   "%zext_ln99_1 = zext i7 %tmp_8 to i8" [quantized_mlp/mlp.cpp:99]   --->   Operation 190 'zext' 'zext_ln99_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 191 [1/2] (1.35ns)   --->   "%acc_V_3 = load i15* %B3_V_addr, align 2" [quantized_mlp/mlp.cpp:99]   --->   Operation 191 'load' 'acc_V_3' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_11 : Operation 192 [1/1] (0.00ns)   --->   "%sext_ln99 = sext i15 %acc_V_3 to i20" [quantized_mlp/mlp.cpp:99]   --->   Operation 192 'sext' 'sext_ln99' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 193 [1/1] (0.75ns)   --->   "br label %5" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:99]   --->   Operation 193 'br' <Predicate = true> <Delay = 0.75>
+
+State 12 <SV = 5> <Delay = 2.24>
+ST_12 : Operation 194 [1/1] (0.00ns)   --->   "%p_Val2_9 = phi i20 [ %sext_ln99, %4 ], [ %acc_V_6, %_ZN13ap_fixed_baseILi41ELi13ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi20ELi6ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i39 ]"   --->   Operation 194 'phi' 'p_Val2_9' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 195 [1/1] (0.00ns)   --->   "%i_0_i26 = phi i4 [ 0, %4 ], [ %i_2, %_ZN13ap_fixed_baseILi41ELi13ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi20ELi6ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i39 ]"   --->   Operation 195 'phi' 'i_0_i26' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 196 [1/1] (0.00ns)   --->   "%empty_21 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 196 'speclooptripcount' 'empty_21' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 197 [1/1] (0.88ns)   --->   "%icmp_ln68_2 = icmp eq i4 %i_0_i26, -8" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:99]   --->   Operation 197 'icmp' 'icmp_ln68_2' <Predicate = true> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 198 [1/1] (0.86ns)   --->   "%i_2 = add i4 %i_0_i26, 1" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:99]   --->   Operation 198 'add' 'i_2' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 199 [1/1] (0.00ns)   --->   "br i1 %icmp_ln68_2, label %neuron.141.exit, label %_ZN13ap_fixed_baseILi41ELi13ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi20ELi6ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i39" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:99]   --->   Operation 199 'br' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 200 [1/1] (0.00ns)   --->   "%zext_ln69_2 = zext i4 %i_0_i26 to i64" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 200 'zext' 'zext_ln69_2' <Predicate = (!icmp_ln68_2)> <Delay = 0.00>
+ST_12 : Operation 201 [1/1] (0.00ns)   --->   "%zext_ln1117_6 = zext i4 %i_0_i26 to i8" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 201 'zext' 'zext_ln1117_6' <Predicate = (!icmp_ln68_2)> <Delay = 0.00>
+ST_12 : Operation 202 [1/1] (0.89ns)   --->   "%add_ln1117_3 = add i8 %zext_ln1117_6, %zext_ln99_1" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 202 'add' 'add_ln1117_3' <Predicate = (!icmp_ln68_2)> <Delay = 0.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 203 [1/1] (0.00ns)   --->   "%zext_ln1117_7 = zext i8 %add_ln1117_3 to i64" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 203 'zext' 'zext_ln1117_7' <Predicate = (!icmp_ln68_2)> <Delay = 0.00>
+ST_12 : Operation 204 [1/1] (0.00ns)   --->   "%W3_V_addr = getelementptr [64 x i16]* @W3_V, i64 0, i64 %zext_ln1117_7" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 204 'getelementptr' 'W3_V_addr' <Predicate = (!icmp_ln68_2)> <Delay = 0.00>
+ST_12 : Operation 205 [1/1] (0.00ns)   --->   "%a2_V_addr_1 = getelementptr [8 x i19]* %a2_V, i64 0, i64 %zext_ln69_2" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 205 'getelementptr' 'a2_V_addr_1' <Predicate = (!icmp_ln68_2)> <Delay = 0.00>
+ST_12 : Operation 206 [2/2] (0.79ns)   --->   "%a2_V_load = load i19* %a2_V_addr_1, align 4" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 206 'load' 'a2_V_load' <Predicate = (!icmp_ln68_2)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_12 : Operation 207 [2/2] (1.35ns)   --->   "%W3_V_load = load i16* %W3_V_addr, align 2" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 207 'load' 'W3_V_load' <Predicate = (!icmp_ln68_2)> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_12 : Operation 208 [1/1] (0.00ns)   --->   "%empty_22 = trunc i20 %p_Val2_9 to i19" [quantized_mlp/mlp.cpp:99]   --->   Operation 208 'trunc' 'empty_22' <Predicate = (icmp_ln68_2)> <Delay = 0.00>
+ST_12 : Operation 209 [1/1] (0.00ns)   --->   "%tmp_16 = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %p_Val2_9, i32 19)" [quantized_mlp/mlp.cpp:72->quantized_mlp/mlp.cpp:99]   --->   Operation 209 'bitselect' 'tmp_16' <Predicate = (icmp_ln68_2)> <Delay = 0.00>
+ST_12 : Operation 210 [1/1] (0.43ns)   --->   "%p_Val2_10 = select i1 %tmp_16, i19 0, i19 %empty_22" [quantized_mlp/mlp.cpp:72->quantized_mlp/mlp.cpp:99]   --->   Operation 210 'select' 'p_Val2_10' <Predicate = (icmp_ln68_2)> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 211 [1/1] (0.00ns)   --->   "%a3_V_addr = getelementptr [8 x i19]* %a3_V, i64 0, i64 %zext_ln99" [quantized_mlp/mlp.cpp:99]   --->   Operation 211 'getelementptr' 'a3_V_addr' <Predicate = (icmp_ln68_2)> <Delay = 0.00>
+ST_12 : Operation 212 [1/1] (0.79ns)   --->   "store i19 %p_Val2_10, i19* %a3_V_addr, align 4" [quantized_mlp/mlp.cpp:99]   --->   Operation 212 'store' <Predicate = (icmp_ln68_2)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_12 : Operation 213 [1/1] (0.00ns)   --->   "br label %.preheader275" [quantized_mlp/mlp.cpp:98]   --->   Operation 213 'br' <Predicate = (icmp_ln68_2)> <Delay = 0.00>
+
+State 13 <SV = 6> <Delay = 4.19>
+ST_13 : Operation 214 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str) nounwind" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:99]   --->   Operation 214 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 215 [1/2] (0.79ns)   --->   "%a2_V_load = load i19* %a2_V_addr_1, align 4" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 215 'load' 'a2_V_load' <Predicate = true> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_13 : Operation 216 [1/1] (0.00ns)   --->   "%zext_ln1192_1 = zext i19 %a2_V_load to i34" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 216 'zext' 'zext_ln1192_1' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 217 [1/2] (1.35ns)   --->   "%W3_V_load = load i16* %W3_V_addr, align 2" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 217 'load' 'W3_V_load' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_13 : Operation 218 [1/1] (0.00ns)   --->   "%sext_ln1192_3 = sext i16 %W3_V_load to i34" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 218 'sext' 'sext_ln1192_3' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 219 [1/1] (0.63ns) (grouped into DSP with root node ret_V_2)   --->   "%mul_ln1192_2 = mul i34 %zext_ln1192_1, %sext_ln1192_3" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 219 'mul' 'mul_ln1192_2' <Predicate = true> <Delay = 0.63> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 220 [1/1] (0.00ns)   --->   "%lhs_V_2 = call i34 @_ssdm_op_BitConcatenate.i34.i20.i14(i20 %p_Val2_9, i14 0)" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 220 'bitconcatenate' 'lhs_V_2' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 221 [1/1] (2.20ns) (root node of the DSP)   --->   "%ret_V_2 = add i34 %lhs_V_2, %mul_ln1192_2" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 221 'add' 'ret_V_2' <Predicate = true> <Delay = 2.20> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 222 [1/1] (0.00ns)   --->   "%acc_V_6 = call i20 @_ssdm_op_PartSelect.i20.i34.i32.i32(i34 %ret_V_2, i32 14, i32 33)" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99]   --->   Operation 222 'partselect' 'acc_V_6' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 223 [1/1] (0.00ns)   --->   "br label %5" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:99]   --->   Operation 223 'br' <Predicate = true> <Delay = 0.00>
+
+State 14 <SV = 4> <Delay = 1.35>
+ST_14 : Operation 224 [1/1] (0.00ns)   --->   "%j6_0 = phi i4 [ %j_3, %neuron.exit ], [ 0, %.preheader274.preheader ]"   --->   Operation 224 'phi' 'j6_0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 225 [1/1] (0.88ns)   --->   "%icmp_ln103 = icmp eq i4 %j6_0, -6" [quantized_mlp/mlp.cpp:103]   --->   Operation 225 'icmp' 'icmp_ln103' <Predicate = true> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 226 [1/1] (0.00ns)   --->   "%empty_23 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 226 'speclooptripcount' 'empty_23' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 227 [1/1] (0.86ns)   --->   "%j_3 = add i4 %j6_0, 1" [quantized_mlp/mlp.cpp:103]   --->   Operation 227 'add' 'j_3' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 228 [1/1] (0.00ns)   --->   "br i1 %icmp_ln103, label %_ifconv1, label %6" [quantized_mlp/mlp.cpp:103]   --->   Operation 228 'br' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 229 [1/1] (0.00ns)   --->   "%zext_ln104 = zext i4 %j6_0 to i64" [quantized_mlp/mlp.cpp:104]   --->   Operation 229 'zext' 'zext_ln104' <Predicate = (!icmp_ln103)> <Delay = 0.00>
+ST_14 : Operation 230 [1/1] (0.00ns)   --->   "%B4_V_addr = getelementptr [10 x i16]* @B4_V, i64 0, i64 %zext_ln104" [quantized_mlp/mlp.cpp:104]   --->   Operation 230 'getelementptr' 'B4_V_addr' <Predicate = (!icmp_ln103)> <Delay = 0.00>
+ST_14 : Operation 231 [2/2] (1.35ns)   --->   "%acc_V_5 = load i16* %B4_V_addr, align 2" [quantized_mlp/mlp.cpp:104]   --->   Operation 231 'load' 'acc_V_5' <Predicate = (!icmp_ln103)> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_14 : Operation 232 [1/1] (0.00ns)   --->   "%z4_V_addr = getelementptr [10 x i20]* %z4_V, i64 0, i64 0" [quantized_mlp/mlp.cpp:108]   --->   Operation 232 'getelementptr' 'z4_V_addr' <Predicate = (icmp_ln103)> <Delay = 0.00>
+ST_14 : Operation 233 [2/2] (0.79ns)   --->   "%tmp_V_9 = load i20* %z4_V_addr, align 16" [quantized_mlp/mlp.cpp:108]   --->   Operation 233 'load' 'tmp_V_9' <Predicate = (icmp_ln103)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+
+State 15 <SV = 5> <Delay = 1.35>
+ST_15 : Operation 234 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str11) nounwind" [quantized_mlp/mlp.cpp:104]   --->   Operation 234 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 235 [1/1] (0.00ns)   --->   "%tmp_9 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %j6_0, i3 0)" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 235 'bitconcatenate' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 236 [1/1] (0.00ns)   --->   "%zext_ln104_1 = zext i7 %tmp_9 to i8" [quantized_mlp/mlp.cpp:104]   --->   Operation 236 'zext' 'zext_ln104_1' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 237 [1/2] (1.35ns)   --->   "%acc_V_5 = load i16* %B4_V_addr, align 2" [quantized_mlp/mlp.cpp:104]   --->   Operation 237 'load' 'acc_V_5' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_15 : Operation 238 [1/1] (0.00ns)   --->   "%sext_ln104 = sext i16 %acc_V_5 to i20" [quantized_mlp/mlp.cpp:104]   --->   Operation 238 'sext' 'sext_ln104' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 239 [1/1] (0.75ns)   --->   "br label %7" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:104]   --->   Operation 239 'br' <Predicate = true> <Delay = 0.75>
+
+State 16 <SV = 6> <Delay = 2.24>
+ST_16 : Operation 240 [1/1] (0.00ns)   --->   "%p_Val2_14 = phi i20 [ %sext_ln104, %6 ], [ %acc_V_7, %_ZN13ap_fixed_baseILi41ELi13ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi20ELi6ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i55 ]"   --->   Operation 240 'phi' 'p_Val2_14' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 241 [1/1] (0.00ns)   --->   "%i_0_i42 = phi i4 [ 0, %6 ], [ %i_3, %_ZN13ap_fixed_baseILi41ELi13ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi20ELi6ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i55 ]"   --->   Operation 241 'phi' 'i_0_i42' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 242 [1/1] (0.00ns)   --->   "%empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 242 'speclooptripcount' 'empty_24' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 243 [1/1] (0.88ns)   --->   "%icmp_ln68_3 = icmp eq i4 %i_0_i42, -8" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:104]   --->   Operation 243 'icmp' 'icmp_ln68_3' <Predicate = true> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 244 [1/1] (0.86ns)   --->   "%i_3 = add i4 %i_0_i42, 1" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:104]   --->   Operation 244 'add' 'i_3' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 245 [1/1] (0.00ns)   --->   "br i1 %icmp_ln68_3, label %neuron.exit, label %_ZN13ap_fixed_baseILi41ELi13ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi20ELi6ELb1ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit.i.i.i55" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:104]   --->   Operation 245 'br' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 246 [1/1] (0.00ns)   --->   "%zext_ln69_3 = zext i4 %i_0_i42 to i64" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 246 'zext' 'zext_ln69_3' <Predicate = (!icmp_ln68_3)> <Delay = 0.00>
+ST_16 : Operation 247 [1/1] (0.00ns)   --->   "%zext_ln1117_8 = zext i4 %i_0_i42 to i8" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 247 'zext' 'zext_ln1117_8' <Predicate = (!icmp_ln68_3)> <Delay = 0.00>
+ST_16 : Operation 248 [1/1] (0.89ns)   --->   "%add_ln1117_4 = add i8 %zext_ln1117_8, %zext_ln104_1" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 248 'add' 'add_ln1117_4' <Predicate = (!icmp_ln68_3)> <Delay = 0.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 249 [1/1] (0.00ns)   --->   "%zext_ln1117_9 = zext i8 %add_ln1117_4 to i64" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 249 'zext' 'zext_ln1117_9' <Predicate = (!icmp_ln68_3)> <Delay = 0.00>
+ST_16 : Operation 250 [1/1] (0.00ns)   --->   "%W4_V_addr = getelementptr [80 x i16]* @W4_V, i64 0, i64 %zext_ln1117_9" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 250 'getelementptr' 'W4_V_addr' <Predicate = (!icmp_ln68_3)> <Delay = 0.00>
+ST_16 : Operation 251 [1/1] (0.00ns)   --->   "%a3_V_addr_1 = getelementptr [8 x i19]* %a3_V, i64 0, i64 %zext_ln69_3" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 251 'getelementptr' 'a3_V_addr_1' <Predicate = (!icmp_ln68_3)> <Delay = 0.00>
+ST_16 : Operation 252 [2/2] (0.79ns)   --->   "%a3_V_load = load i19* %a3_V_addr_1, align 4" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 252 'load' 'a3_V_load' <Predicate = (!icmp_ln68_3)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_16 : Operation 253 [2/2] (1.35ns)   --->   "%W4_V_load = load i16* %W4_V_addr, align 2" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 253 'load' 'W4_V_load' <Predicate = (!icmp_ln68_3)> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_16 : Operation 254 [1/1] (0.00ns)   --->   "%z4_V_addr_1 = getelementptr [10 x i20]* %z4_V, i64 0, i64 %zext_ln104" [quantized_mlp/mlp.cpp:104]   --->   Operation 254 'getelementptr' 'z4_V_addr_1' <Predicate = (icmp_ln68_3)> <Delay = 0.00>
+ST_16 : Operation 255 [1/1] (0.79ns)   --->   "store i20 %p_Val2_14, i20* %z4_V_addr_1, align 4" [quantized_mlp/mlp.cpp:104]   --->   Operation 255 'store' <Predicate = (icmp_ln68_3)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_16 : Operation 256 [1/1] (0.00ns)   --->   "br label %.preheader274" [quantized_mlp/mlp.cpp:103]   --->   Operation 256 'br' <Predicate = (icmp_ln68_3)> <Delay = 0.00>
+
+State 17 <SV = 7> <Delay = 4.19>
+ST_17 : Operation 257 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([11 x i8]* @p_str) nounwind" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:104]   --->   Operation 257 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 258 [1/2] (0.79ns)   --->   "%a3_V_load = load i19* %a3_V_addr_1, align 4" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 258 'load' 'a3_V_load' <Predicate = true> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_17 : Operation 259 [1/1] (0.00ns)   --->   "%zext_ln1192_2 = zext i19 %a3_V_load to i34" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 259 'zext' 'zext_ln1192_2' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 260 [1/2] (1.35ns)   --->   "%W4_V_load = load i16* %W4_V_addr, align 2" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 260 'load' 'W4_V_load' <Predicate = true> <Delay = 1.35> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 16> <Depth = 80> <ROM>
+ST_17 : Operation 261 [1/1] (0.00ns)   --->   "%sext_ln1192_4 = sext i16 %W4_V_load to i34" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 261 'sext' 'sext_ln1192_4' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 262 [1/1] (0.63ns) (grouped into DSP with root node ret_V_3)   --->   "%mul_ln1192_3 = mul i34 %zext_ln1192_2, %sext_ln1192_4" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 262 'mul' 'mul_ln1192_3' <Predicate = true> <Delay = 0.63> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_17 : Operation 263 [1/1] (0.00ns)   --->   "%lhs_V_3 = call i34 @_ssdm_op_BitConcatenate.i34.i20.i14(i20 %p_Val2_14, i14 0)" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 263 'bitconcatenate' 'lhs_V_3' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 264 [1/1] (2.20ns) (root node of the DSP)   --->   "%ret_V_3 = add i34 %lhs_V_3, %mul_ln1192_3" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 264 'add' 'ret_V_3' <Predicate = true> <Delay = 2.20> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 0> <II = 1> <Delay = 2.84> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_17 : Operation 265 [1/1] (0.00ns)   --->   "%acc_V_7 = call i20 @_ssdm_op_PartSelect.i20.i34.i32.i32(i34 %ret_V_3, i32 14, i32 33)" [quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104]   --->   Operation 265 'partselect' 'acc_V_7' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 266 [1/1] (0.00ns)   --->   "br label %7" [quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:104]   --->   Operation 266 'br' <Predicate = true> <Delay = 0.00>
+
+State 18 <SV = 5> <Delay = 0.79>
+ST_18 : Operation 267 [1/2] (0.79ns)   --->   "%tmp_V_9 = load i20* %z4_V_addr, align 16" [quantized_mlp/mlp.cpp:108]   --->   Operation 267 'load' 'tmp_V_9' <Predicate = true> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_18 : Operation 268 [1/1] (0.00ns)   --->   "%p_Result_21 = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %tmp_V_9, i32 19)" [quantized_mlp/mlp.cpp:108]   --->   Operation 268 'bitselect' 'p_Result_21' <Predicate = true> <Delay = 0.00>
+
+State 19 <SV = 6> <Delay = 3.99>
+ST_19 : Operation 269 [1/1] (0.92ns)   --->   "%icmp_ln935 = icmp eq i20 %tmp_V_9, 0" [quantized_mlp/mlp.cpp:108]   --->   Operation 269 'icmp' 'icmp_ln935' <Predicate = true> <Delay = 0.92> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 270 [1/1] (1.06ns)   --->   "%tmp_V = sub i20 0, %tmp_V_9" [quantized_mlp/mlp.cpp:108]   --->   Operation 270 'sub' 'tmp_V' <Predicate = (p_Result_21)> <Delay = 1.06> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 271 [1/1] (0.43ns)   --->   "%tmp_V_10 = select i1 %p_Result_21, i20 %tmp_V, i20 %tmp_V_9" [quantized_mlp/mlp.cpp:108]   --->   Operation 271 'select' 'tmp_V_10' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_19 : Operation 272 [1/1] (0.00ns)   --->   "%p_Result_s = call i20 @llvm.part.select.i20(i20 %tmp_V_10, i32 19, i32 0) nounwind" [quantized_mlp/mlp.cpp:108]   --->   Operation 272 'partselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 273 [1/1] (0.00ns)   --->   "%p_Result_22 = call i32 @_ssdm_op_BitConcatenate.i32.i12.i20(i12 -1, i20 %p_Result_s)" [quantized_mlp/mlp.cpp:108]   --->   Operation 273 'bitconcatenate' 'p_Result_22' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 274 [1/1] (1.28ns)   --->   "%l = call i32 @llvm.cttz.i32(i32 %p_Result_22, i1 true) nounwind" [quantized_mlp/mlp.cpp:108]   --->   Operation 274 'cttz' 'l' <Predicate = true> <Delay = 1.28> <Core = "CTTZ">   --->   Core 64 'CTTZ' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'cttz'> <InPorts = 1> <OutPorts = 1>
+ST_19 : Operation 275 [1/1] (1.20ns)   --->   "%sub_ln944 = sub nsw i32 20, %l" [quantized_mlp/mlp.cpp:108]   --->   Operation 275 'sub' 'sub_ln944' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 276 [1/1] (0.00ns)   --->   "%trunc_ln944 = trunc i32 %sub_ln944 to i20" [quantized_mlp/mlp.cpp:108]   --->   Operation 276 'trunc' 'trunc_ln944' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 277 [1/1] (0.00ns)   --->   "%trunc_ln947 = trunc i32 %sub_ln944 to i5" [quantized_mlp/mlp.cpp:108]   --->   Operation 277 'trunc' 'trunc_ln947' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 278 [1/1] (0.00ns)   --->   "%trunc_ln943 = trunc i32 %l to i8" [quantized_mlp/mlp.cpp:108]   --->   Operation 278 'trunc' 'trunc_ln943' <Predicate = true> <Delay = 0.00>
+
+State 20 <SV = 7> <Delay = 4.09>
+ST_20 : Operation 279 [1/1] (1.20ns)   --->   "%lsb_index = add nsw i32 -24, %sub_ln944" [quantized_mlp/mlp.cpp:108]   --->   Operation 279 'add' 'lsb_index' <Predicate = (!icmp_ln935)> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 280 [1/1] (0.00ns)   --->   "%tmp_13 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %lsb_index, i32 1, i32 31)" [quantized_mlp/mlp.cpp:108]   --->   Operation 280 'partselect' 'tmp_13' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_20 : Operation 281 [1/1] (1.09ns)   --->   "%icmp_ln947 = icmp sgt i31 %tmp_13, 0" [quantized_mlp/mlp.cpp:108]   --->   Operation 281 'icmp' 'icmp_ln947' <Predicate = (!icmp_ln935)> <Delay = 1.09> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 282 [1/1] (0.87ns)   --->   "%sub_ln947 = sub i5 13, %trunc_ln947" [quantized_mlp/mlp.cpp:108]   --->   Operation 282 'sub' 'sub_ln947' <Predicate = (!icmp_ln935)> <Delay = 0.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 283 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_1)   --->   "%zext_ln947 = zext i5 %sub_ln947 to i20" [quantized_mlp/mlp.cpp:108]   --->   Operation 283 'zext' 'zext_ln947' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_20 : Operation 284 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_1)   --->   "%lshr_ln947 = lshr i20 -1, %zext_ln947" [quantized_mlp/mlp.cpp:108]   --->   Operation 284 'lshr' 'lshr_ln947' <Predicate = (!icmp_ln935)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 285 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_1)   --->   "%p_Result_4 = and i20 %tmp_V_10, %lshr_ln947" [quantized_mlp/mlp.cpp:108]   --->   Operation 285 'and' 'p_Result_4' <Predicate = (!icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 286 [1/1] (0.92ns) (out node of the LUT)   --->   "%icmp_ln947_1 = icmp ne i20 %p_Result_4, 0" [quantized_mlp/mlp.cpp:108]   --->   Operation 286 'icmp' 'icmp_ln947_1' <Predicate = (!icmp_ln935)> <Delay = 0.92> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 287 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%a = and i1 %icmp_ln947, %icmp_ln947_1" [quantized_mlp/mlp.cpp:108]   --->   Operation 287 'and' 'a' <Predicate = (!icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 288 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %lsb_index, i32 31)" [quantized_mlp/mlp.cpp:108]   --->   Operation 288 'bitselect' 'tmp_14' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_20 : Operation 289 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%xor_ln949 = xor i1 %tmp_14, true" [quantized_mlp/mlp.cpp:108]   --->   Operation 289 'xor' 'xor_ln949' <Predicate = (!icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 290 [1/1] (1.06ns)   --->   "%add_ln949 = add i20 -24, %trunc_ln944" [quantized_mlp/mlp.cpp:108]   --->   Operation 290 'add' 'add_ln949' <Predicate = (!icmp_ln935)> <Delay = 1.06> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 291 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%p_Result_3 = call i1 @_ssdm_op_BitSelect.i1.i20.i20(i20 %tmp_V_10, i20 %add_ln949)" [quantized_mlp/mlp.cpp:108]   --->   Operation 291 'bitselect' 'p_Result_3' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_20 : Operation 292 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%and_ln949 = and i1 %p_Result_3, %xor_ln949" [quantized_mlp/mlp.cpp:108]   --->   Operation 292 'and' 'and_ln949' <Predicate = (!icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 293 [1/1] (0.00ns) (grouped into LUT with out node or_ln)   --->   "%or_ln949 = or i1 %and_ln949, %a" [quantized_mlp/mlp.cpp:108]   --->   Operation 293 'or' 'or_ln949' <Predicate = (!icmp_ln935)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 294 [1/1] (0.33ns) (out node of the LUT)   --->   "%or_ln = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 0, i1 %or_ln949)" [quantized_mlp/mlp.cpp:108]   --->   Operation 294 'bitconcatenate' 'or_ln' <Predicate = (!icmp_ln935)> <Delay = 0.33>
+ST_20 : Operation 295 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%m = zext i20 %tmp_V_10 to i64" [quantized_mlp/mlp.cpp:108]   --->   Operation 295 'zext' 'm' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_20 : Operation 296 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%zext_ln957_1 = zext i20 %tmp_V_10 to i32" [quantized_mlp/mlp.cpp:108]   --->   Operation 296 'zext' 'zext_ln957_1' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_20 : Operation 297 [1/1] (1.11ns)   --->   "%icmp_ln958 = icmp sgt i32 %lsb_index, 0" [quantized_mlp/mlp.cpp:108]   --->   Operation 297 'icmp' 'icmp_ln958' <Predicate = (!icmp_ln935)> <Delay = 1.11> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 298 [1/1] (1.20ns)   --->   "%add_ln958 = add nsw i32 -25, %sub_ln944" [quantized_mlp/mlp.cpp:108]   --->   Operation 298 'add' 'add_ln958' <Predicate = (!icmp_ln935)> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 299 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%lshr_ln958 = lshr i32 %zext_ln957_1, %add_ln958" [quantized_mlp/mlp.cpp:108]   --->   Operation 299 'lshr' 'lshr_ln958' <Predicate = (!icmp_ln935)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 300 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%zext_ln958 = zext i32 %lshr_ln958 to i64" [quantized_mlp/mlp.cpp:108]   --->   Operation 300 'zext' 'zext_ln958' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_20 : Operation 301 [1/1] (1.20ns)   --->   "%sub_ln958 = sub i32 25, %sub_ln944" [quantized_mlp/mlp.cpp:108]   --->   Operation 301 'sub' 'sub_ln958' <Predicate = (!icmp_ln935)> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 302 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%zext_ln958_1 = zext i32 %sub_ln958 to i64" [quantized_mlp/mlp.cpp:108]   --->   Operation 302 'zext' 'zext_ln958_1' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_20 : Operation 303 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%shl_ln958 = shl i64 %m, %zext_ln958_1" [quantized_mlp/mlp.cpp:108]   --->   Operation 303 'shl' 'shl_ln958' <Predicate = (!icmp_ln935)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 304 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%m_1 = select i1 %icmp_ln958, i64 %zext_ln958, i64 %shl_ln958" [quantized_mlp/mlp.cpp:108]   --->   Operation 304 'select' 'm_1' <Predicate = (!icmp_ln935)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_20 : Operation 305 [1/1] (0.00ns) (grouped into LUT with out node m_2)   --->   "%zext_ln961 = zext i32 %or_ln to i64" [quantized_mlp/mlp.cpp:108]   --->   Operation 305 'zext' 'zext_ln961' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_20 : Operation 306 [1/1] (1.47ns) (out node of the LUT)   --->   "%m_2 = add i64 %m_1, %zext_ln961" [quantized_mlp/mlp.cpp:108]   --->   Operation 306 'add' 'm_2' <Predicate = (!icmp_ln935)> <Delay = 1.47> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 307 [1/1] (0.00ns)   --->   "%m_s = call i63 @_ssdm_op_PartSelect.i63.i64.i32.i32(i64 %m_2, i32 1, i32 63)" [quantized_mlp/mlp.cpp:108]   --->   Operation 307 'partselect' 'm_s' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_20 : Operation 308 [1/1] (0.00ns)   --->   "%tmp_15 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %m_2, i32 25)" [quantized_mlp/mlp.cpp:108]   --->   Operation 308 'bitselect' 'tmp_15' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+
+State 21 <SV = 8> <Delay = 2.19>
+ST_21 : Operation 309 [1/1] (0.00ns)   --->   "%m_26 = zext i63 %m_s to i64" [quantized_mlp/mlp.cpp:108]   --->   Operation 309 'zext' 'm_26' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_21 : Operation 310 [1/1] (0.44ns)   --->   "%select_ln964 = select i1 %tmp_15, i8 127, i8 126" [quantized_mlp/mlp.cpp:108]   --->   Operation 310 'select' 'select_ln964' <Predicate = (!icmp_ln935)> <Delay = 0.44> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_21 : Operation 311 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln964 = sub i8 6, %trunc_ln943" [quantized_mlp/mlp.cpp:108]   --->   Operation 311 'sub' 'sub_ln964' <Predicate = (!icmp_ln935)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.61> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_21 : Operation 312 [1/1] (1.22ns) (root node of TernaryAdder)   --->   "%add_ln964 = add i8 %select_ln964, %sub_ln964" [quantized_mlp/mlp.cpp:108]   --->   Operation 312 'add' 'add_ln964' <Predicate = (!icmp_ln935)> <Delay = 1.22> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.61> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_21 : Operation 313 [1/1] (0.00ns)   --->   "%tmp_s = call i9 @_ssdm_op_BitConcatenate.i9.i1.i8(i1 %p_Result_21, i8 %add_ln964)" [quantized_mlp/mlp.cpp:108]   --->   Operation 313 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_21 : Operation 314 [1/1] (0.00ns)   --->   "%p_Result_23 = call i64 @_ssdm_op_PartSet.i64.i64.i9.i32.i32(i64 %m_26, i9 %tmp_s, i32 23, i32 31)" [quantized_mlp/mlp.cpp:108]   --->   Operation 314 'partset' 'p_Result_23' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_21 : Operation 315 [1/1] (0.00ns)   --->   "%trunc_ln738 = trunc i64 %p_Result_23 to i32" [quantized_mlp/mlp.cpp:108]   --->   Operation 315 'trunc' 'trunc_ln738' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_21 : Operation 316 [1/1] (0.00ns)   --->   "%bitcast_ln739 = bitcast i32 %trunc_ln738 to float" [quantized_mlp/mlp.cpp:108]   --->   Operation 316 'bitcast' 'bitcast_ln739' <Predicate = (!icmp_ln935)> <Delay = 0.00>
+ST_21 : Operation 317 [1/1] (0.52ns)   --->   "%select_ln935 = select i1 %icmp_ln935, float 0.000000e+00, float %bitcast_ln739" [quantized_mlp/mlp.cpp:108]   --->   Operation 317 'select' 'select_ln935' <Predicate = true> <Delay = 0.52> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_21 : Operation 318 [1/1] (0.75ns)   --->   "br label %_ZNK13ap_fixed_baseILi20ELi6ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEcvfEv.exit120" [quantized_mlp/mlp.cpp:109]   --->   Operation 318 'br' <Predicate = true> <Delay = 0.75>
+
+State 22 <SV = 9> <Delay = 0.88>
+ST_22 : Operation 319 [1/1] (0.00ns)   --->   "%maxv_0 = phi float [ %select_ln111_1, %_ZNK13ap_fixed_baseILi20ELi6ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEcvfEv.exit60_ifconv ], [ %select_ln935, %_ifconv1 ]" [quantized_mlp/mlp.cpp:111]   --->   Operation 319 'phi' 'maxv_0' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 320 [1/1] (0.00ns)   --->   "%j7_0 = phi i4 [ %j_5, %_ZNK13ap_fixed_baseILi20ELi6ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEcvfEv.exit60_ifconv ], [ 1, %_ifconv1 ]"   --->   Operation 320 'phi' 'j7_0' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 321 [1/1] (0.88ns)   --->   "%icmp_ln109 = icmp eq i4 %j7_0, -6" [quantized_mlp/mlp.cpp:109]   --->   Operation 321 'icmp' 'icmp_ln109' <Predicate = true> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 322 [1/1] (0.00ns)   --->   "%empty_25 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 9, i64 9, i64 9)"   --->   Operation 322 'speclooptripcount' 'empty_25' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 323 [1/1] (0.00ns)   --->   "br i1 %icmp_ln109, label %_ifconv2, label %8" [quantized_mlp/mlp.cpp:109]   --->   Operation 323 'br' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 324 [1/1] (0.00ns)   --->   "%zext_ln110 = zext i4 %j7_0 to i64" [quantized_mlp/mlp.cpp:110]   --->   Operation 324 'zext' 'zext_ln110' <Predicate = (!icmp_ln109)> <Delay = 0.00>
+ST_22 : Operation 325 [1/1] (0.00ns)   --->   "%z4_V_addr_2 = getelementptr [10 x i20]* %z4_V, i64 0, i64 %zext_ln110" [quantized_mlp/mlp.cpp:110]   --->   Operation 325 'getelementptr' 'z4_V_addr_2' <Predicate = (!icmp_ln109)> <Delay = 0.00>
+ST_22 : Operation 326 [2/2] (0.79ns)   --->   "%tmp_V_11 = load i20* %z4_V_addr_2, align 4" [quantized_mlp/mlp.cpp:110]   --->   Operation 326 'load' 'tmp_V_11' <Predicate = (!icmp_ln109)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_22 : Operation 327 [1/1] (0.00ns)   --->   "%logits_addr_2 = getelementptr inbounds [10 x float]* %logits, i64 0, i64 0" [quantized_mlp/mlp.cpp:114]   --->   Operation 327 'getelementptr' 'logits_addr_2' <Predicate = (icmp_ln109)> <Delay = 0.00>
+ST_22 : Operation 328 [1/1] (0.79ns)   --->   "store float %select_ln935, float* %logits_addr_2, align 16" [quantized_mlp/mlp.cpp:114]   --->   Operation 328 'store' <Predicate = (icmp_ln109)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_22 : Operation 329 [1/1] (0.75ns)   --->   "br label %9" [quantized_mlp/mlp.cpp:118]   --->   Operation 329 'br' <Predicate = (icmp_ln109)> <Delay = 0.75>
+
+State 23 <SV = 10> <Delay = 3.58>
+ST_23 : Operation 330 [1/2] (0.79ns)   --->   "%tmp_V_11 = load i20* %z4_V_addr_2, align 4" [quantized_mlp/mlp.cpp:110]   --->   Operation 330 'load' 'tmp_V_11' <Predicate = true> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_23 : Operation 331 [1/1] (0.92ns)   --->   "%icmp_ln935_1 = icmp eq i20 %tmp_V_11, 0" [quantized_mlp/mlp.cpp:110]   --->   Operation 331 'icmp' 'icmp_ln935_1' <Predicate = true> <Delay = 0.92> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 332 [1/1] (0.00ns)   --->   "br i1 %icmp_ln935_1, label %_ZNK13ap_fixed_baseILi20ELi6ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEcvfEv.exit90._ZNK13ap_fixed_baseILi20ELi6ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEcvfEv.exit60_crit_edge.critedge, label %_ifconv" [quantized_mlp/mlp.cpp:110]   --->   Operation 332 'br' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 333 [1/1] (0.00ns)   --->   "%p_Result_24 = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %tmp_V_11, i32 19)" [quantized_mlp/mlp.cpp:110]   --->   Operation 333 'bitselect' 'p_Result_24' <Predicate = (!icmp_ln935_1)> <Delay = 0.00>
+ST_23 : Operation 334 [1/1] (1.06ns)   --->   "%tmp_V_5 = sub i20 0, %tmp_V_11" [quantized_mlp/mlp.cpp:110]   --->   Operation 334 'sub' 'tmp_V_5' <Predicate = (!icmp_ln935_1)> <Delay = 1.06> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 335 [1/1] (0.43ns)   --->   "%tmp_V_12 = select i1 %p_Result_24, i20 %tmp_V_5, i20 %tmp_V_11" [quantized_mlp/mlp.cpp:110]   --->   Operation 335 'select' 'tmp_V_12' <Predicate = (!icmp_ln935_1)> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_23 : Operation 336 [1/1] (0.00ns)   --->   "%p_Result_10 = call i20 @llvm.part.select.i20(i20 %tmp_V_12, i32 19, i32 0) nounwind" [quantized_mlp/mlp.cpp:110]   --->   Operation 336 'partselect' 'p_Result_10' <Predicate = (!icmp_ln935_1)> <Delay = 0.00>
+ST_23 : Operation 337 [1/1] (0.00ns)   --->   "%p_Result_25 = call i32 @_ssdm_op_BitConcatenate.i32.i12.i20(i12 -1, i20 %p_Result_10)" [quantized_mlp/mlp.cpp:110]   --->   Operation 337 'bitconcatenate' 'p_Result_25' <Predicate = (!icmp_ln935_1)> <Delay = 0.00>
+ST_23 : Operation 338 [1/1] (1.28ns)   --->   "%l_1 = call i32 @llvm.cttz.i32(i32 %p_Result_25, i1 true) nounwind" [quantized_mlp/mlp.cpp:110]   --->   Operation 338 'cttz' 'l_1' <Predicate = (!icmp_ln935_1)> <Delay = 1.28> <Core = "CTTZ">   --->   Core 64 'CTTZ' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'cttz'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 339 [1/1] (0.00ns)   --->   "%trunc_ln943_1 = trunc i32 %l_1 to i8" [quantized_mlp/mlp.cpp:110]   --->   Operation 339 'trunc' 'trunc_ln943_1' <Predicate = (!icmp_ln935_1)> <Delay = 0.00>
+ST_23 : Operation 340 [1/1] (0.00ns)   --->   "%logits_addr = getelementptr inbounds [10 x float]* %logits, i64 0, i64 %zext_ln110" [quantized_mlp/mlp.cpp:110]   --->   Operation 340 'getelementptr' 'logits_addr' <Predicate = (icmp_ln935_1)> <Delay = 0.00>
+ST_23 : Operation 341 [1/1] (0.79ns)   --->   "store float 0.000000e+00, float* %logits_addr, align 4" [quantized_mlp/mlp.cpp:110]   --->   Operation 341 'store' <Predicate = (icmp_ln935_1)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_23 : Operation 342 [1/1] (0.75ns)   --->   "br label %_ZNK13ap_fixed_baseILi20ELi6ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEcvfEv.exit60_ifconv" [quantized_mlp/mlp.cpp:111]   --->   Operation 342 'br' <Predicate = (icmp_ln935_1)> <Delay = 0.75>
+
+State 24 <SV = 11> <Delay = 3.83>
+ST_24 : Operation 343 [1/1] (1.20ns)   --->   "%sub_ln944_1 = sub nsw i32 20, %l_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 343 'sub' 'sub_ln944_1' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 344 [1/1] (0.00ns)   --->   "%trunc_ln944_1 = trunc i32 %sub_ln944_1 to i20" [quantized_mlp/mlp.cpp:110]   --->   Operation 344 'trunc' 'trunc_ln944_1' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 345 [1/1] (1.20ns)   --->   "%lsb_index_1 = add nsw i32 -24, %sub_ln944_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 345 'add' 'lsb_index_1' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 346 [1/1] (0.00ns)   --->   "%tmp_18 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %lsb_index_1, i32 1, i32 31)" [quantized_mlp/mlp.cpp:110]   --->   Operation 346 'partselect' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 347 [1/1] (1.09ns)   --->   "%icmp_ln947_2 = icmp sgt i31 %tmp_18, 0" [quantized_mlp/mlp.cpp:110]   --->   Operation 347 'icmp' 'icmp_ln947_2' <Predicate = true> <Delay = 1.09> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 348 [1/1] (0.00ns)   --->   "%trunc_ln947_1 = trunc i32 %sub_ln944_1 to i5" [quantized_mlp/mlp.cpp:110]   --->   Operation 348 'trunc' 'trunc_ln947_1' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 349 [1/1] (0.87ns)   --->   "%sub_ln947_1 = sub i5 13, %trunc_ln947_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 349 'sub' 'sub_ln947_1' <Predicate = true> <Delay = 0.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 350 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_3)   --->   "%zext_ln947_1 = zext i5 %sub_ln947_1 to i20" [quantized_mlp/mlp.cpp:110]   --->   Operation 350 'zext' 'zext_ln947_1' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 351 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_3)   --->   "%lshr_ln947_1 = lshr i20 -1, %zext_ln947_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 351 'lshr' 'lshr_ln947_1' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 352 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_3)   --->   "%p_Result_12 = and i20 %tmp_V_12, %lshr_ln947_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 352 'and' 'p_Result_12' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 353 [1/1] (0.92ns) (out node of the LUT)   --->   "%icmp_ln947_3 = icmp ne i20 %p_Result_12, 0" [quantized_mlp/mlp.cpp:110]   --->   Operation 353 'icmp' 'icmp_ln947_3' <Predicate = true> <Delay = 0.92> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 354 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_2)   --->   "%a_1 = and i1 %icmp_ln947_2, %icmp_ln947_3" [quantized_mlp/mlp.cpp:110]   --->   Operation 354 'and' 'a_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 355 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_2)   --->   "%tmp_19 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %lsb_index_1, i32 31)" [quantized_mlp/mlp.cpp:110]   --->   Operation 355 'bitselect' 'tmp_19' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 356 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_2)   --->   "%xor_ln949_1 = xor i1 %tmp_19, true" [quantized_mlp/mlp.cpp:110]   --->   Operation 356 'xor' 'xor_ln949_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 357 [1/1] (1.06ns)   --->   "%add_ln949_1 = add i20 -24, %trunc_ln944_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 357 'add' 'add_ln949_1' <Predicate = true> <Delay = 1.06> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 358 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_2)   --->   "%p_Result_13 = call i1 @_ssdm_op_BitSelect.i1.i20.i20(i20 %tmp_V_12, i20 %add_ln949_1)" [quantized_mlp/mlp.cpp:110]   --->   Operation 358 'bitselect' 'p_Result_13' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 359 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_2)   --->   "%and_ln949_1 = and i1 %p_Result_13, %xor_ln949_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 359 'and' 'and_ln949_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 360 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_2)   --->   "%or_ln949_1 = or i1 %and_ln949_1, %a_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 360 'or' 'or_ln949_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 361 [1/1] (0.33ns) (out node of the LUT)   --->   "%or_ln949_2 = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 0, i1 %or_ln949_1)" [quantized_mlp/mlp.cpp:110]   --->   Operation 361 'bitconcatenate' 'or_ln949_2' <Predicate = true> <Delay = 0.33>
+ST_24 : Operation 362 [1/1] (1.11ns)   --->   "%icmp_ln958_1 = icmp sgt i32 %lsb_index_1, 0" [quantized_mlp/mlp.cpp:110]   --->   Operation 362 'icmp' 'icmp_ln958_1' <Predicate = true> <Delay = 1.11> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 363 [1/1] (1.20ns)   --->   "%add_ln958_1 = add nsw i32 -25, %sub_ln944_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 363 'add' 'add_ln958_1' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 364 [1/1] (1.20ns)   --->   "%sub_ln958_1 = sub i32 25, %sub_ln944_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 364 'sub' 'sub_ln958_1' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 12> <Delay = 3.92>
+ST_25 : Operation 365 [1/1] (0.00ns) (grouped into LUT with out node m_17)   --->   "%m_15 = zext i20 %tmp_V_12 to i64" [quantized_mlp/mlp.cpp:110]   --->   Operation 365 'zext' 'm_15' <Predicate = (!icmp_ln935_1 & !icmp_ln958_1)> <Delay = 0.00>
+ST_25 : Operation 366 [1/1] (0.00ns) (grouped into LUT with out node m_17)   --->   "%zext_ln957_2 = zext i20 %tmp_V_12 to i32" [quantized_mlp/mlp.cpp:110]   --->   Operation 366 'zext' 'zext_ln957_2' <Predicate = (!icmp_ln935_1 & icmp_ln958_1)> <Delay = 0.00>
+ST_25 : Operation 367 [1/1] (0.00ns) (grouped into LUT with out node m_17)   --->   "%lshr_ln958_1 = lshr i32 %zext_ln957_2, %add_ln958_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 367 'lshr' 'lshr_ln958_1' <Predicate = (!icmp_ln935_1 & icmp_ln958_1)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 368 [1/1] (0.00ns) (grouped into LUT with out node m_17)   --->   "%zext_ln958_2 = zext i32 %lshr_ln958_1 to i64" [quantized_mlp/mlp.cpp:110]   --->   Operation 368 'zext' 'zext_ln958_2' <Predicate = (!icmp_ln935_1 & icmp_ln958_1)> <Delay = 0.00>
+ST_25 : Operation 369 [1/1] (0.00ns) (grouped into LUT with out node m_17)   --->   "%zext_ln958_3 = zext i32 %sub_ln958_1 to i64" [quantized_mlp/mlp.cpp:110]   --->   Operation 369 'zext' 'zext_ln958_3' <Predicate = (!icmp_ln935_1 & !icmp_ln958_1)> <Delay = 0.00>
+ST_25 : Operation 370 [1/1] (0.00ns) (grouped into LUT with out node m_17)   --->   "%shl_ln958_1 = shl i64 %m_15, %zext_ln958_3" [quantized_mlp/mlp.cpp:110]   --->   Operation 370 'shl' 'shl_ln958_1' <Predicate = (!icmp_ln935_1 & !icmp_ln958_1)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 371 [1/1] (0.00ns) (grouped into LUT with out node m_17)   --->   "%m_16 = select i1 %icmp_ln958_1, i64 %zext_ln958_2, i64 %shl_ln958_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 371 'select' 'm_16' <Predicate = (!icmp_ln935_1)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_25 : Operation 372 [1/1] (0.00ns) (grouped into LUT with out node m_17)   --->   "%zext_ln961_1 = zext i32 %or_ln949_2 to i64" [quantized_mlp/mlp.cpp:110]   --->   Operation 372 'zext' 'zext_ln961_1' <Predicate = (!icmp_ln935_1)> <Delay = 0.00>
+ST_25 : Operation 373 [1/1] (1.47ns) (out node of the LUT)   --->   "%m_17 = add i64 %m_16, %zext_ln961_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 373 'add' 'm_17' <Predicate = (!icmp_ln935_1)> <Delay = 1.47> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 374 [1/1] (0.00ns)   --->   "%m_3 = call i63 @_ssdm_op_PartSelect.i63.i64.i32.i32(i64 %m_17, i32 1, i32 63)" [quantized_mlp/mlp.cpp:110]   --->   Operation 374 'partselect' 'm_3' <Predicate = (!icmp_ln935_1)> <Delay = 0.00>
+ST_25 : Operation 375 [1/1] (0.00ns)   --->   "%m_27 = zext i63 %m_3 to i64" [quantized_mlp/mlp.cpp:110]   --->   Operation 375 'zext' 'm_27' <Predicate = (!icmp_ln935_1)> <Delay = 0.00>
+ST_25 : Operation 376 [1/1] (0.00ns)   --->   "%tmp_20 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %m_17, i32 25)" [quantized_mlp/mlp.cpp:110]   --->   Operation 376 'bitselect' 'tmp_20' <Predicate = (!icmp_ln935_1)> <Delay = 0.00>
+ST_25 : Operation 377 [1/1] (0.44ns)   --->   "%select_ln964_1 = select i1 %tmp_20, i8 127, i8 126" [quantized_mlp/mlp.cpp:110]   --->   Operation 377 'select' 'select_ln964_1' <Predicate = (!icmp_ln935_1)> <Delay = 0.44> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_25 : Operation 378 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln964_1 = sub i8 6, %trunc_ln943_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 378 'sub' 'sub_ln964_1' <Predicate = (!icmp_ln935_1)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.61> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_25 : Operation 379 [1/1] (1.22ns) (root node of TernaryAdder)   --->   "%add_ln964_1 = add i8 %select_ln964_1, %sub_ln964_1" [quantized_mlp/mlp.cpp:110]   --->   Operation 379 'add' 'add_ln964_1' <Predicate = (!icmp_ln935_1)> <Delay = 1.22> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.61> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_25 : Operation 380 [1/1] (0.00ns)   --->   "%tmp_4 = call i9 @_ssdm_op_BitConcatenate.i9.i1.i8(i1 %p_Result_24, i8 %add_ln964_1)" [quantized_mlp/mlp.cpp:110]   --->   Operation 380 'bitconcatenate' 'tmp_4' <Predicate = (!icmp_ln935_1)> <Delay = 0.00>
+ST_25 : Operation 381 [1/1] (0.00ns)   --->   "%p_Result_26 = call i64 @_ssdm_op_PartSet.i64.i64.i9.i32.i32(i64 %m_27, i9 %tmp_4, i32 23, i32 31)" [quantized_mlp/mlp.cpp:110]   --->   Operation 381 'partset' 'p_Result_26' <Predicate = (!icmp_ln935_1)> <Delay = 0.00>
+ST_25 : Operation 382 [1/1] (0.00ns)   --->   "%trunc_ln738_1 = trunc i64 %p_Result_26 to i32" [quantized_mlp/mlp.cpp:110]   --->   Operation 382 'trunc' 'trunc_ln738_1' <Predicate = (!icmp_ln935_1)> <Delay = 0.00>
+ST_25 : Operation 383 [1/1] (0.00ns)   --->   "%bitcast_ln739_1 = bitcast i32 %trunc_ln738_1 to float" [quantized_mlp/mlp.cpp:110]   --->   Operation 383 'bitcast' 'bitcast_ln739_1' <Predicate = (!icmp_ln935_1)> <Delay = 0.00>
+ST_25 : Operation 384 [1/1] (0.00ns)   --->   "%logits_addr_1 = getelementptr inbounds [10 x float]* %logits, i64 0, i64 %zext_ln110" [quantized_mlp/mlp.cpp:110]   --->   Operation 384 'getelementptr' 'logits_addr_1' <Predicate = (!icmp_ln935_1)> <Delay = 0.00>
+ST_25 : Operation 385 [1/1] (0.79ns)   --->   "store float %bitcast_ln739_1, float* %logits_addr_1, align 4" [quantized_mlp/mlp.cpp:110]   --->   Operation 385 'store' <Predicate = (!icmp_ln935_1)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_25 : Operation 386 [1/1] (0.75ns)   --->   "br label %_ZNK13ap_fixed_baseILi20ELi6ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEcvfEv.exit60_ifconv" [quantized_mlp/mlp.cpp:111]   --->   Operation 386 'br' <Predicate = (!icmp_ln935_1)> <Delay = 0.75>
+ST_25 : Operation 387 [1/1] (0.00ns)   --->   "%p_Result_27 = call i1 @_ssdm_op_BitSelect.i1.i20.i32(i20 %tmp_V_11, i32 19)" [quantized_mlp/mlp.cpp:112]   --->   Operation 387 'bitselect' 'p_Result_27' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 388 [1/1] (1.06ns)   --->   "%tmp_V_7 = sub i20 0, %tmp_V_11" [quantized_mlp/mlp.cpp:112]   --->   Operation 388 'sub' 'tmp_V_7' <Predicate = true> <Delay = 1.06> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 389 [1/1] (0.43ns)   --->   "%tmp_V_13 = select i1 %p_Result_27, i20 %tmp_V_7, i20 %tmp_V_11" [quantized_mlp/mlp.cpp:112]   --->   Operation 389 'select' 'tmp_V_13' <Predicate = true> <Delay = 0.43> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_25 : Operation 390 [1/1] (0.00ns)   --->   "%p_Result_16 = call i20 @llvm.part.select.i20(i20 %tmp_V_13, i32 19, i32 0) nounwind" [quantized_mlp/mlp.cpp:112]   --->   Operation 390 'partselect' 'p_Result_16' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 391 [1/1] (0.00ns)   --->   "%p_Result_28 = call i32 @_ssdm_op_BitConcatenate.i32.i12.i20(i12 -1, i20 %p_Result_16)" [quantized_mlp/mlp.cpp:112]   --->   Operation 391 'bitconcatenate' 'p_Result_28' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 392 [1/1] (1.28ns)   --->   "%l_2 = call i32 @llvm.cttz.i32(i32 %p_Result_28, i1 true) nounwind" [quantized_mlp/mlp.cpp:112]   --->   Operation 392 'cttz' 'l_2' <Predicate = true> <Delay = 1.28> <Core = "CTTZ">   --->   Core 64 'CTTZ' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'cttz'> <InPorts = 1> <OutPorts = 1>
+ST_25 : Operation 393 [1/1] (0.00ns)   --->   "%trunc_ln943_2 = trunc i32 %l_2 to i8" [quantized_mlp/mlp.cpp:112]   --->   Operation 393 'trunc' 'trunc_ln943_2' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 394 [1/1] (0.86ns)   --->   "%j_5 = add i4 1, %j7_0" [quantized_mlp/mlp.cpp:109]   --->   Operation 394 'add' 'j_5' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 13> <Delay = 3.83>
+ST_26 : Operation 395 [1/1] (0.00ns)   --->   "%p_0202 = phi float [ %bitcast_ln739_1, %_ifconv ], [ 0.000000e+00, %_ZNK13ap_fixed_baseILi20ELi6ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEcvfEv.exit90._ZNK13ap_fixed_baseILi20ELi6ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEcvfEv.exit60_crit_edge.critedge ]" [quantized_mlp/mlp.cpp:110]   --->   Operation 395 'phi' 'p_0202' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 396 [1/1] (0.00ns)   --->   "%bitcast_ln111 = bitcast float %p_0202 to i32" [quantized_mlp/mlp.cpp:111]   --->   Operation 396 'bitcast' 'bitcast_ln111' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 397 [1/1] (0.00ns)   --->   "%tmp_1 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %bitcast_ln111, i32 23, i32 30)" [quantized_mlp/mlp.cpp:111]   --->   Operation 397 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 398 [1/1] (0.00ns)   --->   "%trunc_ln111 = trunc i32 %bitcast_ln111 to i23" [quantized_mlp/mlp.cpp:111]   --->   Operation 398 'trunc' 'trunc_ln111' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 399 [1/1] (0.85ns)   --->   "%icmp_ln111 = icmp ne i8 %tmp_1, -1" [quantized_mlp/mlp.cpp:111]   --->   Operation 399 'icmp' 'icmp_ln111' <Predicate = true> <Delay = 0.85> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 400 [1/1] (0.97ns)   --->   "%icmp_ln111_1 = icmp eq i23 %trunc_ln111, 0" [quantized_mlp/mlp.cpp:111]   --->   Operation 400 'icmp' 'icmp_ln111_1' <Predicate = true> <Delay = 0.97> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 401 [2/2] (3.34ns)   --->   "%tmp_5 = fcmp ogt float %p_0202, %maxv_0" [quantized_mlp/mlp.cpp:111]   --->   Operation 401 'fcmp' 'tmp_5' <Predicate = true> <Delay = 3.34> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 3.34> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 402 [1/1] (1.20ns)   --->   "%sub_ln944_2 = sub nsw i32 20, %l_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 402 'sub' 'sub_ln944_2' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 403 [1/1] (0.00ns)   --->   "%trunc_ln944_2 = trunc i32 %sub_ln944_2 to i20" [quantized_mlp/mlp.cpp:112]   --->   Operation 403 'trunc' 'trunc_ln944_2' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 404 [1/1] (1.20ns)   --->   "%lsb_index_2 = add nsw i32 -24, %sub_ln944_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 404 'add' 'lsb_index_2' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 405 [1/1] (0.00ns)   --->   "%tmp_22 = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %lsb_index_2, i32 1, i32 31)" [quantized_mlp/mlp.cpp:112]   --->   Operation 405 'partselect' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 406 [1/1] (1.09ns)   --->   "%icmp_ln947_4 = icmp sgt i31 %tmp_22, 0" [quantized_mlp/mlp.cpp:112]   --->   Operation 406 'icmp' 'icmp_ln947_4' <Predicate = true> <Delay = 1.09> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 407 [1/1] (0.00ns)   --->   "%trunc_ln947_2 = trunc i32 %sub_ln944_2 to i5" [quantized_mlp/mlp.cpp:112]   --->   Operation 407 'trunc' 'trunc_ln947_2' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 408 [1/1] (0.87ns)   --->   "%sub_ln947_2 = sub i5 13, %trunc_ln947_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 408 'sub' 'sub_ln947_2' <Predicate = true> <Delay = 0.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 409 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_5)   --->   "%zext_ln947_2 = zext i5 %sub_ln947_2 to i20" [quantized_mlp/mlp.cpp:112]   --->   Operation 409 'zext' 'zext_ln947_2' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 410 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_5)   --->   "%lshr_ln947_2 = lshr i20 -1, %zext_ln947_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 410 'lshr' 'lshr_ln947_2' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 411 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln947_5)   --->   "%p_Result_18 = and i20 %tmp_V_13, %lshr_ln947_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 411 'and' 'p_Result_18' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 412 [1/1] (0.92ns) (out node of the LUT)   --->   "%icmp_ln947_5 = icmp ne i20 %p_Result_18, 0" [quantized_mlp/mlp.cpp:112]   --->   Operation 412 'icmp' 'icmp_ln947_5' <Predicate = true> <Delay = 0.92> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 413 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_4)   --->   "%a_2 = and i1 %icmp_ln947_4, %icmp_ln947_5" [quantized_mlp/mlp.cpp:112]   --->   Operation 413 'and' 'a_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 414 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_4)   --->   "%tmp_23 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %lsb_index_2, i32 31)" [quantized_mlp/mlp.cpp:112]   --->   Operation 414 'bitselect' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 415 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_4)   --->   "%xor_ln949_2 = xor i1 %tmp_23, true" [quantized_mlp/mlp.cpp:112]   --->   Operation 415 'xor' 'xor_ln949_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 416 [1/1] (1.06ns)   --->   "%add_ln949_2 = add i20 -24, %trunc_ln944_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 416 'add' 'add_ln949_2' <Predicate = true> <Delay = 1.06> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 417 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_4)   --->   "%p_Result_19 = call i1 @_ssdm_op_BitSelect.i1.i20.i20(i20 %tmp_V_13, i20 %add_ln949_2)" [quantized_mlp/mlp.cpp:112]   --->   Operation 417 'bitselect' 'p_Result_19' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 418 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_4)   --->   "%and_ln949_2 = and i1 %p_Result_19, %xor_ln949_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 418 'and' 'and_ln949_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 419 [1/1] (0.00ns) (grouped into LUT with out node or_ln949_4)   --->   "%or_ln949_3 = or i1 %and_ln949_2, %a_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 419 'or' 'or_ln949_3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 420 [1/1] (0.33ns) (out node of the LUT)   --->   "%or_ln949_4 = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 0, i1 %or_ln949_3)" [quantized_mlp/mlp.cpp:112]   --->   Operation 420 'bitconcatenate' 'or_ln949_4' <Predicate = true> <Delay = 0.33>
+ST_26 : Operation 421 [1/1] (1.11ns)   --->   "%icmp_ln958_2 = icmp sgt i32 %lsb_index_2, 0" [quantized_mlp/mlp.cpp:112]   --->   Operation 421 'icmp' 'icmp_ln958_2' <Predicate = true> <Delay = 1.11> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 422 [1/1] (1.20ns)   --->   "%add_ln958_2 = add nsw i32 -25, %sub_ln944_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 422 'add' 'add_ln958_2' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 423 [1/1] (1.20ns)   --->   "%sub_ln958_2 = sub i32 25, %sub_ln944_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 423 'sub' 'sub_ln958_2' <Predicate = true> <Delay = 1.20> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 14> <Delay = 4.20>
+ST_27 : Operation 424 [1/1] (0.00ns)   --->   "%bitcast_ln111_1 = bitcast float %maxv_0 to i32" [quantized_mlp/mlp.cpp:111]   --->   Operation 424 'bitcast' 'bitcast_ln111_1' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 425 [1/1] (0.00ns)   --->   "%tmp_3 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %bitcast_ln111_1, i32 23, i32 30)" [quantized_mlp/mlp.cpp:111]   --->   Operation 425 'partselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 426 [1/1] (0.00ns)   --->   "%trunc_ln111_1 = trunc i32 %bitcast_ln111_1 to i23" [quantized_mlp/mlp.cpp:111]   --->   Operation 426 'trunc' 'trunc_ln111_1' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 427 [1/1] (0.00ns) (grouped into LUT with out node and_ln111_1)   --->   "%or_ln111_1 = or i1 %icmp_ln111_1, %icmp_ln111" [quantized_mlp/mlp.cpp:111]   --->   Operation 427 'or' 'or_ln111_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 428 [1/1] (0.85ns)   --->   "%icmp_ln111_2 = icmp ne i8 %tmp_3, -1" [quantized_mlp/mlp.cpp:111]   --->   Operation 428 'icmp' 'icmp_ln111_2' <Predicate = true> <Delay = 0.85> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 429 [1/1] (0.97ns)   --->   "%icmp_ln111_3 = icmp eq i23 %trunc_ln111_1, 0" [quantized_mlp/mlp.cpp:111]   --->   Operation 429 'icmp' 'icmp_ln111_3' <Predicate = true> <Delay = 0.97> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 430 [1/1] (0.00ns) (grouped into LUT with out node and_ln111_1)   --->   "%or_ln111_2 = or i1 %icmp_ln111_3, %icmp_ln111_2" [quantized_mlp/mlp.cpp:111]   --->   Operation 430 'or' 'or_ln111_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 431 [1/1] (0.00ns) (grouped into LUT with out node and_ln111_1)   --->   "%and_ln111 = and i1 %or_ln111_1, %or_ln111_2" [quantized_mlp/mlp.cpp:111]   --->   Operation 431 'and' 'and_ln111' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 432 [1/2] (3.34ns)   --->   "%tmp_5 = fcmp ogt float %p_0202, %maxv_0" [quantized_mlp/mlp.cpp:111]   --->   Operation 432 'fcmp' 'tmp_5' <Predicate = true> <Delay = 3.34> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 3.34> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 433 [1/1] (0.33ns) (out node of the LUT)   --->   "%and_ln111_1 = and i1 %and_ln111, %tmp_5" [quantized_mlp/mlp.cpp:111]   --->   Operation 433 'and' 'and_ln111_1' <Predicate = true> <Delay = 0.33> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 434 [1/1] (0.00ns) (grouped into LUT with out node select_ln111_1)   --->   "%xor_ln111 = xor i1 %and_ln111_1, true" [quantized_mlp/mlp.cpp:111]   --->   Operation 434 'xor' 'xor_ln111' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 435 [1/1] (0.00ns) (grouped into LUT with out node select_ln111_1)   --->   "%or_ln111 = or i1 %icmp_ln935_1, %xor_ln111" [quantized_mlp/mlp.cpp:111]   --->   Operation 435 'or' 'or_ln111' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 436 [1/1] (0.00ns) (grouped into LUT with out node select_ln111_1)   --->   "%select_ln111 = select i1 %and_ln111_1, float 0.000000e+00, float %maxv_0" [quantized_mlp/mlp.cpp:111]   --->   Operation 436 'select' 'select_ln111' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_27 : Operation 437 [1/1] (0.00ns) (grouped into LUT with out node m_23)   --->   "%m_21 = zext i20 %tmp_V_13 to i64" [quantized_mlp/mlp.cpp:112]   --->   Operation 437 'zext' 'm_21' <Predicate = (!icmp_ln958_2)> <Delay = 0.00>
+ST_27 : Operation 438 [1/1] (0.00ns) (grouped into LUT with out node m_23)   --->   "%zext_ln957_3 = zext i20 %tmp_V_13 to i32" [quantized_mlp/mlp.cpp:112]   --->   Operation 438 'zext' 'zext_ln957_3' <Predicate = (icmp_ln958_2)> <Delay = 0.00>
+ST_27 : Operation 439 [1/1] (0.00ns) (grouped into LUT with out node m_23)   --->   "%lshr_ln958_2 = lshr i32 %zext_ln957_3, %add_ln958_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 439 'lshr' 'lshr_ln958_2' <Predicate = (icmp_ln958_2)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 440 [1/1] (0.00ns) (grouped into LUT with out node m_23)   --->   "%zext_ln958_4 = zext i32 %lshr_ln958_2 to i64" [quantized_mlp/mlp.cpp:112]   --->   Operation 440 'zext' 'zext_ln958_4' <Predicate = (icmp_ln958_2)> <Delay = 0.00>
+ST_27 : Operation 441 [1/1] (0.00ns) (grouped into LUT with out node m_23)   --->   "%zext_ln958_5 = zext i32 %sub_ln958_2 to i64" [quantized_mlp/mlp.cpp:112]   --->   Operation 441 'zext' 'zext_ln958_5' <Predicate = (!icmp_ln958_2)> <Delay = 0.00>
+ST_27 : Operation 442 [1/1] (0.00ns) (grouped into LUT with out node m_23)   --->   "%shl_ln958_2 = shl i64 %m_21, %zext_ln958_5" [quantized_mlp/mlp.cpp:112]   --->   Operation 442 'shl' 'shl_ln958_2' <Predicate = (!icmp_ln958_2)> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 443 [1/1] (0.00ns) (grouped into LUT with out node m_23)   --->   "%m_22 = select i1 %icmp_ln958_2, i64 %zext_ln958_4, i64 %shl_ln958_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 443 'select' 'm_22' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_27 : Operation 444 [1/1] (0.00ns) (grouped into LUT with out node m_23)   --->   "%zext_ln961_2 = zext i32 %or_ln949_4 to i64" [quantized_mlp/mlp.cpp:112]   --->   Operation 444 'zext' 'zext_ln961_2' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 445 [1/1] (1.47ns) (out node of the LUT)   --->   "%m_23 = add i64 %m_22, %zext_ln961_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 445 'add' 'm_23' <Predicate = true> <Delay = 1.47> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 446 [1/1] (0.00ns) (grouped into LUT with out node select_ln111_1)   --->   "%m_4 = call i63 @_ssdm_op_PartSelect.i63.i64.i32.i32(i64 %m_23, i32 1, i32 63)" [quantized_mlp/mlp.cpp:112]   --->   Operation 446 'partselect' 'm_4' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 447 [1/1] (0.00ns) (grouped into LUT with out node select_ln111_1)   --->   "%m_28 = zext i63 %m_4 to i64" [quantized_mlp/mlp.cpp:112]   --->   Operation 447 'zext' 'm_28' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 448 [1/1] (0.00ns)   --->   "%tmp_24 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %m_23, i32 25)" [quantized_mlp/mlp.cpp:112]   --->   Operation 448 'bitselect' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 449 [1/1] (0.44ns)   --->   "%select_ln964_2 = select i1 %tmp_24, i8 127, i8 126" [quantized_mlp/mlp.cpp:112]   --->   Operation 449 'select' 'select_ln964_2' <Predicate = true> <Delay = 0.44> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_27 : Operation 450 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln964_2 = sub i8 6, %trunc_ln943_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 450 'sub' 'sub_ln964_2' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.61> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_27 : Operation 451 [1/1] (1.22ns) (root node of TernaryAdder)   --->   "%add_ln964_2 = add i8 %select_ln964_2, %sub_ln964_2" [quantized_mlp/mlp.cpp:112]   --->   Operation 451 'add' 'add_ln964_2' <Predicate = true> <Delay = 1.22> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.61> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_27 : Operation 452 [1/1] (0.00ns) (grouped into LUT with out node select_ln111_1)   --->   "%tmp_6 = call i9 @_ssdm_op_BitConcatenate.i9.i1.i8(i1 %p_Result_27, i8 %add_ln964_2)" [quantized_mlp/mlp.cpp:112]   --->   Operation 452 'bitconcatenate' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 453 [1/1] (0.00ns) (grouped into LUT with out node select_ln111_1)   --->   "%p_Result_29 = call i64 @_ssdm_op_PartSet.i64.i64.i9.i32.i32(i64 %m_28, i9 %tmp_6, i32 23, i32 31)" [quantized_mlp/mlp.cpp:112]   --->   Operation 453 'partset' 'p_Result_29' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 454 [1/1] (0.00ns) (grouped into LUT with out node select_ln111_1)   --->   "%trunc_ln738_2 = trunc i64 %p_Result_29 to i32" [quantized_mlp/mlp.cpp:112]   --->   Operation 454 'trunc' 'trunc_ln738_2' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 455 [1/1] (0.00ns) (grouped into LUT with out node select_ln111_1)   --->   "%bitcast_ln739_2 = bitcast i32 %trunc_ln738_2 to float" [quantized_mlp/mlp.cpp:112]   --->   Operation 455 'bitcast' 'bitcast_ln739_2' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 456 [1/1] (0.52ns) (out node of the LUT)   --->   "%select_ln111_1 = select i1 %or_ln111, float %select_ln111, float %bitcast_ln739_2" [quantized_mlp/mlp.cpp:111]   --->   Operation 456 'select' 'select_ln111_1' <Predicate = true> <Delay = 0.52> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_27 : Operation 457 [1/1] (0.00ns)   --->   "br label %_ZNK13ap_fixed_baseILi20ELi6ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEcvfEv.exit120" [quantized_mlp/mlp.cpp:109]   --->   Operation 457 'br' <Predicate = true> <Delay = 0.00>
+
+State 28 <SV = 10> <Delay = 0.88>
+ST_28 : Operation 458 [1/1] (0.00ns)   --->   "%sum_0 = phi float [ 0.000000e+00, %_ifconv2 ], [ %sum, %10 ]"   --->   Operation 458 'phi' 'sum_0' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 459 [1/1] (0.00ns)   --->   "%j8_0 = phi i4 [ 0, %_ifconv2 ], [ %j_4, %10 ]"   --->   Operation 459 'phi' 'j8_0' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 460 [1/1] (0.88ns)   --->   "%icmp_ln118 = icmp eq i4 %j8_0, -6" [quantized_mlp/mlp.cpp:118]   --->   Operation 460 'icmp' 'icmp_ln118' <Predicate = true> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 461 [1/1] (0.00ns)   --->   "%empty_26 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 461 'speclooptripcount' 'empty_26' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 462 [1/1] (0.86ns)   --->   "%j_4 = add i4 %j8_0, 1" [quantized_mlp/mlp.cpp:118]   --->   Operation 462 'add' 'j_4' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 463 [1/1] (0.00ns)   --->   "br i1 %icmp_ln118, label %.preheader.preheader, label %10" [quantized_mlp/mlp.cpp:118]   --->   Operation 463 'br' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 464 [1/1] (0.00ns)   --->   "%zext_ln119 = zext i4 %j8_0 to i64" [quantized_mlp/mlp.cpp:119]   --->   Operation 464 'zext' 'zext_ln119' <Predicate = (!icmp_ln118)> <Delay = 0.00>
+ST_28 : Operation 465 [1/1] (0.00ns)   --->   "%logits_addr_3 = getelementptr inbounds [10 x float]* %logits, i64 0, i64 %zext_ln119" [quantized_mlp/mlp.cpp:119]   --->   Operation 465 'getelementptr' 'logits_addr_3' <Predicate = (!icmp_ln118)> <Delay = 0.00>
+ST_28 : Operation 466 [2/2] (0.79ns)   --->   "%logits_load = load float* %logits_addr_3, align 4" [quantized_mlp/mlp.cpp:119]   --->   Operation 466 'load' 'logits_load' <Predicate = (!icmp_ln118)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_28 : Operation 467 [1/1] (0.75ns)   --->   "br label %.preheader" [quantized_mlp/mlp.cpp:124]   --->   Operation 467 'br' <Predicate = (icmp_ln118)> <Delay = 0.75>
+
+State 29 <SV = 11> <Delay = 0.79>
+ST_29 : Operation 468 [1/2] (0.79ns)   --->   "%logits_load = load float* %logits_addr_3, align 4" [quantized_mlp/mlp.cpp:119]   --->   Operation 468 'load' 'logits_load' <Predicate = true> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+
+State 30 <SV = 12> <Delay = 4.18>
+ST_30 : Operation 469 [8/8] (4.18ns)   --->   "%tmp = fsub float %logits_load, %maxv_0" [quantized_mlp/mlp.cpp:119]   --->   Operation 469 'fsub' 'tmp' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 13> <Delay = 4.18>
+ST_31 : Operation 470 [7/8] (4.18ns)   --->   "%tmp = fsub float %logits_load, %maxv_0" [quantized_mlp/mlp.cpp:119]   --->   Operation 470 'fsub' 'tmp' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 14> <Delay = 4.18>
+ST_32 : Operation 471 [6/8] (4.18ns)   --->   "%tmp = fsub float %logits_load, %maxv_0" [quantized_mlp/mlp.cpp:119]   --->   Operation 471 'fsub' 'tmp' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 15> <Delay = 4.18>
+ST_33 : Operation 472 [5/8] (4.18ns)   --->   "%tmp = fsub float %logits_load, %maxv_0" [quantized_mlp/mlp.cpp:119]   --->   Operation 472 'fsub' 'tmp' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 16> <Delay = 4.18>
+ST_34 : Operation 473 [4/8] (4.18ns)   --->   "%tmp = fsub float %logits_load, %maxv_0" [quantized_mlp/mlp.cpp:119]   --->   Operation 473 'fsub' 'tmp' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 17> <Delay = 4.18>
+ST_35 : Operation 474 [3/8] (4.18ns)   --->   "%tmp = fsub float %logits_load, %maxv_0" [quantized_mlp/mlp.cpp:119]   --->   Operation 474 'fsub' 'tmp' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 18> <Delay = 4.18>
+ST_36 : Operation 475 [2/8] (4.18ns)   --->   "%tmp = fsub float %logits_load, %maxv_0" [quantized_mlp/mlp.cpp:119]   --->   Operation 475 'fsub' 'tmp' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 19> <Delay = 4.18>
+ST_37 : Operation 476 [1/8] (4.18ns)   --->   "%tmp = fsub float %logits_load, %maxv_0" [quantized_mlp/mlp.cpp:119]   --->   Operation 476 'fsub' 'tmp' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 20> <Delay = 4.35>
+ST_38 : Operation 477 [13/13] (4.35ns)   --->   "%e = call float @llvm.exp.f32(float %tmp)" [quantized_mlp/mlp.cpp:119]   --->   Operation 477 'fexp' 'e' <Predicate = true> <Delay = 4.35> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 12> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 39 <SV = 21> <Delay = 4.35>
+ST_39 : Operation 478 [12/13] (4.35ns)   --->   "%e = call float @llvm.exp.f32(float %tmp)" [quantized_mlp/mlp.cpp:119]   --->   Operation 478 'fexp' 'e' <Predicate = true> <Delay = 4.35> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 12> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 40 <SV = 22> <Delay = 4.35>
+ST_40 : Operation 479 [11/13] (4.35ns)   --->   "%e = call float @llvm.exp.f32(float %tmp)" [quantized_mlp/mlp.cpp:119]   --->   Operation 479 'fexp' 'e' <Predicate = true> <Delay = 4.35> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 12> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 41 <SV = 23> <Delay = 4.35>
+ST_41 : Operation 480 [10/13] (4.35ns)   --->   "%e = call float @llvm.exp.f32(float %tmp)" [quantized_mlp/mlp.cpp:119]   --->   Operation 480 'fexp' 'e' <Predicate = true> <Delay = 4.35> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 12> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 42 <SV = 24> <Delay = 4.35>
+ST_42 : Operation 481 [9/13] (4.35ns)   --->   "%e = call float @llvm.exp.f32(float %tmp)" [quantized_mlp/mlp.cpp:119]   --->   Operation 481 'fexp' 'e' <Predicate = true> <Delay = 4.35> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 12> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 43 <SV = 25> <Delay = 4.35>
+ST_43 : Operation 482 [8/13] (4.35ns)   --->   "%e = call float @llvm.exp.f32(float %tmp)" [quantized_mlp/mlp.cpp:119]   --->   Operation 482 'fexp' 'e' <Predicate = true> <Delay = 4.35> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 12> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 44 <SV = 26> <Delay = 4.35>
+ST_44 : Operation 483 [7/13] (4.35ns)   --->   "%e = call float @llvm.exp.f32(float %tmp)" [quantized_mlp/mlp.cpp:119]   --->   Operation 483 'fexp' 'e' <Predicate = true> <Delay = 4.35> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 12> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 45 <SV = 27> <Delay = 4.35>
+ST_45 : Operation 484 [6/13] (4.35ns)   --->   "%e = call float @llvm.exp.f32(float %tmp)" [quantized_mlp/mlp.cpp:119]   --->   Operation 484 'fexp' 'e' <Predicate = true> <Delay = 4.35> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 12> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 46 <SV = 28> <Delay = 4.35>
+ST_46 : Operation 485 [5/13] (4.35ns)   --->   "%e = call float @llvm.exp.f32(float %tmp)" [quantized_mlp/mlp.cpp:119]   --->   Operation 485 'fexp' 'e' <Predicate = true> <Delay = 4.35> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 12> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 47 <SV = 29> <Delay = 4.35>
+ST_47 : Operation 486 [4/13] (4.35ns)   --->   "%e = call float @llvm.exp.f32(float %tmp)" [quantized_mlp/mlp.cpp:119]   --->   Operation 486 'fexp' 'e' <Predicate = true> <Delay = 4.35> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 12> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 48 <SV = 30> <Delay = 4.35>
+ST_48 : Operation 487 [3/13] (4.35ns)   --->   "%e = call float @llvm.exp.f32(float %tmp)" [quantized_mlp/mlp.cpp:119]   --->   Operation 487 'fexp' 'e' <Predicate = true> <Delay = 4.35> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 12> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 49 <SV = 31> <Delay = 4.35>
+ST_49 : Operation 488 [2/13] (4.35ns)   --->   "%e = call float @llvm.exp.f32(float %tmp)" [quantized_mlp/mlp.cpp:119]   --->   Operation 488 'fexp' 'e' <Predicate = true> <Delay = 4.35> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 12> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 50 <SV = 32> <Delay = 4.35>
+ST_50 : Operation 489 [1/13] (4.35ns)   --->   "%e = call float @llvm.exp.f32(float %tmp)" [quantized_mlp/mlp.cpp:119]   --->   Operation 489 'fexp' 'e' <Predicate = true> <Delay = 4.35> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 12> <II = 1> <Delay = 4.35> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 51 <SV = 33> <Delay = 4.18>
+ST_51 : Operation 490 [1/1] (0.00ns)   --->   "%output_addr = getelementptr [10 x float]* %output_r, i64 0, i64 %zext_ln119" [quantized_mlp/mlp.cpp:120]   --->   Operation 490 'getelementptr' 'output_addr' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 491 [1/1] (0.79ns)   --->   "store float %e, float* %output_addr, align 4" [quantized_mlp/mlp.cpp:120]   --->   Operation 491 'store' <Predicate = true> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_51 : Operation 492 [8/8] (4.18ns)   --->   "%sum = fadd float %sum_0, %e" [quantized_mlp/mlp.cpp:121]   --->   Operation 492 'fadd' 'sum' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 34> <Delay = 4.18>
+ST_52 : Operation 493 [7/8] (4.18ns)   --->   "%sum = fadd float %sum_0, %e" [quantized_mlp/mlp.cpp:121]   --->   Operation 493 'fadd' 'sum' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 35> <Delay = 4.18>
+ST_53 : Operation 494 [6/8] (4.18ns)   --->   "%sum = fadd float %sum_0, %e" [quantized_mlp/mlp.cpp:121]   --->   Operation 494 'fadd' 'sum' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 36> <Delay = 4.18>
+ST_54 : Operation 495 [5/8] (4.18ns)   --->   "%sum = fadd float %sum_0, %e" [quantized_mlp/mlp.cpp:121]   --->   Operation 495 'fadd' 'sum' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 55 <SV = 37> <Delay = 4.18>
+ST_55 : Operation 496 [4/8] (4.18ns)   --->   "%sum = fadd float %sum_0, %e" [quantized_mlp/mlp.cpp:121]   --->   Operation 496 'fadd' 'sum' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 56 <SV = 38> <Delay = 4.18>
+ST_56 : Operation 497 [3/8] (4.18ns)   --->   "%sum = fadd float %sum_0, %e" [quantized_mlp/mlp.cpp:121]   --->   Operation 497 'fadd' 'sum' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 57 <SV = 39> <Delay = 4.18>
+ST_57 : Operation 498 [2/8] (4.18ns)   --->   "%sum = fadd float %sum_0, %e" [quantized_mlp/mlp.cpp:121]   --->   Operation 498 'fadd' 'sum' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 58 <SV = 40> <Delay = 4.18>
+ST_58 : Operation 499 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str12) nounwind" [quantized_mlp/mlp.cpp:118]   --->   Operation 499 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 500 [1/8] (4.18ns)   --->   "%sum = fadd float %sum_0, %e" [quantized_mlp/mlp.cpp:121]   --->   Operation 500 'fadd' 'sum' <Predicate = true> <Delay = 4.18> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.18> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 501 [1/1] (0.00ns)   --->   "br label %9" [quantized_mlp/mlp.cpp:118]   --->   Operation 501 'br' <Predicate = true> <Delay = 0.00>
+
+State 59 <SV = 11> <Delay = 0.88>
+ST_59 : Operation 502 [1/1] (0.00ns)   --->   "%j9_0 = phi i4 [ %j_6, %11 ], [ 0, %.preheader.preheader ]"   --->   Operation 502 'phi' 'j9_0' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 503 [1/1] (0.88ns)   --->   "%icmp_ln124 = icmp eq i4 %j9_0, -6" [quantized_mlp/mlp.cpp:124]   --->   Operation 503 'icmp' 'icmp_ln124' <Predicate = true> <Delay = 0.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_59 : Operation 504 [1/1] (0.00ns)   --->   "%empty_27 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 504 'speclooptripcount' 'empty_27' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 505 [1/1] (0.86ns)   --->   "%j_6 = add i4 %j9_0, 1" [quantized_mlp/mlp.cpp:124]   --->   Operation 505 'add' 'j_6' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_59 : Operation 506 [1/1] (0.00ns)   --->   "br i1 %icmp_ln124, label %12, label %11" [quantized_mlp/mlp.cpp:124]   --->   Operation 506 'br' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 507 [1/1] (0.00ns)   --->   "%zext_ln125 = zext i4 %j9_0 to i64" [quantized_mlp/mlp.cpp:125]   --->   Operation 507 'zext' 'zext_ln125' <Predicate = (!icmp_ln124)> <Delay = 0.00>
+ST_59 : Operation 508 [1/1] (0.00ns)   --->   "%output_addr_1 = getelementptr [10 x float]* %output_r, i64 0, i64 %zext_ln125" [quantized_mlp/mlp.cpp:125]   --->   Operation 508 'getelementptr' 'output_addr_1' <Predicate = (!icmp_ln124)> <Delay = 0.00>
+ST_59 : Operation 509 [2/2] (0.79ns)   --->   "%output_load = load float* %output_addr_1, align 4" [quantized_mlp/mlp.cpp:125]   --->   Operation 509 'load' 'output_load' <Predicate = (!icmp_ln124)> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_59 : Operation 510 [1/1] (0.00ns)   --->   "ret void" [quantized_mlp/mlp.cpp:126]   --->   Operation 510 'ret' <Predicate = (icmp_ln124)> <Delay = 0.00>
+
+State 60 <SV = 12> <Delay = 0.79>
+ST_60 : Operation 511 [1/2] (0.79ns)   --->   "%output_load = load float* %output_addr_1, align 4" [quantized_mlp/mlp.cpp:125]   --->   Operation 511 'load' 'output_load' <Predicate = true> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+
+State 61 <SV = 13> <Delay = 3.73>
+ST_61 : Operation 512 [16/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 512 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 62 <SV = 14> <Delay = 3.73>
+ST_62 : Operation 513 [15/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 513 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 63 <SV = 15> <Delay = 3.73>
+ST_63 : Operation 514 [14/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 514 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 64 <SV = 16> <Delay = 3.73>
+ST_64 : Operation 515 [13/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 515 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 65 <SV = 17> <Delay = 3.73>
+ST_65 : Operation 516 [12/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 516 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 66 <SV = 18> <Delay = 3.73>
+ST_66 : Operation 517 [11/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 517 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 67 <SV = 19> <Delay = 3.73>
+ST_67 : Operation 518 [10/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 518 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 68 <SV = 20> <Delay = 3.73>
+ST_68 : Operation 519 [9/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 519 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 69 <SV = 21> <Delay = 3.73>
+ST_69 : Operation 520 [8/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 520 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 70 <SV = 22> <Delay = 3.73>
+ST_70 : Operation 521 [7/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 521 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 71 <SV = 23> <Delay = 3.73>
+ST_71 : Operation 522 [6/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 522 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 72 <SV = 24> <Delay = 3.73>
+ST_72 : Operation 523 [5/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 523 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 73 <SV = 25> <Delay = 3.73>
+ST_73 : Operation 524 [4/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 524 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 74 <SV = 26> <Delay = 3.73>
+ST_74 : Operation 525 [3/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 525 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 75 <SV = 27> <Delay = 3.73>
+ST_75 : Operation 526 [2/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 526 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 76 <SV = 28> <Delay = 3.73>
+ST_76 : Operation 527 [1/16] (3.73ns)   --->   "%tmp_2 = fdiv float %output_load, %sum_0" [quantized_mlp/mlp.cpp:125]   --->   Operation 527 'fdiv' 'tmp_2' <Predicate = true> <Delay = 3.73> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 15> <II = 1> <Delay = 3.73> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 77 <SV = 29> <Delay = 0.79>
+ST_77 : Operation 528 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str13) nounwind" [quantized_mlp/mlp.cpp:125]   --->   Operation 528 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_77 : Operation 529 [1/1] (0.79ns)   --->   "store float %tmp_2, float* %output_addr_1, align 4" [quantized_mlp/mlp.cpp:125]   --->   Operation 529 'store' <Predicate = true> <Delay = 0.79> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10> <RAM>
+ST_77 : Operation 530 [1/1] (0.00ns)   --->   "br label %.preheader" [quantized_mlp/mlp.cpp:124]   --->   Operation 530 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 0.755ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', quantized_mlp/mlp.cpp:88) [21]  (0.755 ns)
+
+ <State 2>: 1.35ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', quantized_mlp/mlp.cpp:88) [21]  (0 ns)
+	'getelementptr' operation ('B1_V_addr', quantized_mlp/mlp.cpp:89) [31]  (0 ns)
+	'load' operation ('acc.V', quantized_mlp/mlp.cpp:89) on array 'B1_V' [32]  (1.35 ns)
+
+ <State 3>: 1.35ns
+The critical path consists of the following:
+	'load' operation ('acc.V', quantized_mlp/mlp.cpp:89) on array 'B1_V' [32]  (1.35 ns)
+
+ <State 4>: 2.31ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:89) [37]  (0 ns)
+	'add' operation ('add_ln1117_1', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89) [46]  (0.962 ns)
+	'getelementptr' operation ('W1_V_addr', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89) [48]  (0 ns)
+	'load' operation ('W1_V_load', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89) on array 'W1_V' [52]  (1.35 ns)
+
+ <State 5>: 4.2ns
+The critical path consists of the following:
+	'load' operation ('input_V_load', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89) on array 'input_V' [50]  (1.35 ns)
+	'mul' operation of DSP[56] ('mul_ln1192', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89) [54]  (0.638 ns)
+	'add' operation of DSP[56] ('ret.V', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:89) [56]  (2.21 ns)
+
+ <State 6>: 1.35ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', quantized_mlp/mlp.cpp:93) [69]  (0 ns)
+	'getelementptr' operation ('B2_V_addr', quantized_mlp/mlp.cpp:94) [81]  (0 ns)
+	'load' operation ('acc.V', quantized_mlp/mlp.cpp:94) on array 'B2_V' [82]  (1.35 ns)
+
+ <State 7>: 1.35ns
+The critical path consists of the following:
+	'load' operation ('acc.V', quantized_mlp/mlp.cpp:94) on array 'B2_V' [82]  (1.35 ns)
+
+ <State 8>: 2.25ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:94) [87]  (0 ns)
+	'add' operation ('add_ln1117_2', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94) [96]  (0.897 ns)
+	'getelementptr' operation ('W2_V_addr', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94) [98]  (0 ns)
+	'load' operation ('W2_V_load', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94) on array 'W2_V' [102]  (1.35 ns)
+
+ <State 9>: 4.2ns
+The critical path consists of the following:
+	'load' operation ('W2_V_load', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94) on array 'W2_V' [102]  (1.35 ns)
+	'mul' operation of DSP[106] ('mul_ln1192_1', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94) [104]  (0.638 ns)
+	'add' operation of DSP[106] ('ret.V', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:94) [106]  (2.21 ns)
+
+ <State 10>: 1.35ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', quantized_mlp/mlp.cpp:98) [119]  (0 ns)
+	'getelementptr' operation ('B3_V_addr', quantized_mlp/mlp.cpp:99) [129]  (0 ns)
+	'load' operation ('acc.V', quantized_mlp/mlp.cpp:99) on array 'B3_V' [130]  (1.35 ns)
+
+ <State 11>: 1.35ns
+The critical path consists of the following:
+	'load' operation ('acc.V', quantized_mlp/mlp.cpp:99) on array 'B3_V' [130]  (1.35 ns)
+
+ <State 12>: 2.25ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:99) [135]  (0 ns)
+	'add' operation ('add_ln1117_3', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99) [144]  (0.897 ns)
+	'getelementptr' operation ('W3_V_addr', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99) [146]  (0 ns)
+	'load' operation ('W3_V_load', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99) on array 'W3_V' [150]  (1.35 ns)
+
+ <State 13>: 4.2ns
+The critical path consists of the following:
+	'load' operation ('W3_V_load', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99) on array 'W3_V' [150]  (1.35 ns)
+	'mul' operation of DSP[154] ('mul_ln1192_2', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99) [152]  (0.638 ns)
+	'add' operation of DSP[154] ('ret.V', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:99) [154]  (2.21 ns)
+
+ <State 14>: 1.35ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', quantized_mlp/mlp.cpp:103) [167]  (0 ns)
+	'getelementptr' operation ('B4_V_addr', quantized_mlp/mlp.cpp:104) [177]  (0 ns)
+	'load' operation ('acc.V', quantized_mlp/mlp.cpp:104) on array 'B4_V' [178]  (1.35 ns)
+
+ <State 15>: 1.35ns
+The critical path consists of the following:
+	'load' operation ('acc.V', quantized_mlp/mlp.cpp:104) on array 'B4_V' [178]  (1.35 ns)
+
+ <State 16>: 2.25ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', quantized_mlp/mlp.cpp:68->quantized_mlp/mlp.cpp:104) [183]  (0 ns)
+	'add' operation ('add_ln1117_4', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104) [192]  (0.897 ns)
+	'getelementptr' operation ('W4_V_addr', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104) [194]  (0 ns)
+	'load' operation ('W4_V_load', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104) on array 'W4_V' [198]  (1.35 ns)
+
+ <State 17>: 4.2ns
+The critical path consists of the following:
+	'load' operation ('W4_V_load', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104) on array 'W4_V' [198]  (1.35 ns)
+	'mul' operation of DSP[202] ('mul_ln1192_3', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104) [200]  (0.638 ns)
+	'add' operation of DSP[202] ('ret.V', quantized_mlp/mlp.cpp:69->quantized_mlp/mlp.cpp:104) [202]  (2.21 ns)
+
+ <State 18>: 0.79ns
+The critical path consists of the following:
+	'load' operation ('tmp.V', quantized_mlp/mlp.cpp:108) on array 'z4.V', quantized_mlp/mlp.cpp:84 [211]  (0.79 ns)
+
+ <State 19>: 3.99ns
+The critical path consists of the following:
+	'sub' operation ('tmp.V', quantized_mlp/mlp.cpp:108) [214]  (1.06 ns)
+	'select' operation ('tmp.V', quantized_mlp/mlp.cpp:108) [215]  (0.439 ns)
+	'cttz' operation ('l', quantized_mlp/mlp.cpp:108) [218]  (1.29 ns)
+	'sub' operation ('sub_ln944', quantized_mlp/mlp.cpp:108) [219]  (1.2 ns)
+
+ <State 20>: 4.1ns
+The critical path consists of the following:
+	'add' operation ('lsb_index', quantized_mlp/mlp.cpp:108) [221]  (1.2 ns)
+	'icmp' operation ('icmp_ln947', quantized_mlp/mlp.cpp:108) [223]  (1.1 ns)
+	'and' operation ('a', quantized_mlp/mlp.cpp:108) [230]  (0 ns)
+	'or' operation ('or_ln949', quantized_mlp/mlp.cpp:108) [236]  (0 ns)
+	'add' operation ('m', quantized_mlp/mlp.cpp:108) [249]  (1.47 ns)
+	blocking operation 0.331 ns on control path)
+
+ <State 21>: 2.19ns
+The critical path consists of the following:
+	'select' operation ('select_ln964', quantized_mlp/mlp.cpp:108) [253]  (0.445 ns)
+	'add' operation ('add_ln964', quantized_mlp/mlp.cpp:108) [256]  (1.22 ns)
+	'select' operation ('select_ln935', quantized_mlp/mlp.cpp:108) [261]  (0.525 ns)
+
+ <State 22>: 0.884ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', quantized_mlp/mlp.cpp:109) [265]  (0 ns)
+	'icmp' operation ('icmp_ln109', quantized_mlp/mlp.cpp:109) [266]  (0.884 ns)
+
+ <State 23>: 3.58ns
+The critical path consists of the following:
+	'load' operation ('tmp.V', quantized_mlp/mlp.cpp:110) on array 'z4.V', quantized_mlp/mlp.cpp:84 [272]  (0.79 ns)
+	'sub' operation ('tmp.V', quantized_mlp/mlp.cpp:110) [277]  (1.06 ns)
+	'select' operation ('tmp.V', quantized_mlp/mlp.cpp:110) [278]  (0.439 ns)
+	'cttz' operation ('l', quantized_mlp/mlp.cpp:110) [281]  (1.29 ns)
+
+ <State 24>: 3.83ns
+The critical path consists of the following:
+	'sub' operation ('sub_ln944_1', quantized_mlp/mlp.cpp:110) [282]  (1.2 ns)
+	'add' operation ('lsb_index', quantized_mlp/mlp.cpp:110) [284]  (1.2 ns)
+	'icmp' operation ('icmp_ln947_2', quantized_mlp/mlp.cpp:110) [286]  (1.1 ns)
+	'and' operation ('a', quantized_mlp/mlp.cpp:110) [293]  (0 ns)
+	'or' operation ('or_ln949_1', quantized_mlp/mlp.cpp:110) [299]  (0 ns)
+	blocking operation 0.331 ns on control path)
+
+ <State 25>: 3.93ns
+The critical path consists of the following:
+	'shl' operation ('shl_ln958_1', quantized_mlp/mlp.cpp:110) [309]  (0 ns)
+	'select' operation ('m', quantized_mlp/mlp.cpp:110) [310]  (0 ns)
+	'add' operation ('m', quantized_mlp/mlp.cpp:110) [312]  (1.47 ns)
+	'select' operation ('select_ln964_1', quantized_mlp/mlp.cpp:110) [316]  (0.445 ns)
+	'add' operation ('add_ln964_1', quantized_mlp/mlp.cpp:110) [319]  (1.22 ns)
+	'store' operation ('store_ln110', quantized_mlp/mlp.cpp:110) of variable 'bitcast_ln739_1', quantized_mlp/mlp.cpp:110 on array 'logits', quantized_mlp/mlp.cpp:107 [325]  (0.79 ns)
+
+ <State 26>: 3.83ns
+The critical path consists of the following:
+	'sub' operation ('sub_ln944_2', quantized_mlp/mlp.cpp:112) [357]  (1.2 ns)
+	'add' operation ('lsb_index', quantized_mlp/mlp.cpp:112) [359]  (1.2 ns)
+	'icmp' operation ('icmp_ln947_4', quantized_mlp/mlp.cpp:112) [361]  (1.1 ns)
+	'and' operation ('a', quantized_mlp/mlp.cpp:112) [368]  (0 ns)
+	'or' operation ('or_ln949_3', quantized_mlp/mlp.cpp:112) [374]  (0 ns)
+	blocking operation 0.331 ns on control path)
+
+ <State 27>: 4.2ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_5', quantized_mlp/mlp.cpp:111) [346]  (3.35 ns)
+	'and' operation ('and_ln111_1', quantized_mlp/mlp.cpp:111) [347]  (0.331 ns)
+	'xor' operation ('xor_ln111', quantized_mlp/mlp.cpp:111) [348]  (0 ns)
+	'or' operation ('or_ln111', quantized_mlp/mlp.cpp:111) [349]  (0 ns)
+	'select' operation ('select_ln111_1', quantized_mlp/mlp.cpp:111) [399]  (0.525 ns)
+
+ <State 28>: 0.884ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', quantized_mlp/mlp.cpp:118) [408]  (0 ns)
+	'icmp' operation ('icmp_ln118', quantized_mlp/mlp.cpp:118) [409]  (0.884 ns)
+
+ <State 29>: 0.79ns
+The critical path consists of the following:
+	'load' operation ('logits_load', quantized_mlp/mlp.cpp:119) on array 'logits', quantized_mlp/mlp.cpp:107 [417]  (0.79 ns)
+
+ <State 30>: 4.18ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', quantized_mlp/mlp.cpp:119) [418]  (4.18 ns)
+
+ <State 31>: 4.18ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', quantized_mlp/mlp.cpp:119) [418]  (4.18 ns)
+
+ <State 32>: 4.18ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', quantized_mlp/mlp.cpp:119) [418]  (4.18 ns)
+
+ <State 33>: 4.18ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', quantized_mlp/mlp.cpp:119) [418]  (4.18 ns)
+
+ <State 34>: 4.18ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', quantized_mlp/mlp.cpp:119) [418]  (4.18 ns)
+
+ <State 35>: 4.18ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', quantized_mlp/mlp.cpp:119) [418]  (4.18 ns)
+
+ <State 36>: 4.18ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', quantized_mlp/mlp.cpp:119) [418]  (4.18 ns)
+
+ <State 37>: 4.18ns
+The critical path consists of the following:
+	'fsub' operation ('tmp', quantized_mlp/mlp.cpp:119) [418]  (4.18 ns)
+
+ <State 38>: 4.35ns
+The critical path consists of the following:
+	'fexp' operation ('e', quantized_mlp/mlp.cpp:119) [419]  (4.35 ns)
+
+ <State 39>: 4.35ns
+The critical path consists of the following:
+	'fexp' operation ('e', quantized_mlp/mlp.cpp:119) [419]  (4.35 ns)
+
+ <State 40>: 4.35ns
+The critical path consists of the following:
+	'fexp' operation ('e', quantized_mlp/mlp.cpp:119) [419]  (4.35 ns)
+
+ <State 41>: 4.35ns
+The critical path consists of the following:
+	'fexp' operation ('e', quantized_mlp/mlp.cpp:119) [419]  (4.35 ns)
+
+ <State 42>: 4.35ns
+The critical path consists of the following:
+	'fexp' operation ('e', quantized_mlp/mlp.cpp:119) [419]  (4.35 ns)
+
+ <State 43>: 4.35ns
+The critical path consists of the following:
+	'fexp' operation ('e', quantized_mlp/mlp.cpp:119) [419]  (4.35 ns)
+
+ <State 44>: 4.35ns
+The critical path consists of the following:
+	'fexp' operation ('e', quantized_mlp/mlp.cpp:119) [419]  (4.35 ns)
+
+ <State 45>: 4.35ns
+The critical path consists of the following:
+	'fexp' operation ('e', quantized_mlp/mlp.cpp:119) [419]  (4.35 ns)
+
+ <State 46>: 4.35ns
+The critical path consists of the following:
+	'fexp' operation ('e', quantized_mlp/mlp.cpp:119) [419]  (4.35 ns)
+
+ <State 47>: 4.35ns
+The critical path consists of the following:
+	'fexp' operation ('e', quantized_mlp/mlp.cpp:119) [419]  (4.35 ns)
+
+ <State 48>: 4.35ns
+The critical path consists of the following:
+	'fexp' operation ('e', quantized_mlp/mlp.cpp:119) [419]  (4.35 ns)
+
+ <State 49>: 4.35ns
+The critical path consists of the following:
+	'fexp' operation ('e', quantized_mlp/mlp.cpp:119) [419]  (4.35 ns)
+
+ <State 50>: 4.35ns
+The critical path consists of the following:
+	'fexp' operation ('e', quantized_mlp/mlp.cpp:119) [419]  (4.35 ns)
+
+ <State 51>: 4.18ns
+The critical path consists of the following:
+	'fadd' operation ('sum', quantized_mlp/mlp.cpp:121) [422]  (4.18 ns)
+
+ <State 52>: 4.18ns
+The critical path consists of the following:
+	'fadd' operation ('sum', quantized_mlp/mlp.cpp:121) [422]  (4.18 ns)
+
+ <State 53>: 4.18ns
+The critical path consists of the following:
+	'fadd' operation ('sum', quantized_mlp/mlp.cpp:121) [422]  (4.18 ns)
+
+ <State 54>: 4.18ns
+The critical path consists of the following:
+	'fadd' operation ('sum', quantized_mlp/mlp.cpp:121) [422]  (4.18 ns)
+
+ <State 55>: 4.18ns
+The critical path consists of the following:
+	'fadd' operation ('sum', quantized_mlp/mlp.cpp:121) [422]  (4.18 ns)
+
+ <State 56>: 4.18ns
+The critical path consists of the following:
+	'fadd' operation ('sum', quantized_mlp/mlp.cpp:121) [422]  (4.18 ns)
+
+ <State 57>: 4.18ns
+The critical path consists of the following:
+	'fadd' operation ('sum', quantized_mlp/mlp.cpp:121) [422]  (4.18 ns)
+
+ <State 58>: 4.18ns
+The critical path consists of the following:
+	'fadd' operation ('sum', quantized_mlp/mlp.cpp:121) [422]  (4.18 ns)
+
+ <State 59>: 0.884ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', quantized_mlp/mlp.cpp:124) [427]  (0 ns)
+	'icmp' operation ('icmp_ln124', quantized_mlp/mlp.cpp:124) [428]  (0.884 ns)
+
+ <State 60>: 0.79ns
+The critical path consists of the following:
+	'load' operation ('output_load', quantized_mlp/mlp.cpp:125) on array 'output_r' [436]  (0.79 ns)
+
+ <State 61>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 62>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 63>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 64>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 65>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 66>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 67>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 68>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 69>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 70>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 71>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 72>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 73>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 74>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 75>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 76>: 3.74ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_2', quantized_mlp/mlp.cpp:125) [437]  (3.74 ns)
+
+ <State 77>: 0.79ns
+The critical path consists of the following:
+	'store' operation ('store_ln125', quantized_mlp/mlp.cpp:125) of variable 'tmp_2', quantized_mlp/mlp.cpp:125 on array 'output_r' [438]  (0.79 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

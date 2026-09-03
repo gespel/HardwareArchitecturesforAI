@@ -1,0 +1,18 @@
+############################################################
+## This file is generated automatically by Vivado HLS.
+## Please DO NOT edit it.
+## Copyright (C) 1986-2019 Xilinx, Inc. All Rights Reserved.
+############################################################
+open_project quantized_mlp
+set_top mlp
+add_files quantized_mlp/mlp.cpp
+add_files quantized_mlp/mlp.h
+add_files -tb quantized_mlp/mlp_tb.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+open_solution "solution1"
+set_part {xczu3eg-sbva484-1-i} -tool vivado
+create_clock -period 10 -name default
+#source "./quantized_mlp/solution1/directives.tcl"
+csim_design -clean
+csynth_design
+cosim_design -wave_debug -trace_level all -tool xsim
+export_design -format ip_catalog

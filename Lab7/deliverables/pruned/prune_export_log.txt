@@ -1,0 +1,13 @@
+  spliced: /home/sten/Uni/HardwareArchitecturesforAI/Lab7/pruned_mlp/mlp.cpp
+  spliced: /home/sten/Uni/HardwareArchitecturesforAI/Lab7/pruned_mlp/mlp_tb.cpp
+==========================================================================
+ Lab 7 - pruned MLP : export magnitude-pruned weights + golden
+==========================================================================
+  threshold |w| >= 0.24091238
+  global kernel sparsity : 78.947 %   (864 non-zero of 4104)
+  per-layer sparsity     : 81.28 / 30.00 / 26.56 / 31.25 %
+    img 0: label 7  Python-pruned argmax 5  p(max)=0.30967
+    img 1: label 2  Python-pruned argmax 5  p(max)=0.43747
+    img 2: label 1  Python-pruned argmax 4  p(max)=0.90000
+    img 3: label 0  Python-pruned argmax 5  p(max)=0.41792
+    img 4: label 4  Python-pruned argmax 4  p(max)=0.98311

@@ -1,0 +1,25 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="sol_p_w16_10"/>
+    </name>
+    <project>
+        <value string="pruned_mlp"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xczu3eg:-sbva484:-1-i"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynquplus/zynquplus" name="DefaultPlatform"/>
+        <library value="xilinx/zynquplus/zynquplus_fpv7" name="DefaultPlatform"/>
+    </libraryList>
+    <downStreamTool>
+        <DownStreamTool name="vivado"/>
+    </downStreamTool>
+    <clockList>
+        <clock name="default" period="10" default="false"/>
+    </clockList>
+    <config>
+        <schedule model="mlp"/>
+    </config>
+</AutoPilot:solution>
+

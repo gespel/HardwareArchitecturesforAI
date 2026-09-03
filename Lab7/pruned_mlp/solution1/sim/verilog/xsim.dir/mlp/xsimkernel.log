@@ -1,0 +1,7 @@
+Running: xsim.dir/mlp/xsimk -simmode gui -wdb mlp.wdb -simrunnum 0 -socket 32819
+Design successfully loaded
+Design Loading Memory Usage: 40504 KB (Peak: 40504 KB)
+Design Loading CPU Usage: 40 ms
+Simulation completed
+Simulation Memory Usage: 138964 KB (Peak: 179772 KB)
+Simulation CPU Usage: 1760 ms

@@ -1,0 +1,16 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../mlp_tb.cpp in debug mode
+   Compiling ../../../mlp.cpp in debug mode
+   Generating csim.exe
+Image 0  (true label 7) : HW class = 7 , golden class = 7
+Image 1  (true label 2) : HW class = 2 , golden class = 2
+Image 2  (true label 1) : HW class = 1 , golden class = 1
+Image 3  (true label 0) : HW class = 0 , golden class = 0
+Image 4  (true label 4) : HW class = 4 , golden class = 4
+
+Datapath type : ap_fixed<20,6>  (6 integer + 14 fractional bits)
+max |dP| vs Python golden : 0.000360355
+Test PASSED : quantized MLP matches the Python golden reference within +/-0.01.
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

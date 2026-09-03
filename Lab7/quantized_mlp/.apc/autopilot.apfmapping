@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="mlp.cpp" path="/home/sten/Uni/HardwareArchitecturesforAI/Lab7/quantized_mlp/mlp.cpp"/>
+    <originFiles name="mlp.h" path="/home/sten/Uni/HardwareArchitecturesforAI/Lab7/quantized_mlp/mlp.h"/>
+  </source>
+  <testbench>
+    <originFiles name="mlp_tb.cpp" path="/home/sten/Uni/HardwareArchitecturesforAI/Lab7/quantized_mlp/mlp_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

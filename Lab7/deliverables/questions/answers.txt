@@ -1,0 +1,115 @@
+======================================================================
+Lab 7 - synthesis questions
+======================================================================
+
+Part xczu3eg-sbva484-1-i. Top function mlp. Numbers from csynth_design
+(Vivado HLS 2019.1), loops left rolled, no pragmas.
+
+
+BASELINE (10 ns target)
+----------------------------------------------------------------------
+
+  design               LUT    FF    DSP  BRAM18  lat[cyc]  est.clk  lat[us]
+  mlp_FP  (float32)     3620   2419  12   11      37375     9.99 ns  ~374
+  quantized (fx<20,6>)  5788   2185  13    6       8645     8.51 ns   ~86
+  pruned    (fx<20,6>)  5803   2201  13    5       8645     8.51 ns   ~86
+
+
+CAN THE RESOURCE USE BE REDUCED FURTHER?
+----------------------------------------------------------------------
+
+Yes. Two cheap levers.
+
+1. Take softmax out of the hardware. Return the 10 logits and do exp/div
+   on the CPU or in the testbench. Argmax stays the same. The float
+   exp/div/add IP is 9 of the 13 DSPs and about 5100 of the 5800 LUTs,
+   and it is also the timing bottleneck.
+   quantized fx<20,6> with softmax removed:
+       LUT  5788 -> 673
+       FF   2185 -> 466
+       DSP    13 -> 4
+       BRAM    6 unchanged
+       lat  8645 -> 8326 cyc
+       est. clk 8.51 ns -> 4.20 ns
+
+2. Narrower word. fx<20,6> -> fx<16,6> still matches Python
+   (max dP about 5e-3, under the 1e-2 limit):
+       LUT  5788 -> 5674
+       FF   2185 -> 2129
+       BRAM    6 -> 3
+       DSP and latency unchanged
+
+Both levers combine. Rolled loops already use one shared MAC unit per
+layer, so nothing else can be cut without losing accuracy. The committed
+projects keep fx<20,6> and hardware softmax so the testbench stays
+self-checking. Switching is a one-line interface change.
+
+
+CAN THE CLOCK PERIOD BE IMPROVED? WHAT HAPPENS TO PERFORMANCE?
+----------------------------------------------------------------------
+
+Fixed-point (quantized and pruned). Over-constrained at 10 ns, est 8.51.
+A tighter constraint works and costs little.
+
+  target   est.clk   lat[cyc]   FF     LUT    lat[us]
+  10 ns    8.51 ns   8645       2185   5788   86.5
+   7 ns    6.04 ns   8695       2349   5842   60.9
+   5 ns    4.35 ns   8866       2952   6019   44.3
+
+Cycle count barely moves because the loops are not pipelined, so run time
+drops almost linearly with the period. About 2x faster at 5 ns for about
+35 percent more FF. With softmax removed the datapath closes at 4.2 ns,
+so it could run near a 4 ns clock.
+
+Float (mlp_FP). Already at the limit at 10 ns, est 9.99. Asking for less
+does not help.
+   7 ns gives est 7.50 ns (misses), latency 37375 -> 41519
+   5 ns gives est 5.67 ns (misses), latency 62230
+The float adder and multiplier IP latency sets the floor. A tighter
+target only adds pipeline stages, so more FF and more cycles, no real
+speed-up.
+
+
+HOW DO THE 3 DESIGNS DIFFER IN FPGA RESOURCE UTILIZATION?
+----------------------------------------------------------------------
+
+- Float uses the fewest LUT and FF but the most BRAM. Its arithmetic is
+  hardened float IP, DSP-heavy and LUT-light, and the 32-bit weight
+  tables need 11 BRAM18.
+
+- Quantized uses about 1.6x the LUT of float and half the BRAM. The
+  ap_fixed multiply and add sit in fabric (LUT), and the 20-bit weight
+  ROMs need only 6 BRAM18. DSP is about the same, 12 against 13, both
+  dominated by the shared float softmax.
+
+- Pruned equals quantized. LUT 5803 against 5788, FF 2201 against 2185,
+  DSP 13, BRAM 5 against 6. Pruning zeroed about 79 percent of the
+  weights but they are still stored and still multiplied by the dense
+  MAC, so no logic is saved. The one BRAM difference is just ROM packing.
+  A real saving would need a sparse or skip-zero datapath, which this
+  code does not have.
+
+Utilisation is small either way, at most 8 percent LUT, 3 percent DSP,
+3 percent BRAM.
+
+
+HOW DO THE 3 DESIGNS DIFFER IN PERFORMANCE?
+----------------------------------------------------------------------
+
+- Latency. Fixed-point is about 4.3x faster than float, 8645 against
+  37375 cycles. A float add takes about 9 cycles, so each iteration of
+  the rolled neuron_mac loop takes 9 cycles (784 x 9 x 5 = 35300 for
+  layer 1 alone). The ap_fixed add is 1 to 2 cycles, so the same loop is
+  about 4x shorter.
+
+- Clock. Fixed-point also closes faster, 8.5 ns against 10.0 ns at the
+  same target, and it still meets 5 ns while float cannot beat 10 ns.
+
+- Time per inference. Float about 374 us. Quantized and pruned about
+  86 us at 10 ns and about 44 us at 5 ns. Pruned and quantized are
+  identical, same interval, same cycles, same Fmax.
+
+- All three are single-call and not pipelined (ap_ctrl_hs, interval
+  equals latency), so throughput is 1 over latency. Pipelining
+  neuron_mac to interval 1 would cut latency to about 4 to 5k cycles but
+  roughly doubles LUT and FF and needs the weight ROMs partitioned.

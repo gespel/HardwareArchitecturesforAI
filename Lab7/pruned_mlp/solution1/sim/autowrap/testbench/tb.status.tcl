@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/sten/Uni/HardwareArchitecturesforAI/Lab7/pruned_mlp/solution1/./sim/autowrap/testbench/mlp.cpp_pre.cpp.tb.cpp
